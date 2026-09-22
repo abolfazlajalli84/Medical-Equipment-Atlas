@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>اطلس تجهیزات پزشکی | ابوالفضل اجلّی — دانشگاه صنعتی همدان</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue-50:#f2f7fd;
+    --blue-100:#e2edfa;
+    --blue-200:#c4dbf4;
+    --blue-300:#93bfe9;
+    --blue-400:#5d9bd8;
+    --blue-500:#3d7fc1;
+    --blue-600:#2c669f;
+    --blue-700:#22517d;
+    --blue-800:#1b3f61;
+    --ink:#12293d;
+    --ink-soft:#3d566c;
+    --line:#dbe7f3;
+    --bg:#f6f9fc;
+    --white:#ffffff;
+    --warn:#b45309;
+    --warn-bg:#fef7ec;
+    --danger:#b91c1c;
+    --danger-bg:#fdf3f2;
+    --ok:#15803d;
+    --ok-bg:#f1f9f3;
+    --shadow-sm:0 1px 2px rgba(18,41,61,.06), 0 2px 8px rgba(18,41,61,.05);
+    --shadow-md:0 4px 14px rgba(18,41,61,.09), 0 12px 34px rgba(18,41,61,.07);
+    --shadow-lg:0 18px 60px rgba(18,41,61,.20);
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Vazirmatn', 'Segoe UI', Tahoma, sans-serif;
+    background:
+      radial-gradient(1100px 480px at 88% -8%, #e6f0fa 0%, rgba(230,240,250,0) 62%),
+      radial-gradient(900px 420px at -10% 4%, #eaf3fb 0%, rgba(234,243,251,0) 58%),
+      var(--bg);
+    color:var(--ink);
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  /* ---------- HEADER ---------- */
+  header.site{
+    position:relative;
+    background:linear-gradient(135deg,#1d4f7a 0%, #2c669f 45%, #3d7fc1 100%);
+    color:#fff;
+    padding:30px 22px 26px;
+    overflow:hidden;
+  }
+  header.site::after{
+    content:"";
+    position:absolute;inset:0;
+    background-image:
+      radial-gradient(rgba(255,255,255,.10) 1px, transparent 1px);
+    background-size:22px 22px;
+    opacity:.6;
+    pointer-events:none;
+  }
+  .hwrap{
+    max-width:1180px;margin:0 auto;position:relative;z-index:2;
+    display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;
+  }
+  .brand{display:flex;gap:16px;align-items:center;min-width:280px}
+  .logo{
+    width:62px;height:62px;flex:0 0 62px;border-radius:18px;
+    background:rgba(255,255,255,.13);
+    border:1px solid rgba(255,255,255,.28);
+    display:grid;place-items:center;
+    backdrop-filter:blur(4px);
+  }
+  .logo svg{width:36px;height:36px}
+  .brand h1{
+    font-size:clamp(1.28rem,3.1vw,1.72rem);
+    font-weight:800;letter-spacing:-.2px;line-height:1.5;
+  }
+  .brand p{font-size:.86rem;opacity:.88;font-weight:300;margin-top:2px}
+  .meta{
+    display:flex;flex-wrap:wrap;gap:10px;
+  }
+  .meta-item{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.22);
+    border-radius:12px;
+    padding:8px 14px;
+    font-size:.82rem;
+    display:flex;align-items:center;gap:8px;
+    backdrop-filter:blur(4px);
+  }
+  .meta-item b{font-weight:600}
+  .meta-item span{opacity:.8;font-weight:300;font-size:.76rem}
+  /* ---------- STATS BAR ---------- */
+  .stats{
+    max-width:1180px;margin:-24px auto 0;padding:0 22px;position:relative;z-index:5;
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;
+  }
+  .stat{
+    background:var(--white);border:1px solid var(--line);border-radius:14px;
+    padding:12px 16px;box-shadow:var(--shadow-sm);
+    display:flex;align-items:center;gap:12px;
+  }
+  .stat .n{font-size:1.35rem;font-weight:800;color:var(--blue-600);line-height:1.2}
+  .stat .l{font-size:.76rem;color:var(--ink-soft);font-weight:400}
+  /* ---------- MAIN ---------- */
+  main{max-width:1180px;margin:0 auto;padding:34px 22px 10px}
+  .sec-head{text-align:center;margin-bottom:28px}
+  .sec-head h2{
+    font-size:clamp(1.14rem,2.6vw,1.42rem);font-weight:800;color:var(--blue-800);
+    display:inline-flex;align-items:center;gap:10px;
+  }
+  .sec-head h2::before,.sec-head h2::after{
+    content:"";height:2px;width:34px;background:linear-gradient(90deg,transparent,var(--blue-300));
+    display:inline-block;border-radius:2px;
+  }
+  .sec-head h2::after{background:linear-gradient(90deg,var(--blue-300),transparent)}
+  .sec-head p{color:var(--ink-soft);font-size:.9rem;margin-top:8px;font-weight:300}
+  .searchbar{
+    max-width:520px;margin:0 auto 26px;position:relative;
+  }
+  .searchbar input{
+    width:100%;padding:13px 46px 13px 16px;border-radius:13px;
+    border:1px solid var(--line);background:var(--white);
+    font-family:inherit;font-size:.9rem;color:var(--ink);
+    box-shadow:var(--shadow-sm);outline:none;transition:.22s;
+  }
+  .searchbar input:focus{border-color:var(--blue-400);box-shadow:0 0 0 4px var(--blue-100)}
+  .searchbar svg{
+    position:absolute;right:15px;top:50%;transform:translateY(-50%);
+    width:19px;height:19px;color:var(--blue-400);pointer-events:none;
+  }
+  .grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;
+  }
+  .card{
+    background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 18px 18px;cursor:pointer;text-align:right;
+    box-shadow:var(--shadow-sm);
+    transition:transform .24s cubic-bezier(.2,.8,.3,1), box-shadow .24s, border-color .24s;
+    position:relative;overflow:hidden;
+    display:flex;flex-direction:column;gap:12px;
+    font-family:inherit;color:inherit;
+  }
+  .card::before{
+    content:"";position:absolute;top:0;right:0;left:0;height:3px;
+    background:linear-gradient(90deg,var(--blue-500),var(--blue-300));
+    transform:scaleX(0);transform-origin:right;transition:transform .3s;
+  }
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:var(--blue-200)}
+  .card:hover::before{transform:scaleX(1)}
+  .card:focus-visible{outline:3px solid var(--blue-300);outline-offset:2px}
+  .card .ico{
+    width:56px;height:56px;border-radius:14px;
+    background:linear-gradient(140deg,var(--blue-50),var(--blue-100));
+    border:1px solid var(--blue-200);
+    display:grid;place-items:center;
+    color:var(--blue-600);
+  }
+  .card .ico svg{width:30px;height:30px}
+  .card h3{font-size:1rem;font-weight:700;color:var(--blue-800);line-height:1.6}
+  .card .en{font-size:.74rem;color:var(--ink-soft);direction:ltr;text-align:right;font-weight:400;letter-spacing:.2px}
+  .card .tag{
+    margin-top:auto;align-self:flex-start;
+    font-size:.7rem;padding:3px 10px;border-radius:20px;
+    background:var(--blue-50);color:var(--blue-600);border:1px solid var(--blue-100);
+    font-weight:500;
+  }
+  .empty{
+    grid-column:1/-1;text-align:center;padding:50px 20px;color:var(--ink-soft);
+    background:var(--white);border:1px dashed var(--line);border-radius:var(--radius);
+    font-size:.9rem;
+  }
+  /* ---------- MODAL ---------- */
+  .overlay{
+    position:fixed;inset:0;background:rgba(12,29,44,.60);
+    backdrop-filter:blur(4px);
+    display:none;align-items:flex-start;justify-content:center;
+    padding:26px 16px;z-index:1000;overflow-y:auto;
+  }
+  .overlay.open{display:flex;animation:fade .22s ease}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .modal{
+    background:var(--white);border-radius:20px;width:100%;max-width:930px;
+    box-shadow:var(--shadow-lg);overflow:hidden;
+    animation:pop .28s cubic-bezier(.2,.8,.3,1);
+    margin:auto 0;
+  }
+  @keyframes pop{from{opacity:0;transform:translateY(22px) scale(.985)}to{opacity:1;transform:none}}
+  .m-head{
+    background:linear-gradient(135deg,#1d4f7a,#2c669f 55%,#3d7fc1);
+    color:#fff;padding:20px 22px;display:flex;gap:16px;align-items:center;
+    position:sticky;top:0;z-index:12;
+  }
+  .m-head .mico{
+    width:56px;height:56px;flex:0 0 56px;border-radius:15px;
+    background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.26);
+    display:grid;place-items:center;
+  }
+  .m-head .mico svg{width:31px;height:31px}
+  .m-head h2{font-size:1.16rem;font-weight:800;line-height:1.6}
+  .m-head .men{font-size:.8rem;direction:ltr;text-align:right;opacity:.9;font-weight:300}
+  .m-head .close{
+    margin-right:auto;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);
+    color:#fff;width:38px;height:38px;border-radius:11px;cursor:pointer;
+    font-size:1.2rem;line-height:1;display:grid;place-items:center;flex:0 0 38px;
+    transition:.2s;font-family:inherit;
+  }
+  .m-head .close:hover{background:rgba(255,255,255,.26);transform:rotate(90deg)}
+  /* tabs */
+  .tabs{
+    display:flex;gap:4px;overflow-x:auto;padding:10px 14px 0;
+    border-bottom:1px solid var(--line);background:var(--blue-50);
+    position:sticky;top:96px;z-index:11;
+    scrollbar-width:thin;
+  }
+  .tabs::-webkit-scrollbar{height:5px}
+  .tabs::-webkit-scrollbar-thumb{background:var(--blue-200);border-radius:4px}
+  .tab{
+    flex:0 0 auto;border:none;background:transparent;font-family:inherit;
+    font-size:.83rem;font-weight:500;color:var(--ink-soft);
+    padding:10px 15px;border-radius:10px 10px 0 0;cursor:pointer;
+    white-space:nowrap;transition:.2s;position:relative;bottom:-1px;
+    border-bottom:2.5px solid transparent;
+  }
+  .tab:hover{color:var(--blue-600);background:var(--white)}
+  .tab.active{color:var(--blue-700);background:var(--white);font-weight:700;border-bottom-color:var(--blue-500)}
+  .m-body{padding:22px 24px 26px;min-height:250px}
+  .panel{display:none;animation:fade .2s}
+  .panel.active{display:block}
+  .panel h4{
+    font-size:.98rem;font-weight:700;color:var(--blue-700);margin-bottom:12px;
+    display:flex;align-items:center;gap:9px;
+  }
+  .panel h4 .dot{width:8px;height:8px;border-radius:50%;background:var(--blue-400);flex:0 0 8px}
+  .panel p{font-size:.9rem;color:var(--ink-soft);text-align:justify;margin-bottom:12px}
+  .panel ul,.panel ol{margin:0 20px 14px 0;font-size:.885rem;color:var(--ink-soft)}
+  .panel li{margin-bottom:7px;text-align:justify}
+  .panel li b{color:var(--blue-800);font-weight:600}
+  .panel .en-inline{direction:ltr;display:inline-block;font-size:.8rem;color:var(--blue-500)}
+  /* table */
+  .tbl{
+    width:100%;border-collapse:separate;border-spacing:0;
+    font-size:.835rem;margin-bottom:16px;border:1px solid var(--line);
+    border-radius:12px;overflow:hidden;
+  }
+  .tbl th{
+    background:var(--blue-50);color:var(--blue-700);font-weight:700;
+    padding:10px 13px;text-align:right;font-size:.8rem;border-bottom:1px solid var(--line);
+  }
+  .tbl td{
+    padding:10px 13px;border-bottom:1px solid var(--line);color:var(--ink-soft);
+    vertical-align:top;
+  }
+  .tbl tr:last-child td{border-bottom:none}
+  .tbl tr:nth-child(even) td{background:#fbfdff}
+  .tbl td:first-child{color:var(--blue-800);font-weight:600;width:38%}
+  .tbl .num{direction:ltr;text-align:right;display:inline-block}
+  /* callouts */
+  .box{border-radius:12px;padding:14px 16px;margin-bottom:14px;font-size:.87rem;border:1px solid}
+  .box h5{font-size:.86rem;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .box ul{margin:0 18px 0 0}
+  .box.warn{background:var(--warn-bg);border-color:#f3ddb8;color:#7c4a06}
+  .box.warn h5{color:var(--warn)}
+  .box.danger{background:var(--danger-bg);border-color:#f2d2cf;color:#8a1f1f}
+  .box.danger h5{color:var(--danger)}
+  .box.ok{background:var(--ok-bg);border-color:#cfe9d7;color:#14603a}
+  .box.ok h5{color:var(--ok)}
+  .box ul li{margin-bottom:6px;text-align:justify}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+  .badge{
+    font-size:.76rem;padding:6px 12px;border-radius:9px;
+    background:var(--blue-50);border:1px solid var(--blue-200);color:var(--blue-700);
+    font-weight:500;direction:ltr;
+  }
+  .thread{
+    background:var(--blue-50);border-right:4px solid var(--blue-400);
+    border-radius:10px;padding:12px 15px;font-size:.855rem;color:var(--ink-soft);
+    margin-bottom:14px;
+  }
+  .thread b{color:var(--blue-800)}
+  /* accordion (FAQ) */
+  .acc{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:10px;background:var(--white)}
+  .acc summary{
+    cursor:pointer;padding:13px 16px;font-size:.87rem;font-weight:600;color:var(--blue-800);
+    list-style:none;display:flex;align-items:center;gap:10px;transition:.2s;
+  }
+  .acc summary::-webkit-details-marker{display:none}
+  .acc summary::before{
+    content:"؟";width:22px;height:22px;flex:0 0 22px;border-radius:7px;
+    background:var(--blue-100);color:var(--blue-600);font-size:.8rem;
+    display:grid;place-items:center;font-weight:700;
+  }
+  .acc summary:hover{background:var(--blue-50)}
+  .acc[open] summary{background:var(--blue-50);border-bottom:1px solid var(--line)}
+  .acc .ans{padding:13px 16px;font-size:.855rem;color:var(--ink-soft);text-align:justify;background:#fdfeff}
+  .acc .ans b{color:var(--blue-700)}
+  /* ---------- FOOTER ---------- */
+  footer.site{
+    margin-top:40px;
+    background:linear-gradient(180deg,#1b3f61,#12293d);
+    color:#c9dbeb;padding:30px 22px;text-align:center;
+  }
+  footer.site .fname{font-weight:700;color:#fff;font-size:1rem}
+  footer.site .fsub{font-size:.8rem;opacity:.8;margin-top:5px;font-weight:300}
+  footer.site .fline{
+    width:60px;height:2px;background:var(--blue-400);margin:14px auto;border-radius:2px;
+  }
+  footer.site small{font-size:.74rem;opacity:.62;display:block;margin-top:8px;font-weight:300}
+  body.locked{overflow:hidden}
+  @media(max-width:640px){
+    .hwrap{justify-content:center;text-align:center}
+    .brand{flex-direction:column;text-align:center}
+    .meta{justify-content:center;width:100%}
+    .m-head{padding:16px;gap:12px}
+    .m-head .mico{width:46px;height:46px;flex:0 0 46px}
+    .m-head .mico svg{width:25px;height:25px}
+    .m-head h2{font-size:1rem}
+    .tabs{top:auto;position:static}
+    .m-body{padding:18px 16px 22px}
+    .tbl td:first-child{width:44%}
+    .grid{grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:13px}
+    .card{padding:16px 14px}
+    .card .ico{width:48px;height:48px}
+    .card .ico svg{width:26px;height:26px}
+  }
+  @media print{
+    .overlay{position:static;display:block;padding:0;background:none}
+    .modal{box-shadow:none;max-width:100%}
+    .m-head .close,.tabs{display:none}
+    .panel{display:block!important;page-break-inside:avoid;margin-bottom:20px}
+    header.site,footer.site{color:#000;background:#fff}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site">
+  <div class="hwrap">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12h3l2-5 3 10 2.5-7 1.8 4H21"/>
+        </svg>
+      </div>
+      <div>
+        <h1>اطلس تجهیزات پزشکی</h1>
+        <p>راهنمای آموزشی دستگاه‌های پزشکی برای دانشجویان مهندسی پزشکی</p>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="meta-item">
+        <b>ابوالفضل اجلّی</b>
+        <span>دانشجوی مهندسی پزشکی</span>
+      </div>
+      <div class="meta-item">
+        <b>دانشگاه صنعتی همدان</b>
+        <span>Hamedan University of Technology</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= STATS ================= -->
+<div class="stats">
+  <div class="stat"><div><div class="n" id="statCount">۸</div><div class="l">دستگاه ثبت‌شده</div></div></div>
+  <div class="stat"><div><div class="n">۹</div><div class="l">بخش علمی در هر دستگاه</div></div></div>
+  <div class="stat"><div><div class="n">IEC / ISO</div><div class="l">استانداردهای مرجع</div></div></div>
+  <div class="stat"><div><div class="n">۲۷</div><div class="l">سوال خودآزمایی</div></div></div>
+</div>
+
+<!-- ================= MAIN ================= -->
+<main>
+  <div class="sec-head">
+    <h2>فهرست دستگاه‌ها</h2>
+    <p>برای مشاهده اطلاعات کامل هر دستگاه، روی کارت آن کلیک کنید.</p>
+  </div>
+
+  <div class="searchbar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+    </svg>
+    <input type="text" id="searchInput" placeholder="جستجوی دستگاه… (فارسی یا انگلیسی)" autocomplete="off">
+  </div>
+
+  <div class="grid" id="cardGrid"></div>
+</main>
+
+<!-- ================= MODAL ================= -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal" id="modal">
+    <div class="m-head">
+      <div class="mico" id="mIco"></div>
+      <div>
+        <h2 id="mTitle">—</h2>
+        <div class="men" id="mEn">—</div>
+      </div>
+      <button class="close" id="btnClose" aria-label="بستن" title="بستن (Esc)">✕</button>
+    </div>
+    <div class="tabs" id="tabBar"></div>
+    <div class="m-body" id="mBody"></div>
+  </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site">
+  <div class="fname">ابوالفضل اجلّی</div>
+  <div class="fsub">دانشجوی مهندسی پزشکی — دانشگاه صنعتی همدان</div>
+  <div class="fline"></div>
+  <small>اطلس تجهیزات پزشکی · نسخه آموزشی ۱٫۰ — محتوای این اطلس جنبه آموزشی دارد و جایگزین دفترچه راهنمای سازنده یا پروتکل‌های بالینی بیمارستان نیست.</small>
+  <small id="yearLine"></small>
+</footer>
+
+<script>
+/* =========================================================
+   اطلس تجهیزات پزشکی — داده‌ها
+   ========================================================= */
+const ICONS = {
+  ventilator:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="14" rx="2.5"/><path d="M6 4v-1.5M18 4v-1.5"/><path d="M6 12h2.5l1.8-4 2.2 8 1.7-5 1.3 3H18"/><path d="M7 18v2.5M17 18v2.5"/></svg>`,
+  spo2:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2.8h5v4.3H17a2 2 0 0 1 2 2v10.4a1.7 1.7 0 0 1-1.7 1.7H6.7A1.7 1.7 0 0 1 5 19.5V9.1a2 2 0 0 1 2-2h2.5z"/><path d="M7.6 13.6h2.1l1-2.2 1.5 4.4 1.3-2.9.9 1.4h2"/><circle cx="12" cy="5" r="1.1"/></svg>`,
+  ecg:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M5 12.5h2.6l1.2-2.6 1.4 5 1.6-6 1.4 5 1.1-1.4H19"/><path d="M8 2.6v2M16 2.6v2M8 19.4v2M16 19.4v2"/></svg>`,
+  incubator:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="11.5" rx="3"/><path d="M3 9.5h18"/><circle cx="9" cy="13" r="1.6"/><path d="M13.5 13h3.5"/><path d="M6 16.5v2.4M18 16.5v2.4M4.5 20.5h15"/></svg>`,
+  defib:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="18" height="13" rx="2.5"/><path d="M13.4 2.2 9.2 8h3.2l-1.6 4.4 4.6-6h-3.3z"/><path d="M7 20l1.6-2.4M17 20l-1.6-2.4"/></svg>`,
+  ultrasound:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3.2 4.2h8.6a3.4 3.4 0 0 1 3.4 3.4v2.6a3.4 3.4 0 0 1-3.4 3.4H6.2a3 3 0 0 1-3-3z"/><path d="M18.4 6.6a6.6 6.6 0 0 1 0 8.4"/><path d="M21 4.4a10 10 0 0 1 0 12.8"/><path d="M7.6 22v-4.6M5.2 22h4.8"/></svg>`,
+  ct:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10.8" r="8"/><circle cx="12" cy="10.8" r="3.4"/><path d="M12 2.8v4.6M12 14.2v4.6M3.8 10.8h4.8M15.4 10.8h4.8"/><path d="M4.2 20.6h15.6"/><path d="M9.6 20.6v-2.4M14.4 20.6v-2.4"/></svg>`,
+  patientMonitor:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="18" height="13.5" rx="2.2"/><path d="M5.2 10.5h2.4l1.2-2.8 1.7 5.5 1.7-4 1.3 2.3h3.3"/><path d="M8 17v3M16 17v3M6.2 20.5h11.6"/></svg>`,
+  mri:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="7"/><circle cx="12" cy="11" r="4.2"/><circle cx="12" cy="11" r="1.5"/><path d="M8.2 18v2.5M15.8 18v2.5M5.2 20.5h13.6"/><path d="M5 7.2h2.2M16.8 7.2H19"/></svg>`
+};
+
+/* ساختار هر دستگاه:
+   name, en, tag, icon, sections: {key,label,html} */
+const DEVICES = [
+  {
+    id:"ventilator",
+    name:"ونتیلاتور",
+    en:"Mechanical Ventilator",
+    tag:"تنفسی / مراقبت ویژه",
+    icon:"ventilator",
+    sections:[
+      { key:"principle", label:"اصل کارکرد", html:`
+        <h4><span class="dot"></span>اصل کارکرد</h4>
+        <p>ونتیلاتور یک سیستم <b>فشار مثبت</b> است که جریان هوای تنفسی را به‌صورت مکانیکی وارد راه هوایی بیمار می‌کند تا زمانی که بیمار توان تنفس خودبه‌خودی ندارد یا این تنفس ناکافی است، تبادل گازها حفظ شود. هوای فشرده‌ی خط بیمارستان (یا توربین داخلی دستگاه) وارد یک <b>مدار بسته‌ی تنفسی</b> می‌شود و از طریق لوله‌ی تراشه یا ماسک به ریه می‌رسد؛ هوای بازدمی نیز از همان مسیر (به‌کمک شیر یک‌طرفه) خارج می‌شود.</p>
+        <div class="thread">
+          <b>الگوریتم پایه‌ی کنترل:</b> دستگاه بر اساس یک متغیر هدف (حجم، فشار یا جریان) و یک متغیر سیکل (زمان، جریان یا فشار) کار می‌کند. در حالت <b>VCV</b> حجم جاری ثابت تحویل داده می‌شود و فشار متغیر است؛ در <b>PCV</b> فشار در سطح تعیین‌شده ثابت نگه داشته می‌شود و حجم جاری تابعی از مکانیک ریه‌ی بیمار است. حالت‌های کمکی–کنترلی (SIMV، PSV) و تهویه‌ی ماورای‌گردش‌خون (HFNC، APRV) نیز بر همین مبانی کنترل بنا شده‌اند.
+        </div>
+        <p>ابزار اصلی محاسبه، <b>معادله‌ی حرکت</b> است: <span class="en-inline">P<sub>aw</sub> = P<sub>insp</sub> + (V̇ × R<sub>aw</sub>) + (V × 1/C)</span>. به این معنا که فشار راه هوایی حاصل جمع فشار راه هوایی انتهایی مثبت، افت فشار ناشی از مقاومت جریان و بازده الاستیک ریه است. کامپیوتر دستگاه هر ۱۰ تا ۲۰ میلی‌ثانیه این متغیرها را می‌خواند و شیرهای تناسبی‌جریان را تنظیم می‌کند تا پروفایل فشار/جریان مورد نظر شکل بگیرد.</p>
+        <ul>
+          <li><b>مرحله‌ی دم:</b> شیر دم باز می‌شود و مخلوط اکسیژن/هوا با پروفایل جریان مشخص وارد بیمار می‌شود.</li>
+          <li><b>مرحله‌ی بازدم:</b> شیر دم بسته و شیر بازدم باز می‌شود؛ PEEP با یک شیر انسدادی تنظیم می‌شود.</li>
+          <li><b>همگام‌سازی (Trigger):</b> کاهش فشار یا تغییر جریان پایه در ابتدای دم، به‌عنوان تلاش تنفسی بیمار شناسایی و دم را آغاز می‌کند.</li>
+        </ul>`
+      },
+      { key:"parts", label:"اجزای اصلی", html:`
+        <h4><span class="dot"></span>اجزای اصلی و زنجیره‌ی عملکردی</h4>
+        <ul>
+          <li><b>واحد تولید جریان:</b> توربین (Blower) یا سیستم پنوماتیک دوگانه‌ی هوا/اکسیژن با رگولاتورهای دقیق و نسبت‌دهنده‌ی O₂ (میکسر اکسیژن).</li>
+          <li><b>سنسورهای شارش:</b> سنسورهای جریان سیم‌داغ (Hot-wire) یا دیفرانسیل‌فشار در دو سر مدار (دم و بازدم) برای اندازه‌گیری حجم جاری و جریان لحظه‌ای.</li>
+          <li><b>ترنسدیوسرهای فشار:</b> سنسورهای <span class="en-inline">P<sub>aw</sub></span> (فشار راه هوایی)، P<sub>exp</sub> و خط PEEP؛ همراه با خطوط پیلوترابط.</li>
+          <li><b>سنسور اکسیژن:</b> سلول سوختی گالوانیک یا پارامغناطیسی برای پایش کسر اکسیژن دمیده‌شده (FiO₂).</li>
+          <li><b>شیرهای تناسبی و سلونوئیدی:</b> کنترل دقیق جریان و مسیر دم/بازدم؛ عملگرهای سریع با زمان پاسخ میلی‌ثانیه‌ای.</li>
+          <li><b>واحد مرکزی:</b> برد پردازش سیگنال (MCU/DSP)، حافظه‌ی پارامترها، باتری پشتیبان و منبع تغذیه‌ی سوئیچینگ.</li>
+          <li><b>HMI و آلارم:</b> نمایشگر لمسی با نمایشگرهای موج و اعداد، انکودرهای تنظیم، بلندگوی آلارم با طبقه‌بندی اولویت‌دار.</li>
+          <li><b>مدار تنفسی و قطعات مصرفی:</b> لوله‌های حلقه‌ای، مرطوب‌کننده‌ی گرم‌شده (Heated Humidifier)، تله‌ی آب، فیلترهای ضدباکتریایی HEPA و شیر یک‌طرفه.</li>
+        </ul>
+        <div class="box ok"><h5>نکته‌ی مهندسی</h5><ul><li>دقت اندازه‌گیری حجم جاری به کیفیت کالیبراسیون سنسور جریان و نبود نشتی در اتصالات بستگی دارد؛ هر نشتی در مدار، باعث اختلاف بین حجم تنظیمی و حجم تحویلی می‌شود.</li></ul></div>`
+      },
+      { key:"clinical", label:"کاربرد بالینی", html:`
+        <h4><span class="dot"></span>کاربرد بالینی</h4>
+        <ul>
+          <li><b>نارسایی تنفسی حاد و مزمن:</b> ARDS، تشدید COPD، پنومونی شدید، ادم ریه.</li>
+          <li><b>بیماران بی‌هوش یا تحت بیهوشی:</b> در اتاق عمل برای تهویه‌ی کنترل‌شده در طول جراحی.</li>
+          <li><b>واحد مراقبت ویژه (ICU):</b> پشتیبانی تهویه‌ای کوتاه‌مدت تا طولانی‌مدت و جداسازی تدریجی (Weaning).</li>
+          <li><b>نارسی و نوزادان:</b> حالت‌های مخصوص نوزاد با حجم‌های کم و PEEP پایین.</li>
+          <li><b>مراقبت‌های تسکینی/انتقال:</b> ونتیلاتورهای قابل حمل برای انتقال بیمار بین بخش‌ها.</li>
+        </ul>
+        <div class="box warn"><h5>کاربرد پزشکی–مهندسی</h5><ul><li>مهندس پزشکی در انتخاب حالت تهویه، تنظیم پارامترهای اولیه (VT بر مبنای وزن پیش‌بینی‌شده، PEEP، FiO₂) و پایش منحنی‌های ریه همراه تیم درمان نقش مشورتی دارد.</li></ul></div>`
+      },
+      { key:"specs", label:"مشخصات فنی", html:`
+        <h4><span class="dot"></span>مشخصات فنی (نوعی)</h4>
+        <table class="tbl">
+          <tr><th>پارامتر</th><th>مقدار نوعی</th></tr>
+          <tr><td>بازه‌ی حجم جاری (VT)</td><td><span class="num">20 – 2000 mL</span> (بزرگسال) / <span class="num">2 – 100 mL</span> (نوزاد)</td></tr>
+          <tr><td>بازه‌ی نرخ تنفس</td><td><span class="num">1 – 100 b/min</span></td></tr>
+          <tr><td>بازه‌ی PEEP</td><td><span class="num">0 – 50 cmH₂O</span></td></tr>
+          <tr><td>بازه‌ی فشار دم (PCV)</td><td><span class="num">5 – 80 cmH₂O</span></td></tr>
+          <tr><td>دقت اندازه‌گیری حجم</td><td>± ۱۰٪ یا ± <span class="num">20 mL</span> (هرکدام بزرگ‌تر)</td></tr>
+          <tr><td>دقت اندازه‌گیری فشار</td><td>± ۲ <span class="num">cmH₂O</span></td></tr>
+          <tr><td>دقت FiO₂</td><td>± ۳٪ از مقدار تنظیمی</td></tr>
+          <tr><td>نوع سیگنال خروجی</td><td>دیجیتال (RS-232 / USB / اترنت)، آنالوگ (0–10 V) برای ثبت، خروجی های‌لوول آلارم</td></tr>
+          <tr><td>منبع محرک</td><td>هوای فشرده <span class="num">2.5–5.5 bar</span> و اکسیژن <span class="num">2.5–5.5 bar</span> یا توربین داخلی</td></tr>
+          <tr><td>توان مصرفی</td><td><span class="num">150 – 400 W</span> در حالت کاری، <span class="num">&lt; 50 W</span> در حالت آماده‌به‌کار</td></tr>
+          <tr><td>باتری پشتیبان</td><td>حداقل <span class="num">30 – 60 دقیقه</span> کارکرد مستقل</td></tr>
+          <tr><td>صفحه‌نمایش</td><td><span class="num">10 – 15 اینچ</span> لمسی رنگی با نمایش منحنی‌های فشار–حجم–جریان</td></tr>
+        </table>
+        <p>مقادیر فوق نمونه‌های متعارف بازار هستند و مقدار دقیق هر دستگاه باید از بروشور سازنده استخراج شود؛ در طراحی و تست، همیشه به مشخصات اعلامی مدل مرجع اتکا کنید.</p>`
+      },
+      { key:"standards", label:"استانداردها و کلاس خطر", html:`
+        <h4><span class="dot"></span>استانداردها و طبقه‌بندی خطر</h4>
+        <div class="badges">
+          <span class="badge">IEC 60601-1</span>
+          <span class="badge">IEC 60601-1-2</span>
+          <span class="badge">IEC 60601-2-12</span>
+          <span class="badge">ISO 80601-2-12</span>
+          <span class="badge">ISO 14971</span>
+          <span class="badge">ISO 13485</span>
+        </div>
+        <ul>
+          <li><b>ISO 80601-2-12 / IEC 60601-2-12:</b> استاندارد اختصاصی ونتیلاتورهای مراقبت ویژه؛ الزامات عملکرد ضروری، دقت حجم و فشار، و همگام‌سازی با بیمار را تعیین می‌کند.</li>
+          <li><b>IEC 60601-1:</b> الزامات عمومی ایمنی پایه و عملکرد ضروری تجهیزات برقی پزشکی.</li>
+          <li><b>IEC 60601-1-2:</b> سازگاری الکترومغناطیسی (EMC) — بسیار حیاتی چون آلارم‌ها و سنسورهای دقیق نباید تحت تأثیر تداخل قرار گیرند.</li>
+          <li><b>ISO 14971:</b> مدیریت ریسک تجهیزات پزشکی در تمام چرخه‌ی عمر.</li>
+          <li><b>ISO 13485:</b> سیستم مدیریت کیفیت تولیدکننده.</li>
+        </ul>
+        <table class="tbl">
+          <tr><th>ویژگی طبقه‌بندی</th><th>وضعیت ونتیلاتور</th></tr>
+          <tr><td>کلاس حفاظت الکتریکی</td><td>کلاس I (اتصال به هادی حفاظتی زمین) یا کلاس II در مدل‌های قابل حمل</td></tr>
+          <tr><td>نوع قطعه‌ی کاربرد (Applied Part)</td><td>نوع BF — مدار تنفسی از نوع Type CF محسوب نمی‌شود</td></tr>
+          <tr><td>درجه‌ی حفاظت در برابر آب/گردوغبار</td><td>معمولاً IP21 یا IPX1 (کاربرد عمومی) و IPX4 در مدل‌های قابل حمل</td></tr>
+          <tr><td>حالت کار</td><td>کارکرد پیوسته (Continuous Operation)</td></tr>
+          <tr><td>طبقه‌بندی خطر</td><td>خطر بالا / کلاس C بر مبنای ریسک ناشی از قطع تهویه</td></tr>
+        </table>`
+      },
+      { key:"safety", label:"ایمنی و هشدارها", html:`
+        <h4><span class="dot"></span>ایمنی بیمار و اپراتور</h4>
+        <div class="box danger">
+          <h5>هشدارهای بحرانی برای بیمار</h5>
+          <ul>
+            <li>قطع کامل تهویه در بیمار وابسته به ونتیلاتور، در چند دقیقه منجر به هیپوکسی و مرگ می‌شود؛ بنابراین همیشه <b>ونتیلاتور پشتیبان و کیسه‌ی احیا (Ambu)</b> در دسترس باشد.</li>
+            <li>پیش از اتصال به بیمار جدید، مدار تنفسی، مرطوب‌کننده و فیلترها باید نو یا استریل باشد (ریسک عفونت بیمارستانی).</li>
+            <li>ریسک <b>ولوتروما</b> (پارگی آلوئولی) با فشار راه هوایی بیش از حد و <b>بازجذب اکسیژن</b> با FiO₂ بالای طولانی‌مدت وجود دارد؛ آستانه‌های سقف فشار را جدی بگیرید.</li>
+            <li>در بیماران با تراکئوستومی یا لوله‌ی درون‌تراشه، جدا‌شدن اتصال یک خطر جدی است و باید با آلارم نشتی/شکست مدار پایش شود.</li>
+          </ul>
+        </div>
+        <div class="box warn">
+          <h5>هشدارهای اپراتور و ایمنی الکتریکی</h5>
+          <ul>
+            <li>خطای زمین (Equipotential Bonding) و اتصال نامناسب به زمین بیمارستانی می‌تواند جریان نشتی خطرناک ایجاد کند؛ تست ایمنی الکتریکی دوره‌ای الزامی است.</li>
+            <li>هوای فشرده و اکسیژن باید از خطوط استاندارد با رگولاتور و فیلتر مناسب تأمین شود؛ استفاده از گاز آلوده به آب یا روغن به سنسورها آسیب می‌زند.</li>
+            <li>در نبود برق بیمارستان، باتری پشتیبان و سوخت‌رسانی گاز باید پیش از استفاده بررسی شود.</li>
+            <li>آلارم‌ها نباید بی‌دلیل خاموش یا بی‌صدا شوند؛ خاموشی کامل آلارم، علت اصلی حوادث ونتیلاسیون گزارش شده است.</li>
+          </ul>
+        </div>
+        <div class="box ok"><h5>توصیه‌ی عملی برای مهندس پزشکی</h5><ul><li>پیش از شروع شیفت، تست مدار، تست خودکار دستگاه (Self-Test) و بررسی تاریخ آخرین کالیبراسیون را در چک‌لیست قرار دهید.</li></ul></div>`
+      },
+      { key:"troubleshoot", label:"خرابی‌های رایج و عیب‌یابی", html:`
+        <h4><span class="dot"></span>خرابی‌های رایج و عیب‌یابی</h4>
+        <table class="tbl">
+          <tr><th>مشکل</th><th>علت احتمالی و راه‌حل</th></tr>
+          <tr><td>آلارم “Low Tidal Volume”</td><td>نشتی در مدار، سست بودن اتصال لوله‌ی تراشه، یا تجمع آب در مدار؛ اتصالات را بررسی و تله‌ی آب را خالی کنید. در صورت ادامه، کالیبراسیون سنسور جریان را بازبینی کنید.</td></tr>
+          <tr><td>آلارم فشار راه هوایی بالا</td><td>انسداد لوله (ترشح)، خم‌شدگی مدار، یا کاهش کمپلیانس ریه؛ ساکشن، بازکردن مدار و بازبینی وضعیت بالینی بیمار.</td></tr>
+          <tr><td>عدم تشخیص تلاش تنفسی (Trigger حساس نشدن)</td><td>تنظیم نامناسب آستانه‌ی حساسیت، PEEP نامناسب یا خطای سنسور فشار؛ حساسیت را گام‌به‌گام تنظیم، PEEP و ترنسدیوسر فشار را بررسی کنید.</td></tr>
+          <tr><td>خطای “O₂ Supply Failure”</td><td>فشار ناکافی اکسیژن خط، نشتی در اتصال سریع، یا خرابی رگولاتور؛ فشار خط، اتصال و رگولاتور را تست کنید.</td></tr>
+          <tr><td>نوسان FiO₂ یا خوانش نادرست آن</td><td>فرسودگی سلول سوختی اکسیژن (عمر معمول ۱–۲ سال) یا نشتی در مسیر میکسر؛ سنسور را تعویض و مسیر را تست کنید.</td></tr>
+          <tr><td>کاهش عمر باتری و قطع ناگهانی در برق‌قطع</td><td>افت ظرفیت باتری لید-اسید/لیتیومی؛ تست ظرفیت دوره‌ای و تعویض باتری طبق برنامه‌ی سازنده.</td></tr>
+          <tr><td>عدم پاسخ صفحه‌نمایش لمسی</td><td>خطای Firmware یا کابل فلت داخلی؛ ری‌استارت نرم، به‌روزرسانی نرم‌افزار و بررسی کابل‌های داخلی.</td></tr>
+          <tr><td>خطای Self-Test در شروع کار</td><td>سنسور جریان/فشار نامعتبر، شیرهای تناسبی معیوب یا مرطوب؛ تمیز و خشک کردن مسیر و اجرای مجدد تست. در صورت تکرار، تعویض قطعه‌ی معیوب.</td></tr>
+        </table>`
+      },
+      { key:"maintenance", label:"نگهداری و کالیبراسیون", html:`
+        <h4><span class="dot"></span>نگهداری، کالیبراسیون و QC</h4>
+        <ul>
+          <li><b>روزانه:</b> بررسی آلارم‌ها، تست مدار و اتصالات، بررسی سطح مرطوب‌کننده، پاک‌سازی بیرونی با پارچه‌ی نرم و محلول ضدعفونی سازگار.</li>
+          <li><b>هفتگی:</b> بررسی و خالی‌کردن تله‌ی آب، تست باتری، بررسی فیلترهای ورودی و اتصالات گاز.</li>
+          <li><b>ماهیانه:</b> تست عملکرد با شبیه‌ساز ریه (Test Lung)، بررسی دقت حجم و فشار در برابر آنالیزور جریان مرجع.</li>
+          <li><b>سالانه:</b> کالیبراسیون کامل سنسور جریان، ترنسدیوسرهای فشار و سلول اکسیژن، تست ایمنی الکتریکی (جریان نشتی، مقاومت زمین)، به‌روزرسانی Firmware.</li>
+          <li><b>مستندسازی:</b> هر کالیبراسیون باید با گواهی و برچسب تاریخ انقضا ثبت شود؛ در صورت خارج از تلورانس بودن، دستگاه تا رفع خطا از سرویس خارج شود.</li>
+        </ul>
+        <div class="box warn"><h5>کالیبراسیون سنسور جریان</h5><ul><li>بیشترین منبع خطای ونتیلاتور، درفت سنسور جریان است؛ تست آن با یک فلومتر مرجع کالیبره انجام می‌شود و پروفایل جریان سینوسی/مربعی برای همه‌ی بازه‌های جریان آزمون می‌شود.</li></ul></div>
+        <div class="box ok"><h5>تعویض قطعات مصرفی</h5><ul><li>فیلترهای HEPA، مرطوب‌کننده‌ها و لوله‌های یک‌بارمصرف طبق دستور سازنده و نه بیشتر از مدت تعیین‌شده استفاده شوند.</li></ul></div>`
+      },
+      { key:"quiz", label:"سوالات خودآزمایی", html:`
+        <h4><span class="dot"></span>سوالات خودآزمایی</h4>
+        <details class="acc"><summary>۱. در حالت VCV چه پارامتری ثابت نگه داشته می‌شود و چه پارامتری متغیر است؟</summary>
+          <div class="ans"><b>پاسخ:</b> در VCV (Volume-Control Ventilation) حجم جاری و نرخ تنفس ثابت تحویل داده می‌شود، درحالی‌که فشار راه هوایی متناسب با مکانیک ریه‌ی بیمار (مقاومت و کمپلیانس) متغیر است. در مقابل، در PCV فشار ثابت و حجم تابع مکانیک ریه است.</div>
+        </details>
+        <details class="acc"><summary>۲. تفاوت سنسور جریان سیم‌داغ و سنسور دیفرانسیل‌فشار در ونتیلاتور چیست؟</summary>
+          <div class="ans"><b>پاسخ:</b> سنسور سیم‌داغ جریان را بر اساس اتلاف حرارت سیم اندازه‌گیری می‌کند و پاسخ سریعی دارد؛ سنسور دیفرانسیل‌فشار با اختلاف فشار دو سر یک ساکن‌شکن، جریان را محاسبه می‌کند. در هر دو مورد، کالیبراسیون و رفع نشتی پیش‌شرط دقت اندازه‌گیری است.</div>
+        </details>
+        <details class="acc"><summary>۳. اگر آلارم “Low Tidal Volume” فعال شود، نخستین اقدام‌های عیب‌یابی چیست؟</summary>
+          <div class="ans"><b>پاسخ:</b> ابتدا وضعیت بیمار (علائم حیاتی) بررسی می‌شود؛ سپس نشتی مدار و اتصالات لوله‌ی تراشه، تجمع آب و انسداد مسیر، و در گام بعد کالیبراسیون سنسور جریان و اعتبار مقادیر اندازه‌گیری‌شده بازبینی می‌شود.</div>
+        </details>`
+      }
+    ]
+  },
+
+  {
+    id:"spo2",
+    name:"پالس اکسیمتر",
+    en:"Pulse Oximeter",
+    tag:"پایش علائم حیاتی",
+    icon:"spo2",
+    sections:[
+      { key:"principle", label:"اصل کارکرد", html:`
+        <h4><span class="dot"></span>اصل کارکرد</h4>
+        <p>پالس اکسیمتر یک روش <b>غیرتهاجمی و اسپکتروفتومتری</b> است که درصد اشباع هموگلوبین با اکسیژن (SpO₂) را اندازه می‌گیرد. پایه‌ی فیزیکی آن <b>قانون بیر–لامبرت</b> است: نور جذب‌شده توسط یک محیط، با غلظت ماده‌ی جذب‌کننده متناسب است. هموگلوبین اکسیژن‌دار (HbO₂) و هموگلوبین احیاشده (Hb) در طول‌موج‌های مختلف الگوی جذب متفاوتی دارند.</p>
+        <div class="thread">
+          <b>اصل Ratios of Ratios:</b> دستگاه دو نور با طول‌موج معمول <span class="en-inline">660 nm</span> (سرخ) و <span class="en-inline">940 nm</span> (مادون قرمز) به بافت می‌تاباند. نسبت جذب نور سرخ به مادون قرمز، که فقط به مؤلفه‌ی ضربانی (شریانی) نگاه می‌کند، به SpO₂ تبدیل می‌شود. حذف مؤلفه‌ی ثابت بافت (DC)، خطای ناشی از پوست، استخوان و ورید را کنار می‌گذارد.
+        </div>
+        <ul>
+          <li><b>تولید نور:</b> لامپ‌های LED با طول‌موج دقیق (۶۶۰ و ۹۴۰ نانومتر) به‌صورت متناوب روشن/خاموش می‌شوند.</li>
+          <li><b>دریافت نور:</b> فوتودیود در طرف مقابل انگشت، شدت نور عبوری هر طول‌موج را اندازه می‌گیرد (حالت Transmission) یا نور بازتابی را می‌گیرد (حالت Reflectance).</li>
+          <li><b>تفکیک مؤلفه‌ی ضربانی:</b> تغییرات شدت نور ناشی از تپش قلب، منحنی پلتیسموگرافیک (Plethysmogram) را می‌سازد که مبنای محاسبه‌ی SpO₂ و نرخ نبض است.</li>
+          <li><b>تبدیل به عدد:</b> منحنی کالیبراسیون تجربی سازنده (بر پایه‌ی مطالعه روی داوطلبان) نسبت R را به SpO₂ نگاشت می‌کند.</li>
+        </ul>`
+      },
+      { key:"parts", label:"اجزای اصلی", html:`
+        <h4><span class="dot"></span>اجزای اصلی</h4>
+        <ul>
+          <li><b>پروب (سنسور):</b> جفت LED در دو طول‌موج (۶۶۰ و ۹۴۰ نانومتر) + فوتودیود؛ در انواع <b>انگشتی (Clip)</b>، <b>گوشی</b>، <b>پیشانی (Reflectance)</b> و <b>نوزادی (Wrap)</b>.</li>
+          <li><b>سنسور تشخیص حضور انگشت:</b> برای جلوگیری از خطای “صفحه‌ی درخشان” و کنترل شدت نور.</li>
+          <li><b>واحد پیش‌پردازش آنالوگ:</b> تقویت‌کننده‌ی ترانشیمی‌دانس (TIA)، فیلتر نوارگذر برای حذف نویز ۵۰/۶۰ هرتز و نور محیط، نمونه‌بردار و مبدل آنالوگ به دیجیتال (ADC).</li>
+          <li><b>پردازنده/برد کنترل:</b> الگوریتم محاسبه‌ی نسبت R، تشخیص پرفیوژن ضعیف، محاسبه‌ی نرخ نبض و سرعت پاسخ؛ به‌همراه حافظه‌ی روند.</li>
+          <li><b>نمایشگر:</b> OLED/LCD با نمایش SpO₂، نرخ نبض (PR)، شاخص کیفیت سیگنال (PI/SQI)، نمایشگر موج و نشانگر باتری.</li>
+          <li><b>آلارم:</b> آلارم شنیداری/دیداری برای SpO₂ پایین، نرخ نبض غیرطبیعی یا ضعف سیگنال؛ همراه با رله‌ی های‌لوول در مدل‌های بیمارستانی.</li>
+          <li><b>منبع تغذیه و باتری:</b> باتری لیتیومی قابل شارژ با عمر کاری معمول ۱۰–۲۴ ساعت یا باتری سکه‌ای در مدل‌های جیبی.</li>
+        </ul>
+        <div class="box ok"><h5>نکته‌ی مهندسی</h5><ul><li>طول‌موج LED و مشخصه‌ی فوتودیود، هسته‌ی دقت دستگاه‌اند؛ جایگزینی پروب با پروب غیراصل یا غیرکالیبره، خطای چند درصدی در SpO₂ ایجاد می‌کند.</li></ul></div>`
+      },
+      { key:"clinical", label:"کاربرد بالینی", html:`
+        <h4><span class="dot"></span>کاربرد بالینی</h4>
+        <ul>
+          <li><b>پایش پیوسته‌ی اشباع اکسیژن</b> در ICU، اتاق عمل، ریکاوری، اورژانس و آمبولانس و واحدهای ویژه‌ی نوزادان (NICU).</li>
+          <li><b>تشخیص سریع هیپوکسی</b> پیش از بروز علائم بالینی و پایش پاسخ به اکسیژن‌درمانی و تهویه‌ی کمکی.</li>
+          <li><b>غربالگری آپنه‌ی خواب و بیماری‌های تنفسی</b> در ترکیب با پلی‌سومنوگرافی.</li>
+          <li><b>ارزیابی تست راه‌رفتن ۶ دقیقه‌ای (6MWT)</b> و توان‌سنجی قلبی–ریوی.</li>
+          <li><b>پایش نوزادان</b> با پروب‌های مخصوص دست/پا، به‌ویژه برای تشخیص زودهنگام بیماری‌های مادرزادی قلب.</li>
+          <li><b>پایش پس از بیهوشی و در بخش‌های بیماران پرخطر</b> به‌عنوان بخشی از سیستم Early Warning Score.</li>
+        </ul>
+        <div class="box warn"><h5>محدودیت بالینی</h5><ul><li>SpO₂ اشباع هموگلوبین را می‌سنجد، نه محتوای اکسیژن؛ در کم‌خونی شدید یا مسمومیت با مونوکسید کربن (Carboxyhemoglobin) مقدار SpO₂ می‌تواند گمراه‌کننده باشد.</li></ul></div>`
+      },
+      { key:"specs", label:"مشخصات فنی", html:`
+        <h4><span class="dot"></span>مشخصات فنی (نوعی)</h4>
+        <table class="tbl">
+          <tr><th>پارامتر</th><th>مقدار نوعی</th></tr>
+          <tr><td>بازه‌ی اندازه‌گیری SpO₂</td><td><span class="num">0 – 100 %</span> (بازه‌ی معتبر بالینی معمولاً <span class="num">70 – 100 %</span>)</td></tr>
+          <tr><td>دقت SpO₂</td><td>± ۲٪ برای <span class="num">90 – 100 %</span>، ± ۳٪ برای <span class="num">70 – 89 %</span></td></tr>
+          <tr><td>بازه‌ی نرخ نبض</td><td><span class="num">20 – 250 b/min</span></td></tr>
+          <tr><td>دقت نرخ نبض</td><td>± ۳ <span class="num">b/min</span> یا ± ۲٪ (هر کدام بزرگ‌تر)</td></tr>
+          <tr><td>طول‌موج نور</td><td><span class="num">660 nm</span> (سرخ) و <span class="num">940 nm</span> (مادون قرمز)</td></tr>
+          <tr><td>زمان پاسخ (Response Time)</td><td>معمولاً <span class="num">4 – 10 s</span>؛ حالت میانگین‌گیری ۴ ثانیه در مدل‌های بیمارستانی</td></tr>
+          <tr><td>نوع سیگنال خروجی</td><td>دیجیتال (USB / RS-232 / بلوتوث / Wi-Fi)، آنالوگ <span class="num">0–1 V</span> برای SpO₂، خروجی های‌لوول آلارم</td></tr>
+          <tr><td>توان مصرفی</td><td><span class="num">10 – 60 mW</span> (جیبی) تا <span class="num">2 – 5 W</span> (بیمارستانی رومیزی)</td></tr>
+          <tr><td>عمر باتری</td><td><span class="num">10 – 24 ساعت</span> کارکرد پیوسته (مدل‌های قابل حمل)</td></tr>
+          <tr><td>درجه‌ی حفاظت</td><td>معمولاً IPX1 تا IPX2 (بدون آب‌بندی کامل)</td></tr>
+        </table>`
+      },
+      { key:"standards", label:"استانداردها و کلاس خطر", html:`
+        <h4><span class="dot"></span>استانداردها و طبقه‌بندی خطر</h4>
+        <div class="badges">
+          <span class="badge">ISO 80601-2-61</span>
+          <span class="badge">IEC 60601-1</span>
+          <span class="badge">IEC 60601-1-2</span>
+          <span class="badge">IEC 60601-1-8</span>
+          <span class="badge">ISO 14971</span>
+        </div>
+        <ul>
+          <li><b>ISO 80601-2-61:</b> استاندارد اختصاصی پالس اکسیمتر؛ الزامات دقت، زمان پاسخ، پایداری طولانی‌مدت و شرایط آزمون را تعیین می‌کند. این استاندارد جای IEC 60601-2-49 در نسخه‌ی جدید است.</li>
+          <li><b>IEC 60601-1-8:</b> الزامات سیستم‌های آلارم در تجهیزات پزشکی (اولویت، رنگ و صدا).</li>
+          <li><b>IEC 60601-1-2:</b> سازگاری الکترومغناطیسی — اهمیت زیاد، چون سیگنال نوری بسیار ضعیف است و تداخل نوری/الکتریکی می‌تواند خوانش را مختل کند.</li>
+        </ul>
+        <table class="tbl">
+          <tr><th>ویژگی طبقه‌بندی</th><th>وضعیت پالس اکسیمتر</th></tr>
+          <tr><td>کلاس حفاظت الکتریکی</td><td>کلاس II یا کلاس III (با منبع باتری) در مدل‌های جیبی</td></tr>
+          <tr><td>نوع قطعه‌ی کاربرد</td><td>نوع BF برای پروب انگشتی استاندارد؛ <b>نوع CF</b> در پروب‌های مخصوص نوزاد و برخی پروب‌های پیشانی</td></tr>
+          <tr><td>درجه‌ی حفاظت در برابر آب</td><td>معمولاً IPX1 تا IPX4</td></tr>
+          <tr><td>حالت کار</td><td>کارکرد پیوسته (Continuous)</td></tr>
+          <tr><td>طبقه‌بندی خطر</td><td>خطر متوسط تا بالا؛ پایش پیوسته‌ی بیمار حساس محسوب می‌شود</td></tr>
+        </table>`
+      },
+      { key:"safety", label:"ایمنی و هشدارها", html:`
+        <h4><span class="dot"></span>ایمنی بیمار و اپراتور</h4>
+        <div class="box danger">
+          <h5>هشدارهای بیمار</h5>
+          <ul>
+            <li>نور LED دستگاه در محدوده‌ی امن چشمی است، اما خیره شدن مستقیم و طولانی به نور پروب مطلوب نیست.</li>
+            <li>در بیماران با آلرژی پوستی، پروب ممکن است واکنش تحریکی ایجاد کند؛ محل پروب را هر ۲–۴ ساعت جابه‌جا کنید.</li>
+            <li>در بیماران با پرفیوژن ضعیف (شوک، هیپوترمی، انسداد عروق)، خوانش نادرست است و تصمیم‌گیری درمانی نباید فقط بر آن استوار شود.</li>
+            <li>مسمومیت با CO، متهموگلوبینمی، رنگ ناخن، لاک، کثیفی یا نور شدید محیطی از عوامل خطای شایع هستند.</li>
+          </ul>
+        </div>
+        <div class="box warn">
+          <h5>هشدارهای اپراتور</h5>
+          <ul>
+            <li>کابل پروب باید در برابر کشش و گره‌خوردگی محافظت شود؛ کشش مکرر به شکستگی سیم داخلی و خطای “Probe Off” می‌انجامد.</li>
+            <li>پاک‌سازی پروب با الکل ایزوپروپیل ۷۰٪ و پرهیز از خیساندن کامل در مایع.</li>
+            <li>شمارش صحیح و فعال بودن آلارم‌های SpO₂/نبض در زمان پایش پیوسته ضروری است.</li>
+            <li>استفاده از پروب مطابق نوع بیمار (بزرگسال/کودک/نوزاد) برای پیشگیری از فشار موضعی و نکروز.</li>
+          </ul>
+        </div>
+        <div class="box ok"><h5>نکته‌ی ایمنی نوری</h5><ul><li>تداخل نور فلورسنت، نور خورشید مستقیم و نور عمل جراحی می‌تواند سیگنال را مختل کند؛ در این شرایط روی پروب را با یک لایه‌ی کدر بپوشانید.</li></ul></div>`
+      },
+      { key:"troubleshoot", label:"خرابی‌های رایج و عیب‌یابی", html:`
+        <h4><span class="dot"></span>خرابی‌های رایج و عیب‌یابی</h4>
+        <table class="tbl">
+          <tr><th>مشکل</th><th>علت احتمالی و راه‌حل</th></tr>
+          <tr><td>پیام “Probe Off” یا “No Finger” مکرر</td><td>قطع سیم پروب (شکستگی در ناحیه‌ی اتصال)، آلودگی لنزها، یا قرار نادرست پروب؛ تست پروب جایگزین، تمیزکردن لنز و بازبینی محل پروب.</td></tr>
+          <tr><td>خوانش SpO₂ پایین ولی بیمار بدون علائم هیپوکسی</td><td>پرفیوژن ضعیف، سردی اندام، لاک ناخن، حرکت زیاد یا تداخل نور؛ گرم‌کردن اندام، تغییر محل، حذف منبع نور و استفاده از حالت میانگین‌گیری.</td></tr>
+          <tr><td>موج پلتیسموگراف بی‌کیفیت و پرنویز</td><td>حرکت بیمار، پروب شل، یا نویز الکتریکی؛ پایدارسازی اندام و بررسی اتصالات و کابل.</td></tr>
+          <tr><td>نوسان شدید مقادیر (بی‌ثباتی خوانش)</td><td>باتری ضعیف یا منبع تغذیه‌ی نامناسب، خطای سنسور؛ تعویض باتری و تست با پروب مرجع.</td></tr>
+          <tr><td>دقت پایین در بازه‌ی SpO₂ کمتر از ۸۰٪</td><td>محدودیت ذاتی منحنی کالیبراسیون سازنده؛ استفاده از پایش مکمل مانند ABG (گاز خون شریانی).</td></tr>
+          <tr><td>عدم روشن شدن دستگاه</td><td>باتری خالی/معیوب، فیوز سوخته یا خطای برد؛ شارژ/تعویض باتری و بررسی فیوز و آداپتور.</td></tr>
+          <tr><td>آلارم‌ها کار نمی‌کنند</td><td>بی‌صدا‌کردن دستی، نقص بلندگو یا تنظیم سطح صدا؛ بازبینی تنظیمات آلارم و تست شنیداری.</td></tr>
+        </table>`
+      },
+      { key:"maintenance", label:"نگهداری و کالیبراسیون", html:`
+        <h4><span class="dot"></span>نگهداری، کالیبراسیون و QC</h4>
+        <ul>
+          <li><b>روزانه:</b> بازرسی چشمی پروب و کابل، تمیزکاری لنزها و بدنه، تست عملکرد آلارم و بررسی وضعیت باتری.</li>
+          <li><b>هفتگی/ماهانه:</b> تست با شبیه‌ساز پالس اکسیمتر (SpO₂ Simulator) در نقاط مرجع ۷۰٪، ۸۰٪، ۹۰٪ و ۱۰۰٪؛ بررسی نرخ نبض در محدوده‌های مختلف.</li>
+          <li><b>سالانه:</b> کالیبراسیون کامل با شبیه‌ساز کالیبره، تست ایمنی الکتریکی (جریان نشتی و مقاومت عایق)، به‌روزرسانی نرم‌افزار.</li>
+          <li><b>تعویض پروب:</b> پس از مشاهده‌ی خطای مکرر، پوشش فرسوده یا کاهش شدت نور، پروب اصلی دستگاه را جایگزین کنید.</li>
+          <li><b>روند و مستندسازی:</b> ثبت نتایج کالیبراسیون، ثبت شماره‌ی سری پروب‌ها و برچسب‌گذاری تاریخ انقضای کالیبراسیون روی دستگاه.</li>
+        </ul>
+        <div class="box warn"><h5>هشدار کالیبراسیون</h5><ul><li>پالس اکسیمتر معمولاً کالیبراسیون کاربر ندارد؛ اما استفاده از پروب شبیه‌ساز یا پروب معیوب، خطای واقعی را پنهان می‌کند. تست با شبیه‌ساز، راهبرد استاندارد QC است.</li></ul></div>
+        <div class="box ok"><h5>نگهداری پروب</h5><ul><li>کابل پروب را با حلقه‌های بزرگ و بدون گره نگه‌داری کنید؛ شکست در نوک پروب شایع‌ترین علت خرابی است.</li></ul></div>`
+      },
+      { key:"quiz", label:"سوالات خودآزمایی", html:`
+        <h4><span class="dot"></span>سوالات خودآزمایی</h4>
+        <details class="acc"><summary>۱. چرا پالس اکسیمتر از دو طول‌موج ۶۶۰ و ۹۴۰ نانومتر استفاده می‌کند؟</summary>
+          <div class="ans"><b>پاسخ:</b> چون HbO₂ و Hb در این دو طول‌موج نسبت جذب متفاوتی دارند؛ نسبت جذب نور سرخ به مادون قرمز (Ratio of Ratios) به‌عنوان شاخص اشباع اکسیژن به‌کار می‌رود. دو طول‌موج به دستگاه امکان محاسبه‌ی SpO₂ مستقل از ضخامت و رنگ بافت را می‌دهد.</div>
+        </details>
+        <details class="acc"><summary>۲. چرا حرکت بیمار و پرفیوژن ضعیف باعث خطای پالس اکسیمتری می‌شود؟</summary>
+          <div class="ans"><b>پاسخ:</b> چون سیگنال، تفاوت مؤلفه‌ی ضربانی (AC) نسبت به مؤلفه‌ی ثابت (DC) است؛ در پرفیوژن ضعیف این تفاوت بسیار کوچک و در نویز حرکت، مؤلفه‌ی ضربانی کاذب ایجاد می‌شود. الگوریتم‌های میانگین‌گیری و شاخص کیفیت سیگنال برای مواجهه با این شرایط طراحی شده‌اند.</div>
+        </details>
+        <details class="acc"><summary>۳. چرا SpO₂ در مسمومیت با مونوکسید کربن قابل اعتماد نیست؟</summary>
+          <div class="ans"><b>پاسخ:</b> چون کربوکسی‌هموگلوبین در طول‌موج ۶۶۰ نانومتر بسیار شبیه HbO₂ جذب می‌کند؛ در نتیجه دستگاه SpO₂ به‌ظاهر طبیعی نشان می‌دهد درحالی‌که اکسیژن‌رسانی بافتی شدیداً مختل است. در این وضعیت باید CO-Oximetry انجام شود.</div>
+        </details>`
+      }
+    ]
+  },
+
+  {
+    id:"ecg",
+    name:"دستگاه نوار قلب",
+    en:"Electrocardiograph (ECG)",
+    tag:"قلبی–عروقی",
+    icon:"ecg",
+    sections:[
+      { key:"principle", label:"اصل کارکرد", html:`
+        <h4><span class="dot"></span>اصل کارکرد</h4>
+        <p>دستگاه نوار قلب، پتانسیل‌های الکتریکی ناشی از دپلاریزاسیون و رپلاریزاسیون عضله‌ی قلبی را از سطح پوست ثبت می‌کند. سلول‌های میوکارد در حال استراحت، اختلاف پتانسیل غشایی حدود <span class="en-inline">-90 mV</span> دارند؛ هنگام تحریک و انقباض، جریان‌های یونی باعث تغییر این پتانسیل و ایجاد میدان الکتریکی قابل ثبت در سطح بدن می‌شوند.</p>
+        <div class="thread">
+          <b>اصل مثلث آینتهوون:</b> با قرار دادن الکترودها روی دو دست و پای چپ، سه لید دوقطبی I، II و III به‌دست می‌آید که مجموع برداری آن‌ها صفر است: <span class="en-inline">I + III = II</span>. اندازه‌گیری سه لید استخراج‌شده‌ی دیگر (aVR, aVL, aVF) و شش لید قفسه‌ی سینه، تصویری سه‌بعدی از فعالیت الکتریکی قلب را می‌سازد.
+        </div>
+        <ul>
+          <li><b>پتانسیل‌های قلبی:</b> دامنه‌ی سیگنال در سطح پوست فقط <span class="en-inline">0.5 – 5 mV</span> است؛ همین موضوع نیاز به تقویت‌کنندگان بسیار دقیق با CMRR بالا را توجیه می‌کند.</li>
+          <li><b>تقویت سیگنال:</b> آمپلی‌فایر تفاضلی با بهره‌ی بالا (معمولاً ۱۰۰۰) سیگنال کوچک بین دو الکترود را تقویت می‌کند.</li>
+          <li><b>حذف نویز:</b> فیلتر نوارگذر <span class="en-inline">0.05 – 150 Hz</span>، فیلتر ناچ ۵۰/۶۰ هرتز برای حذف نویز خط برق، و روش‌های حذف پایه‌ی متغیر (Baseline Wander).</li>
+          <li><b>نمونه‌برداری:</b> ADC با نرخ نمونه‌برداری معمول <span class="en-inline">500 – 1000 Hz</span> و رزولوشن ۱۶ بیت یا بالاتر.</li>
+          <li><b>نمایش و ثبت:</b> رسم شکل موج و محاسبه‌ی خودکار پارامترهایی نظیر نرخ قلب، بازه‌ی PR، مدت QRS و QT.</li>
+        </ul>`
+      },
+      { key:"parts", label:"اجزای اصلی", html:`
+        <h4><span class="dot"></span>اجزای اصلی</h4>
+        <ul>
+          <li><b>الکترودهای سطحی و کابل لید:</b> الکترودهای Ag/AgCl یک‌بارمصرف یا مکنده، با ژل رسانا؛ کابل ۱۰ سیم یا ۴ سیم با رنگ‌بندی استاندارد.</li>
+          <li><b>مدار ورودی و حفاظت بیمار:</b> دیودهای محدودکننده و مقاومت‌های سری برای محدودسازی جریان به زیر سطح ایمن، به‌همراه تقویت‌کننده‌ی ابزاری با CMRR بالا (بیش از <span class="en-inline">100 dB</span>).</li>
+          <li><b>مدار حذف جریان بی‌اثر و تشخیص لید جدا:</b> مدار Right Leg Drive برای کاهش نویز مشترک و آشکارساز Lead-Off برای تشخیص جدا شدن الکترود.</li>
+          <li><b>پردازنده‌ی سیگنال و تحلیل:</b> میکروکنترلر/DSP با الگوریتم تشخیص QRS، فیلترهای دیجیتال، محاسبه‌ی HR و اندازه‌گیری فواصل زمانی.</li>
+          <li><b>پرینتر حرارتی یا چاپگر جوهرافشان:</b> ثبت نوار کاغذی ۱۲ لید با سرعت استاندارد <span class="en-inline">25 mm/s</span> و بهره‌ی <span class="en-inline">10 mm/mV</span>.</li>
+          <li><b>نمایشگر و حافظه:</b> صفحه‌نمایش رنگی با نمایش ۱۲ لید، حافظه‌ی داخلی برای ذخیره‌ی نوارها، رابط USB/شبکه و اتصال به HIS.</li>
+          <li><b>منبع تغذیه:</b> آداپتور پزشکی با جداسازی گالوانیک و باتری داخلی برای جداسازی از برق هنگام ثبت نوار.</li>
+        </ul>
+        <div class="box ok"><h5>نکته‌ی مهندسی</h5><ul><li>کیفیت نوار ECG به کیفیت الکترود، آماده‌سازی پوست و اتصال صحیح لیدها شدیداً وابسته است؛ حتی بهترین دستگاه با الکترود خشک یا ژل‌زده، نویز تولید می‌کند.</li></ul></div>`
+      },
+      { key:"clinical", label:"کاربرد بالینی", html:`
+        <h4><span class="dot"></span>کاربرد بالینی</h4>
+        <ul>
+          <li><b>تشخیص سکته‌ی قلبی (MI):</b> شناسایی تغییرات قطعه‌ی ST، موج Q پاتولوژیک و آریتمی‌های حاد.</li>
+          <li><b>تشخیص و پایش آریتمی‌ها:</b> فیبریلاسیون دهلیزی، تاکی‌کاردی بطنی، بلوک‌های قلبی و اختلالات هدایتی.</li>
+          <li><b>ارزیابی اختلالات الکترولیتی و دارویی:</b> تغییرات QT در هیپوکالمی یا مصرف داروهای ضدآریتمی.</li>
+          <li><b>غربالگری و پایش پیش از عمل جراحی:</b> ارزیابی خطر قلبی بیمار و پایش در حین جراحی.</li>
+          <li><b>پایش مانیتوری در ICU/CCU:</b> نمایش پیوسته‌ی یک یا چند لید با آلارم آریتمی.</li>
+          <li><b>مطالعات تخصصی:</b> هولتر ۲۴–۴۸ ساعته، تست ورزش، و ثبت طولانی‌مدت (Loop Recorder).</li>
+        </ul>
+        <div class="box warn"><h5>توجه بالینی</h5><ul><li>نوار قلب طبیعی می‌تواند در سکته‌ی قلبی زودرس طبیعی باشد؛ یافته‌ها باید با آنزیم‌های قلبی و تصویربرداری تکمیل شوند.</li></ul></div>`
+      },
+      { key:"specs", label:"مشخصات فنی", html:`
+        <h4><span class="dot"></span>مشخصات فنی (نوعی)</h4>
+        <table class="tbl">
+          <tr><th>پارامتر</th><th>مقدار نوعی</th></tr>
+          <tr><td>تعداد لید</td><td>۱۲ لید همزمان (۱۰ الکترود) یا ۳/۶ لید در مانیتورهای بالینی</td></tr>
+          <tr><td>بازه‌ی اندازه‌گیری سیگنال</td><td><span class="num">± 5 mV</span>؛ اشباع ورودی معمولاً <span class="num">± 300 mV</span></td></tr>
+          <tr><td>دقت دامنه (Gain Accuracy)</td><td>± ۵٪</td></tr>
+          <tr><td>پهنای باند (Bandwidth)</td><td><span class="num">0.05 – 150 Hz</span> (تشخیصی)، <span class="num">0.5 – 40 Hz</span> (پایشی)</td></tr>
+          <tr><td>نرخ نمونه‌برداری</td><td><span class="num">500 – 1000 samples/s</span> (تا ۴۰۰۰ در برخی مدل‌ها)</td></tr>
+          <tr><td>CMRR</td><td>بیش از <span class="num">100 dB</span> (معمولاً ۱۱۰ dB)</td></tr>
+          <tr><td>امپدانس ورودی</td><td>بیش از <span class="num">10 MΩ</span> (و در حالت پایش، بیش از ۱۰۰ MΩ)</td></tr>
+          <tr><td>دقت زمانی (Time Base)</td><td>± ۲٪ در سرعت <span class="num">25 mm/s</span></td></tr>
+          <tr><td>نوع سیگنال خروجی</td><td>دیجیتال (USB / اترنت / Wi-Fi)، آنالوگ <span class="num">1 V/mV</span> برای ثبت خارجی، استاندارد HL7/DICOM برای HIS</td></tr>
+          <tr><td>توان مصرفی</td><td><span class="num">30 – 150 W</span> (با پرینتر)، <span class="num">5 – 20 W</span> بدون پرینتر</td></tr>
+          <tr><td>حفاظت جریان بیمار</td><td>جریان نشتی کمتر از <span class="num">10 µA</span> در حالت قطعه‌ی نوع CF</td></tr>
+        </table>`
+      },
+      { key:"standards", label:"استانداردها و کلاس خطر", html:`
+        <h4><span class="dot"></span>استانداردها و طبقه‌بندی خطر</h4>
+        <div class="badges">
+          <span class="badge">IEC 60601-2-25</span>
+          <span class="badge">IEC 60601-2-27</span>
+          <span class="badge">IEC 60601-1</span>
+          <span class="badge">IEC 60601-1-2</span>
+          <span class="badge">IEC 60601-2-47</span>
+          <span class="badge">ISO 14971</span>
+        </div>
+        <ul>
+          <li><b>IEC 60601-2-25:</b> الزامات اختصاصی الکتروکاردیوگراف‌های تشخیصی — دقت دامنه/زمان، پهنای باند و الزامات تست سیگنال‌های مرجع.</li>
+          <li><b>IEC 60601-2-27:</b> الزامات مانیتورهای الکتروکاردیوگرافی برای پایش پیوسته، شامل الزامات آلارم آریتمی و مقاومت در برابر دفیبریلاسیون.</li>
+          <li><b>IEC 60601-2-47:</b> الزامات سیستم‌های ثبت سیگنال قلبی سیار (هولتر و سیستم‌های مشابه).</li>
+          <li><b>IEC 60601-1-2:</b> سازگاری الکترومغناطیسی — به‌ویژه در محیط‌های دارای دستگاه‌های الکتروکوتر و MRI (که الکترودهای MR-unsafe خطر سوختگی دارند).</li>
+        </ul>
+        <table class="tbl">
+          <tr><th>ویژگی طبقه‌بندی</th><th>وضعیت دستگاه ECG</th></tr>
+          <tr><td>کلاس حفاظت الکتریکی</td><td>کلاس I همراه با جداسازی گالوانیک؛ یا کلاس II</td></tr>
+          <tr><td>نوع قطعه‌ی کاربرد</td><td><b>نوع CF</b> برای الکترودهای قلبی داخلی و مدل‌های با مقاومت دفیبریلاسیون؛ نوع BF در برخی مانیتورها</td></tr>
+          <tr><td>مقاومت در برابر دفیبریلاسیون</td><td>الزامی در مانیتورهای ICCU/ICU — ورودی باید تا انرژی دفیبریلاتور را تحمل کند</td></tr>
+          <tr><td>درجه‌ی حفاظت در برابر آب</td><td>معمولاً IPX0 تا IPX1؛ مدل‌های قابل حمل IPX2</td></tr>
+          <tr><td>حالت کار</td><td>کارکرد پیوسته برای مانیتور؛ کارکرد موقت (۵ تا ۱۵ دقیقه) برای دستگاه ثبت نوار</td></tr>
+          <tr><td>طبقه‌بندی خطر</td><td>خطر متوسط (تشخیصی) تا بالا (مانیتورینگ پیوسته و آلارم آریتمی)</td></tr>
+        </table>`
+      },
+      { key:"safety", label:"ایمنی و هشدارها", html:`
+        <h4><span class="dot"></span>ایمنی بیمار و اپراتور</h4>
+        <div class="box danger">
+          <h5>هشدارهای بیمار</h5>
+          <ul>
+            <li>در حین دفیبریلاسیون، الکترودها باید از نوع مقاوم به دفیبریلاسیون باشند؛ در غیر این صورت آسیب دستگاه و خطر اپراتور وجود دارد.</li>
+            <li>جریان نشتی بیمار باید در محدوده‌ی استاندارد نگه داشته شود؛ هر گونه شکستگی در سیم لید یا عایق کابل، خطر <b>میکروشوک</b> ایجاد می‌کند.</li>
+            <li>در بیماران با ضربان‌ساز یا ICD کاشته‌شده، تقویت سیگنال ممکن است تشخیص‌دهنده را به اشتباه بیندازد و لازم است فیلتر مناسب انتخاب شود.</li>
+            <li>در MRI، الکترودها و کابل‌های استاندارد ممکن است ایجاد سوختگی کنند و باید حذف شوند.</li>
+          </ul>
+        </div>
+        <div class="box warn">
+          <h5>هشدارهای اپراتور</h5>
+          <ul>
+            <li>کابل لید باید در برابر کشش، گره‌خوردگی و نشت مایع محافظت شود؛ اتصال شل، نویز شدید و خطای Lead-Off ایجاد می‌کند.</li>
+            <li>پاک‌سازی کابل با الکل ۷۰٪ و پرهیز از فرو بردن کامل در مایع؛ الکترودهای یک‌بارمصرف نباید بازاستفاده شوند (ریسک عفونت و خشک‌شدن ژل).</li>
+            <li>آماده‌سازی مناسب پوست (کوتاه‌کردن مو، پاک‌کردن چربی پوست) نقش کلیدی در کیفیت ثبت دارد.</li>
+            <li>دستگاه‌های دارای پرینتر حرارتی، به کاغذ مخصوص و هد سالم نیاز دارند؛ تغییر رنگ کاغذ نشانه‌ی هد کثیف یا فرسوده است.</li>
+          </ul>
+        </div>
+        <div class="box ok"><h5>نکته‌ی ویژه‌ی مهندسی</h5><ul><li>تست ظرفیت تحمل دفیبریلاسیون (Defib-Proof Test) بخشی از برنامه‌ی سالانه‌ی QC مانیتورهای قلب است و باید با تجهیزات مرجع انجام شود.</li></ul></div>`
+      },
+      { key:"troubleshoot", label:"خرابی‌های رایج و عیب‌یابی", html:`
+        <h4><span class="dot"></span>خرابی‌های رایج و عیب‌یابی</h4>
+        <table class="tbl">
+          <tr><th>مشکل</th><th>علت احتمالی و راه‌حل</th></tr>
+          <tr><td>نویز ۵۰/۶۰ هرتز روی تمام لیدها</td><td>عدم اتصال صحیح الکترود، کابل معیوب، نزدیکی به منابع برق یا تجهیزات الکتریکی قوی؛ تقویت اتصال پوست، فیلتر ناچ را فعال و منابع تداخل را دور کنید.</td></tr>
+          <tr><td>پایه‌ی متغیر (Baseline Wander)</td><td>تنفس بیمار، حرکت الکترود، یا الکترود خشک؛ فیلتر پایه‌ی متغیر را فعال و الکترودها را تعویض کنید.</td></tr>
+          <tr><td>خطای “Lead Off” در یک لید</td><td>جدا شدن الکترود، شکستگی سیم یا افزایش امپدانس پوست؛ بازبینی الکترود، تست کابل با مولتی‌متر و اصلاح آماده‌سازی پوست.</td></tr>
+          <tr><td>دامنه‌ی سیگنال کم</td><td>تضعیف ژل الکترود، اشتباه بودن بهره (۵ یا ۲۰ mm/mV) یا خطای کالیبراسیون؛ تنظیم بهره و تست پالس کالیبراسیون (۱ mV مرجع).</td></tr>
+          <tr><td>کاغذ پرینتر سفید/محو چاپ می‌شود</td><td>هد حرارتی کثیف یا فرسوده، کاغذ نامناسب یا نصب پشت‌روی کاغذ؛ تمیزکردن هد با الکل و تعویض رول کاغذ مناسب.</td></tr>
+          <tr><td>تشخیص نادرست نرخ قلب یا آریتمی کاذب</td><td>الگوریتم QRS تحت تأثیر نویز یا امواج بزرگ P/T؛ انتخاب لید با موج R واضح و فعال‌سازی فیلتر تشخیصی.</td></tr>
+          <tr><td>عدم ذخیره‌سازی نوار در حافظه یا شبکه</td><td>پر بودن حافظه، خطای اتصال شبکه یا خرابی Firmware؛ پاک‌سازی حافظه، بازبینی تنظیمات شبکه و به‌روزرسانی نرم‌افزار.</td></tr>
+        </table>`
+      },
+      { key:"maintenance", label:"نگهداری و کالیبراسیون", html:`
+        <h4><span class="dot"></span>نگهداری، کالیبراسیون و QC</h4>
+        <ul>
+          <li><b>روزانه:</b> بازرسی کابل و اتصالات، بررسی LED/ال‌سی‌دی و آلارم‌ها، پاک‌سازی بدنه و بررسی وضعیت الکترودها.</li>
+          <li><b>هفتگی:</b> بررسی اصالت و سلامت کاغذ و هد پرینتر، تست نمایش همه‌ی لیدها، پاک‌سازی هد حرارتی با الکل ایزوپروپیل.</li>
+          <li><b>ماهانه:</b> تست با شبیه‌ساز سیگنال ECG (پالس مرجع ۱ mV، شکل موج استاندارد و نرخ‌های مشخص)، بررسی دقت سرعت کاغذ.</li>
+          <li><b>سالانه:</b> کالیبراسیون کامل دامنه و زمان، تست ایمنی الکتریکی (جریان نشتی، مقاومت زمین)، تست تحمل دفیبریلاسیون در مانیتورها، به‌روزرسانی Firmware.</li>
+          <li><b>مستندسازی:</b> ثبت تاریخ آخرین کالیبراسیون روی برچسب دستگاه؛ هرگونه انحراف بیش از ± ۵٪ در دامنه یا بیش از ± ۲٪ در دقت زمانی، نیازمند سرویس است.</li>
+        </ul>
+        <div class="box warn"><h5>هشدار کالیبراسیون</h5><ul><li>سیگنال شبیه‌ساز باید استاندارد و کالیبره باشد؛ شبیه‌سازهای ارزان ممکن است خود منبع خطا باشند. مقایسه‌ی نتایج با دستگاه مرجع، راهبرد مطمئن‌تری است.</li></ul></div>
+        <div class="box ok"><h5>تعویض قطعات مصرفی</h5><ul><li>کاغذ حرارتی، الکترودهای سطحی، ژل‌ها و کابل‌های لید فرسوده جزء قطعات مصرفی‌اند و باید طبق برنامه تعویض شوند.</li></ul></div>`
+      },
+      { key:"quiz", label:"سوالات خودآزمایی", html:`
+        <h4><span class="dot"></span>سوالات خودآزمایی</h4>
+        <details class="acc"><summary>۱. چرا تقویت‌کننده‌ی دستگاه ECG باید CMRR بسیار بالا داشته باشد؟</summary>
+          <div class="ans"><b>پاسخ:</b> چون سیگنال قلبی بسیار کوچک (چند میلی‌ولت) است و نویز مشترک محیط (مثل نویز ۵۰/۶۰ هرتز) می‌تواند چند صد میلی‌ولت باشد. CMRR بالا (بیش از ۱۰۰ dB) یعنی تقویت‌کننده سیگنال مشترک را عملاً حذف می‌کند و فقط تفاضل دو الکترود را تقویت می‌کند.</div>
+        </details>
+        <details class="acc"><summary>۲. نقش مدار Right Leg Drive در دستگاه ECG چیست؟</summary>
+          <div class="ans"><b>پاسخ:</b> این مدار بخشی از جریان نویز مشترک را به سمت بدن بازمی‌گرداند و آن را از مسیر تقویت‌کننده حذف می‌کند؛ نتیجه کاهش نویز مشترک و بهبود نسبت سیگنال به نویز است. همچنین در کاهش جریان نشتی مؤثر است.</div>
+        </details>
+        <details class="acc"><summary>۳. چرا فیلترهای تشخیصی (۰٫۰۵–۱۵۰ هرتز) با فیلترهای پایشی (۰٫۵–۴۰ هرتز) متفاوت‌اند؟</summary>
+          <div class="ans"><b>پاسخ:</b> فیلتر تشخیصی برای حفظ محتوای فرکانسی سیگنال (به‌ویژه امواج با فرکانس پایین مانند تغییرات ST) لازم است؛ فیلتر پایشی پهنای باند کمتری دارد تا نویز حرکت و خطای تشخیص آریتمی را کاهش دهد. انتخاب نادرست فیلتر می‌تواند یافته‌های تشخیصی را پنهان کند.</div>
+        </details>`
+      }
+    ]
+  },
+
+  {
+    id:"incubator",
+    name:"انکوباتور نوزاد",
+    en:"Infant Incubator",
+    tag:"نوزادان / NICU",
+    icon:"incubator",
+    sections:[
+      { key:"principle", label:"اصل کارکرد", html:`
+        <h4><span class="dot"></span>اصل کارکرد</h4>
+        <p>انکوباتور یک محیط <b>بسته، کنترل‌شده و گرم</b> را برای نوزاد نارس یا بیمار فراهم می‌کند تا دمای بدن، رطوبت و اکسیژن‌رسانی در محدوده‌ی مطلوب بماند. نوزاد نارس توان تنظیم دمای بدن خود را ندارد و در معرض هیپوترمی، از‌دست‌دادن آب و افزایش مصرف انرژی است؛ انکوباتور این بار تنظیم حرارتی را از بدن نوزاد برمی‌دارد.</p>
+        <div class="thread">
+          <b>دو حالت کنترل دما:</b> در <b>حالت Air Mode</b>، دمای هوای داخل محفظه کنترل می‌شود (پارامتر: دمای داخل انکوباتور). در <b>حالت Skin Mode</b> یا Servo-Control، دمای پوست نوزاد با یک پروب اندازه‌گیری شده و دمای محفظه طوری تنظیم می‌شود که دمای پوست به مقدار هدف (معمولاً ۳۶٫۵ °C) برسد. این دو حالت مکانیزم ایمنی یکدیگر را تکمیل می‌کنند.
+        </div>
+        <ul>
+          <li><b>گرمایش:</b> عنصر حرارتی (مقاومت الکتریکی) هوا را گرم می‌کند و یک فن جریان همگن هوا را در سراسر محفظه برقرار می‌سازد.</li>
+          <li><b>رطوبت‌سازی:</b> یک تبخیرکننده/بخار‌ساز رطوبت را به ۴۰–۹۰٪ می‌رساند تا تبخیر آب از پوست نوزاد کاهش یابد.</li>
+          <li><b>اکسیژن‌رسانی:</b> ورودی اکسیژن به محفظه با میکسر و پایشگر FiO₂ تنظیم می‌شود (در مدل‌های پیشرفته).</li>
+          <li><b>کنترل هوشمند:</b> میکروکنترلر با الگوریتم PID دمای محفظه را به مقدار هدف نزدیک می‌کند و از نوسان شدید جلوگیری می‌کند.</li>
+          <li><b>پایش و آلارم:</b> سنسورهای دما/رطوبت/O₂ هر چند ثانیه خوانده می‌شوند و در صورت انحراف، آلارم فعال می‌شود.</li>
+        </ul>`
+      },
+      { key:"parts", label:"اجزای اصلی", html:`
+        <h4><span class="dot"></span>اجزای اصلی</h4>
+        <ul>
+          <li><b>محفظه‌ی شفاف (Hood):</b> از پلی‌کربنات یا آکریلیک شفاف برای دید مستقیم نوزاد، با دسترسی از طریق پورت‌های جانبی و درب اصلی.</li>
+          <li><b>سیستم گرمایش:</b> عنصر حرارتی، رله/ترایاک فرمان‌پذیر، دمنده و کانال‌های توزیع هوا؛ همراه با ترموستات محدودکننده‌ی اضافه‌دما.</li>
+          <li><b>سنسورهای محیطی:</b> سنسور دمای هوا (RTD یا ترمیستور)، سنسور رطوبت (خازنی)، سنسورهای اکسیژن (سلول سوختی یا پارامغناطیسی)، سنسور جریان هوا.</li>
+          <li><b>پروب پوست نوزاد:</b> ترمیستور یا سنسور RTD کوچک چسبانده‌شده روی شکم/پشت، با کابل و اتصال محافظ.</li>
+          <li><b>سیستم رطوبت‌سازی:</b> مخزن آب، سیستم تبخیر (گرم‌کردن آب در تبخیرکننده) و خطوط بخار با فیلتر ضدمیکروبی.</li>
+          <li><b>کنترلر و برد:</b> میکروکنترلر با الگوریتم PID، مدارهای ایزوله‌ی اندازه‌گیری، حافظه‌ی روند دما و رطوبت.</li>
+          <li><b>HMI و آلارم:</b> صفحه‌نمایش با نمایش دما/رطوبت/O₂، کلیدهای تنظیم، آلارم دمای بالا/پایین، آلارم قطع برق و آلارم خرابی فن.</li>
+          <li><b>منبع تغذیه و باتری:</b> منبع سوئیچینگ با جداسازی، فیوز، و در برخی مدل‌ها باتری پشتیبان برای حفظ آلارم و نمایشگر.</li>
+          <li><b>سایر اجزا:</b> پایه‌ی قابل تنظیم یا تخت (Bed) با قابلیت شیب‌دهی (Trendelenburg)، چرخ‌های قفل‌شو، و امکان اتصال به تخت نگهداری نوزاد.</li>
+        </ul>`
+      },
+      { key:"clinical", label:"کاربرد بالینی", html:`
+        <h4><span class="dot"></span>کاربرد بالینی</h4>
+        <ul>
+          <li><b>نگهداری نوزاد نارس (Preterm):</b> کنترل دقیق دما و رطوبت به‌ویژه در نوزادان با وزن کمتر از ۱۵۰۰ گرم.</li>
+          <li><b>نوزادان با اختلال تنفسی یا هیپوکسی:</b> همراه با اکسیژن‌رسانی کنترل‌شده و پایش SpO₂.</li>
+          <li><b>درمان زردی (هایپربیلیروبینمی):</b> ترکیب با دستگاه فوتوتراپی داخل یا خارج انکوباتور.</li>
+          <li><b>نوزادان با اختلال متابولیک یا نیاز به اکسیژن‌درمانی (O₂ Therapy)</b> که نیاز به محیط ایزوله دارند.</li>
+          <li><b>درمان هیپوترمی و بازگرم‌کردن کنترل‌شده:</b> در زایمان‌های خارج از بیمارستان یا نوزادان با دمای پایین اولیه.</li>
+          <li><b>پایش پیش از انتقال:</b> انکوباتورهای قابل حمل برای انتقال ایمن نوزاد بین بیمارستان‌ها.</li>
+        </ul>
+        <div class="box warn"><h5>نکته‌ی بالینی–مهندسی</h5><ul><li>تنظیم دمای هدف باید بر اساس وزن و سن نوزاد باشد (نوزاد کوچک‌تر، دمای هدف بالاتر). این تنظیم در حالت Skin Mode با کالیبراسیون دقیق پروب پوست امکان‌پذیر است.</li></ul></div>`
+      },
+      { key:"specs", label:"مشخصات فنی", html:`
+        <h4><span class="dot"></span>مشخصات فنی (نوعی)</h4>
+        <table class="tbl">
+          <tr><th>پارامتر</th><th>مقدار نوعی</th></tr>
+          <tr><td>بازه‌ی دمای محفظه (Air Mode)</td><td><span class="num">20 – 39 °C</span> (معمولاً ۲۵ تا ۳۸ درجه‌ی کاربردی)</td></tr>
+          <tr><td>بازه‌ی دمای پوست (Skin Mode)</td><td><span class="num">34 – 38 °C</span> با تنظیم گام <span class="num">0.1 °C</span></td></tr>
+          <tr><td>دقت کنترل دما</td><td>± ۰٫۵ °C در حالت پایدار (Steady State)</td></tr>
+          <tr><td>یکنواختی دما در محفظه</td><td>اختلاف کمتر از <span class="num">0.8 °C</span> بین نقاط مختلف (طبق استاندارد)</td></tr>
+          <tr><td>بازه‌ی رطوبت نسبی</td><td><span class="num">30 – 90 % RH</span> (تنظیم‌پذیر)</td></tr>
+          <tr><td>دقت رطوبت</td><td>± ۵٪ RH</td></tr>
+          <tr><td>بازه‌ی FiO₂ (در صورت مجهز بودن)</td><td><span class="num">21 – 60 %</span> یا <span class="num">21 – 100 %</span> بسته به مدل</td></tr>
+          <tr><td>سرعت بازگرم‌کردن</td><td>رسیدن به دمای هدف در مدت حدود <span class="num">15 – 30 دقیقه</span></td></tr>
+          <tr><td>نوع سیگنال خروجی</td><td>دیجیتال (RS-232 / USB / شبکه)، خروجی های‌لوول آلارم، ثبت روند دما/رطوبت/O₂</td></tr>
+          <tr><td>توان مصرفی</td><td><span class="num">300 – 900 W</span> (بسته به اندازه و سیستم رطوبت‌سازی)، معمولاً حدود <span class="num">500 W</span></td></tr>
+          <tr><td>زمان پشتیبانی باتری</td><td>معمولاً فقط برای آلارم و نمایشگر (۱۰–۳۰ دقیقه) در برق‌قطع</td></tr>
+          <tr><td>سطح صدا</td><td>کمتر از <span class="num">60 dB(A)</span> برای محیط‌های NICU آرام</td></tr>
+        </table>`
+      },
+      { key:"standards", label:"استانداردها و کلاس خطر", html:`
+        <h4><span class="dot"></span>استانداردها و طبقه‌بندی خطر</h4>
+        <div class="badges">
+          <span class="badge">IEC 60601-2-19</span>
+          <span class="badge">IEC 60601-1</span>
+          <span class="badge">IEC 60601-1-2</span>
+          <span class="badge">IEC 60601-1-8</span>
+          <span class="badge">ISO 14971</span>
+          <span class="badge">ISO 13485</span>
+        </div>
+        <ul>
+          <li><b>IEC 60601-2-19:</b> استاندارد اختصاصی انکوباتورهای نوزاد؛ الزامات کنترل دما، دقت و یکنواختی، الزامات آلارم و شرایط آزمون را تعیین می‌کند.</li>
+          <li><b>IEC 60601-1-8:</b> الزامات سیستم آلارم (اولویت، رنگ، صدا) — اهمیت ویژه برای آلارم دمای بالا/پایین در انکوباتور.</li>
+          <li><b>IEC 60601-1-2:</b> سازگاری الکترومغناطیسی — چون انکوباتور در محیطی با مانیتورها و دستگاه‌های متعدد کار می‌کند.</li>
+          <li><b>ISO 14971 و ISO 13485:</b> مدیریت ریسک و سیستم کیفیت سازنده.</li>
+        </ul>
+        <table class="tbl">
+          <tr><th>ویژگی طبقه‌بندی</th><th>وضعیت انکوباتور</th></tr>
+          <tr><td>کلاس حفاظت الکتریکی</td><td>کلاس I (اتصال به زمین) با جداسازی گالوانیک</td></tr>
+          <tr><td>نوع قطعه‌ی کاربرد</td><td>نوع BF (پروب دمای پوست و مسیر تماس با نوزاد)</td></tr>
+          <tr><td>درجه‌ی حفاظت در برابر آب</td><td>معمولاً IPX0 یا IPX1 در بدنه؛ مخزن آب و مسیر بخار با آب‌بندی جداگانه</td></tr>
+          <tr><td>حالت کار</td><td>کارکرد پیوسته (Continuous) — نوزاد ممکن است هفته‌ها در آن بماند</td></tr>
+          <tr><td>طبقه‌بندی خطر</td><td>خطر بالا؛ خرابی کنترل دما می‌تواند هیپوترمی یا هیپرترمی شدید ایجاد کند</td></tr>
+        </table>`
+      },
+      { key:"safety", label:"ایمنی و هشدارها", html:`
+        <h4><span class="dot"></span>ایمنی بیمار و اپراتور</h4>
+        <div class="box danger">
+          <h5>هشدارهای بحرانی برای نوزاد</h5>
+          <ul>
+            <li>خرابی کنترل دما می‌تواند به <b>هیپرترمی</b> (دمای بالا و تشنج/آسیب مغزی) یا <b>هیپوترمی</b> (افزایش مصرف اکسیژن و اسیدوز) منجر شود؛ ترموستات محدودکننده‌ی اضافه‌دما بخشی از طراحی ایمنی است و نباید بای‌پس شود.</li>
+            <li>رطوبت‌سازی نامناسب و آلودگی مخزن آب، ریسک <b>عفونت بیمارستانی</b> (به‌ویژه سودومونا و کلبسیلا) را افزایش می‌دهد.</li>
+            <li>مصرف اکسیژن با FiO₂ بالا و طولانی‌مدت در نوزاد نارس، ریسک <b>رتینوپاتی نارس (ROP)</b> و آسیب ریوی را بالا می‌برد.</li>
+            <li>دسترسی نوزاد از پورت‌ها باید امن باشد؛ نبود پوشش مناسب روی پورت‌ها و درب‌ها، خطر افت‌دما و ورود آلودگی را ایجاد می‌کند.</li>
+            <li>صدای بلند و آلارم‌های مکرر می‌تواند بر رشد عصبی نوزاد اثر منفی داشته باشد؛ سطح صدا را به کمترین حد ممکن برسانید.</li>
+          </ul>
+        </div>
+        <div class="box warn">
+          <h5>هشدارهای اپراتور</h5>
+          <ul>
+            <li>کابل پروب پوست باید از کشش محافظت شود؛ شکستگی سیم باعث خوانش نادرست دمای پوست و کنترل نامناسب گرمایش می‌شود.</li>
+            <li>دسترسی به پریز برق و فیوز باید آزاد باشد؛ استفاده از سه‌راهی‌های برق بدون حفاظت، ریسک ایمنی الکتریکی دارد.</li>
+            <li>پاک‌سازی با مواد ضدعفونی سازگار و پرهیز از مواد خورنده بر پلی‌کربنات (الکل غلیظ می‌تواند ترک ایجاد کند).</li>
+            <li>پیش از هر جابه‌جایی، لوله‌های گاز، جرثقیل‌های بالای تخت و کابل‌ها را بازبینی کنید.</li>
+          </ul>
+        </div>
+        <div class="box ok"><h5>نکته‌ی عملی</h5><ul><li>درجه‌ی حرارت را متناسب با وزن نوزاد تنظیم و در حالت Skin Mode از پروب سالم و چسبندگی مناسب اطمینان حاصل کنید.</li></ul></div>`
+      },
+      { key:"troubleshoot", label:"خرابی‌های رایج و عیب‌یابی", html:`
+        <h4><span class="dot"></span>خرابی‌های رایج و عیب‌یابی</h4>
+        <table class="tbl">
+          <tr><th>مشکل</th><th>علت احتمالی و راه‌حل</th></tr>
+          <tr><td>عدم رسیدن به دمای هدف (گرم‌نشدن کافی)</td><td>عنصر حرارتی فرسوده، خرابی رله/ترایاک، گرفتگی مسیر هوا یا کاهش جریان فن؛ تست مقاومت المنت، بازبینی رله و تمیزکردن مسیر هوا.</td></tr>
+          <tr><td>نوسان شدید دمای محفظه (Overshoot/Undershoot)</td><td>خطای الگوریتم PID، خرابی سنسور دمای هوا یا نشتی محفظه؛ کالیبراسیون PID، تست سنسور و بازبینی درزها و پورت‌ها.</td></tr>
+          <tr><td>آلارم “Skin Temp Probe Failure”</td><td>شکستگی کابل پروب، اتصال شل یا پروب معیوب؛ تست پروب جایگزین و بررسی اتصال پین‌ها.</td></tr>
+          <tr><td>رطوبت به مقدار هدف نمی‌رسد</td><td>رسوب آهک در تبخیرکننده، آب ناکافی، فیلتر بخار گرفته یا خطای سنسور رطوبت؛ رسوب‌زدایی، تعویض فیلتر و کالیبراسیون سنسور.</td></tr>
+          <tr><td>اختلاف دمای غیرمجاز بین نقاط محفظه</td><td>ضعف فن گردش هوا، انسداد مسیر یا تجمع نوزاد و لوازم روی بخشی از مسیر؛ تمیزکردن مسیر و بازبینی فن.</td></tr>
+          <tr><td>آلارم قطع برق و توقف گرمایش</td><td>قطعی برق، سوختن فیوز یا خرابی منبع تغذیه؛ تست فیوز و منبع، بررسی اتصال کابل برق.</td></tr>
+          <tr><td>صدای غیرعادی فن/موتور</td><td>فرسودگی یاتاقان، ورود گردوغبار یا وجود مانع؛ تمیزکاری و در صورت لزوم تعویض فن.</td></tr>
+          <tr><td>نشتی رطوبت یا تجمع آب در محفظه</td><td>خرابی خطوط بخار یا تخلیه‌ی ناقص؛ بازبینی اتصالات بخار و باز کردن مسیر تخلیه.</td></tr>
+        </table>`
+      },
+      { key:"maintenance", label:"نگهداری و کالیبراسیون", html:`
+        <h4><span class="dot"></span>نگهداری، کالیبراسیون و QC</h4>
+        <ul>
+          <li><b>روزانه:</b> بررسی دمای نمایش‌داده‌شده با دماسنج مرجع، بازبینی سطح آب، بررسی پروب پوست و اتصال کابل، تست عملکرد آلارم‌ها.</li>
+          <li><b>هفتگی:</b> تعویض آب مخزن (در صورت الزام) و پاک‌سازی مخزن، بررسی فیلترهای بخار، بازرسی چشمی محفظه و درزها.</li>
+          <li><b>ماهانه:</b> رسوب‌زدایی تبخیرکننده، تست دقت رطوبت با هیگرومتر مرجع، بررسی جریان هوا و صدای فن.</li>
+          <li><b>سالانه:</b> کالیبراسیون کامل سنسورهای دما/رطوبت/O₂، تست ایمنی الکتریکی (جریان نشتی و مقاومت زمین)، تست عملکرد ترموستات محدودکننده، به‌روزرسانی Firmware.</li>
+          <li><b>مستندسازی:</b> ثبت نمودار دما-زمان، ثبت نتایج کالیبراسیون و برچسب تاریخ انقضا روی دستگاه.</li>
+        </ul>
+        <div class="box warn"><h5>هشدارهای کالیبراسیون</h5><ul><li>سنسور دمای هوا و پروب پوست باید به‌طور جداگانه در مقابل مرجع کالیبره شوند؛ خطای پروب پوست، مستقیماً دمای واقعی نوزاد را به خطر می‌اندازد.</li><li>تست یکنواختی دما باید در چند نقطه‌ی محفظه (بالا/پایین، چپ/راست) و پس از رسیدن به حالت پایدار انجام شود.</li></ul></div>
+        <div class="box ok"><h5>مدیریت آب و عفونت</h5><ul><li>مخزن و مسیر آب باید طبق پروتکل بیمارستان به‌طور مکرر تعویض و ضدعفونی شود؛ آب راکد، منبع اصلی رشد باکتری است.</li></ul></div>`
+      },
+      { key:"quiz", label:"سوالات خودآزمایی", html:`
+        <h4><span class="dot"></span>سوالات خودآزمایی</h4>
+        <details class="acc"><summary>۱. تفاوت حالت Air Mode و Skin Mode در انکوباتور چیست و کدام ایمن‌تر است؟</summary>
+          <div class="ans"><b>پاسخ:</b> در Air Mode دمای هوای محفظه کنترل می‌شود؛ در Skin Mode دمای پوست نوزاد اندازه‌گیری و مبنای کنترل قرار می‌گیرد. Skin Mode با کنترل مستقیم وضعیت واقعی نوزاد دقت بالاتری در نگهداشت دمای بدن دارد، اما نیازمند پروب سالم و اتصال صحیح است؛ بنابراین هر دو حالت مکمل هم و بخشی از زنجیره‌ی ایمنی محسوب می‌شوند.</div>
+        </details>
+        <details class="acc"><summary>۲. چرا رطوبت‌سازی در انکوباتور نوزاد مهم است؟</summary>
+          <div class="ans"><b>پاسخ:</b> نوزاد نارس سد پوستی نابالغی دارد و تبخیر آب از پوست او زیاد است؛ رطوبت‌سازی باعث کاهش از‌دست‌دادن آب و انرژی، حفظ دمای بدن و بهبود ثبات پوست می‌شود. اما رطوبت بالا نیازمند مدیریت دقیق ضدعفونی برای جلوگیری از عفونت است.</div>
+        </details>
+        <details class="acc"><summary>۳. اگر انکوباتور دمای هدف را از دست بدهد، نخستین مراحل عیب‌یابی چیست؟</summary>
+          <div class="ans"><b>پاسخ:</b> ابتدا نوزاد را به محیط ایمن منتقل یا از انکوباتور جایگزین استفاده کنید؛ سپس دمای واقعی با دماسنج مرجع سنجیده شود، جریان هوا و مسیر گرمایش بررسی و در ادامه عملکرد المنت، رله/ترایاک، سنسور دما و الگوریتم کنترل بازبینی و در صورت نیاز کالیبره شود.</div>
+        </details>`
+      }
+    ]
+  },
+
+
+  {
+    id:"defib",
+    name:"دیفیبریلاتور",
+    en:"Defibrillator",
+    tag:"اورژانس / قلبی",
+    icon:"defib",
+    sections:[
+      { key:"principle", label:"اصل کارکرد", html:`
+        <h4><span class="dot"></span>اصل کارکرد</h4>
+        <p>دیفیبریلاتور یک تجهیز الکتریکی پزشکی است که با ذخیره‌سازی انرژی در یک <b>خازن</b> و آزادسازی کنترل‌شده‌ی آن از طریق الکترودهای قرارگرفته روی قفسه سینه، میدان الکتریکی کافی برای تأثیر بر فعالیت الکتریکی میوکارد ایجاد می‌کند. در <b>فیبریلاسیون بطنی (VF)</b> و <b>تاکی‌کاردی بطنی بدون نبض (pVT)</b>، هدف شوک این است که بخش بزرگی از سلول‌های میوکارد را در بازه‌ای کوتاه دپلاریزه کند تا فعالیت الکتریکی آشفته قطع شود و در صورت وجود شرایط مناسب، ریتم سازمان‌یافته دوباره شکل بگیرد. موفقیت شوک فقط به ژول تنظیم‌شده وابسته نیست و امپدانس بیمار، محل و اندازه الکترودها، شکل موج و زمان‌بندی شوک نیز اهمیت دارند.</p>
+        <div class="thread"><b>مسیر انرژی:</b> منبع تغذیه یا باتری، خازن را تا سطح ولتاژ موردنیاز شارژ می‌کند. هنگام صدور شوک، مدار سوئیچینگ و شکل‌دهی موج انرژی ذخیره‌شده را در یک بازه زمانی کوتاه به بیمار منتقل می‌کند. بسیاری از سامانه‌های امروزی از <b>شکل موج دوفازی (Biphasic)</b> استفاده می‌کنند؛ یعنی جهت جریان در طول شوک تغییر می‌کند و پارامترهای موج می‌توانند بر اساس امپدانس بیمار کنترل شوند.</div>
+        <div class="box info">
+          <h5>سه عملکرد را از هم تفکیک کنید</h5>
+          <ul>
+            <li><b>Defibrillation:</b> شوک <b>غیرهمگام</b> برای خاتمه‌ی ریتم‌های شوک‌پذیر مانند VF و pVT در ایست قلبی.</li>
+            <li><b>Synchronized Cardioversion:</b> شوک با انرژی معمولاً کمتر و <b>همگام با موج R</b> ECG برای برخی تاکی‌آریتمی‌های دارای نبض؛ همگام‌سازی برای کاهش احتمال اعمال شوک در دوره حساس رپلاریزاسیون اهمیت دارد.</li>
+            <li><b>Pacing:</b> ارسال پالس‌های الکتریکی تکرارشونده با انرژی بسیار کمتر از شوک دیفیبریلاسیون برای تحریک میوکارد در برخی برادی‌آریتمی‌ها؛ در این حالت هدف، ایجاد ضربان است نه خاتمه‌ی VF.</li>
+          </ul>
+        </div>
+        <p><b>شکل موج:</b> در موج <b>Monophasic</b> جریان در یک جهت عبور می‌کند؛ در موج <b>Biphasic</b> جریان در دو فاز با تغییر جهت اعمال می‌شود. دیفیبریلاتورهای امروزی عمدتاً بای‌فازیک هستند و در بسیاری از سامانه‌ها می‌توانند با انرژی کمتر و کنترل بهتر جریان، اثر درمانی موردنظر را ایجاد کنند. مقدار انرژی باید بر اساس نوع دستگاه، شکل موج و دستورالعمل سازنده انتخاب شود.</p>`
+      },
+      { key:"parts", label:"اجزای اصلی", html:`
+        <h4><span class="dot"></span>اجزای اصلی</h4>
+        <ul>
+          <li><b>خازن ذخیره انرژی:</b> انرژی الکتریکی را پیش از شوک در خود ذخیره می‌کند.</li>
+          <li><b>مدار شارژ (Charging Circuit):</b> ولتاژ باتری یا منبع تغذیه را به سطح لازم برای شارژ خازن افزایش می‌دهد و وضعیت شارژ را پایش می‌کند.</li>
+          <li><b>مدار تخلیه و شکل‌دهی موج:</b> با سوئیچ‌های توان و اجزای شکل‌دهنده، انرژی خازن را به پالس درمانی با پارامترهای کنترل‌شده تبدیل می‌کند.</li>
+          <li><b>الکترودها:</b> شامل پدهای چسبان یک‌بارمصرف/مصرفی یا Paddles دستی؛ طراحی آن‌ها بر تماس پوستی و کاهش امپدانس مسیر جریان اثر دارد.</li>
+          <li><b>برد پردازش و کنترل:</b> کنترل شارژ، اندازه‌گیری امپدانس، تولید شکل موج، پایش خطا و مدیریت منطق ایمنی دستگاه را انجام می‌دهد.</li>
+          <li><b>سامانه ECG:</b> سیگنال ECG را دریافت و تقویت می‌کند و در مدل‌های مجهز به Sync برای تشخیص قله R و زمان‌بندی مناسب شوک به‌کار می‌رود.</li>
+          <li><b>نمایشگر:</b> ریتم ECG، وضعیت شارژ، تنظیمات انرژی، پیام‌های هشدار و اطلاعات رویداد را نمایش می‌دهد.</li>
+          <li><b>باتری قابل شارژ:</b> منبع انرژی قابل‌حمل برای شارژ خازن و تغذیه مدارهای الکترونیکی؛ در بسیاری از مدل‌ها امکان کار با برق شهر نیز وجود دارد.</li>
+          <li><b>ثبت‌کننده رویداد:</b> زمان رویدادها، تنظیمات و در برخی مدل‌ها ECG قبل/حین/پس از شوک را برای بازبینی ثبت می‌کند.</li>
+          <li><b>سیستم شارژ سریع و پایش ایمنی:</b> برای رسیدن سریع به انرژی هدف و جلوگیری از تخلیه ناخواسته یا عملکرد خارج از محدوده طراحی شده است.</li>
+        </ul>`
+      },
+      { key:"clinical", label:"کاربرد بالینی", html:`
+        <h4><span class="dot"></span>کاربرد بالینی</h4>
+        <p>دیفیبریلاتور در اورژانس، آمبولانس، ICU/CCU، اتاق عمل و محیط‌های احیای قلبی به‌کار می‌رود. کاربرد دقیق هر مدل به قابلیت‌های دستگاه، پروتکل مرکز درمانی و وضعیت بیمار وابسته است.</p>
+        <ul>
+          <li><b>ایست قلبی با VF یا pVT:</b> دیفیبریلاسیون زودهنگام در کنار CPR باکیفیت، درمان اصلی ریتم‌های شوک‌پذیر است.</li>
+          <li><b>کاردیوورژن الکتریکی:</b> برای برخی تاکی‌آریتمی‌های دارای نبض، از جمله فیبریلاسیون دهلیزی یا فلاتر و بعضی تاکی‌کاردی‌های دهلیزی/فوق‌بطنی یا بطنی ناپایدار، در صورت اندیکاسیون بالینی از شوک همگام استفاده می‌شود.</li>
+          <li><b>مانیتورینگ و احیا:</b> بسیاری از مدل‌های دستی، مانیتور ECG، آلارم، ثبت رویداد و برخی قابلیت‌های پایش بیمار را یکجا ارائه می‌کنند.</li>
+          <li><b>اتاق عمل و جراحی قلب:</b> در محیط‌های جراحی و مراقبت‌های ویژه برای مدیریت آریتمی‌های حاد و احیا قابل استفاده است؛ نوع دستگاه و الکترود باید با کاربرد موردنظر سازگار باشد.</li>
+          <li><b>بخش‌های CCU/ICU و اورژانس:</b> دسترسی سریع به شوک درمانی، مانیتورینگ و ثبت رویداد از کاربردهای اصلی است.</li>
+        </ul>
+        <div class="box warn"><h5>نکته بالینی</h5><p>همه تاکی‌کاردی‌ها نیازمند شوک نیستند و آریتمی‌هایی مانند Asystole و PEA ریتم‌های شوک‌پذیر محسوب نمی‌شوند. انتخاب نوع درمان باید بر اساس ریتم، وضعیت همودینامیک و پروتکل احیا توسط فرد آموزش‌دیده انجام شود.</p></div>`
+      },
+      { key:"specs", label:"مشخصات فنی", html:`
+        <h4><span class="dot"></span>مشخصات فنی (مقادیر نمونه)</h4>
+        <p>مقادیر زیر <b>نوعی</b> هستند و بین مدل‌ها و سازندگان تفاوت دارند؛ برای ارزیابی یا سرویس یک دستگاه واقعی باید مشخصات همان مدل و دستورالعمل سازنده ملاک قرار گیرد.</p>
+        <table class="tbl">
+          <tr><th>پارامتر</th><th>مقدار / بازه نوعی</th></tr>
+          <tr><td>انرژی خروجی دیفیبریلاسیون</td><td>تقریباً 1 تا 360 J؛ محدوده دقیق به مدل و کاربرد وابسته است</td></tr>
+          <tr><td>شکل موج</td><td>عمدتاً Biphasic؛ در تجهیزات قدیمی Monophasic نیز دیده می‌شود</td></tr>
+          <tr><td>دقت انرژی خروجی</td><td>مطابق حدود و تلرانس تعیین‌شده در استاندارد و مشخصات سازنده</td></tr>
+          <tr><td>زمان شارژ</td><td>معمولاً چند ثانیه؛ در بسیاری از مدل‌ها برای انرژی‌های بالاتر حدود 5 تا 15 ثانیه</td></tr>
+          <tr><td>امپدانس بار بیمار</td><td>معمولاً در محدوده تقریبی 25 تا 200 Ω؛ طراحی دستگاه می‌تواند بازه متفاوتی داشته باشد</td></tr>
+          <tr><td>نوع الکترود</td><td>پدهای چسبان یک‌بارمصرف یا Paddles قابل استفاده مجدد، بسته به مدل</td></tr>
+          <tr><td>ECG</td><td>سیگنال سطحی چندلید یا ECG از پدها، با تقویت و فیلتر مناسب</td></tr>
+          <tr><td>نمایشگر</td><td>LCD/LED رنگی یا تک‌رنگ؛ نمایش ECG، انرژی، آلارم و وضعیت دستگاه</td></tr>
+          <tr><td>باتری</td><td>باتری لیتیوم‌یون یا شیمی باتری مشابه، بسته به مدل؛ دارای پایش ظرفیت و وضعیت شارژ</td></tr>
+          <tr><td>نوع سیگنال خروجی درمانی</td><td>پالس الکتریکی دوفازی یا تک‌فازی با پارامترهای کنترل‌شده</td></tr>
+          <tr><td>توان مصرفی</td><td>وابسته به حالت کار؛ از توان کم در آماده‌به‌کار تا توان لحظه‌ای بالا هنگام شارژ خازن</td></tr>
+          <tr><td>تغذیه ورودی</td><td>برق AC بیمارستانی و/یا باتری داخلی، بسته به مدل</td></tr>
+          <tr><td>ثبت رویداد</td><td>حافظه داخلی یا رسانه/اتصال داده برای ثبت شوک‌ها، ECG و رخدادهای دستگاه</td></tr>
+          <tr><td>قابلیت Sync</td><td>در مدل‌های مانیتور-دیفیبریلاتور؛ تشخیص R-wave برای کاردیوورژن همگام</td></tr>
+        </table>
+        <div class="box info"><h5>نکته مهندسی</h5><p>انرژی تنظیم‌شده به ژول، با انرژی واقعی تحویل‌شده به بیمار یکسان فرض نمی‌شود؛ شکل موج، امپدانس بار و الگوریتم کنترل دستگاه بر ولتاژ و جریان واقعی اثر دارند.</p></div>`
+      },
+      { key:"standards", label:"استانداردها و کلاس خطر", html:`
+        <h4><span class="dot"></span>استانداردها و کلاس خطر</h4>
+        <ul>
+          <li><b>IEC 60601-2-4:</b> استاندارد اختصاصی الزامات ایمنی پایه و عملکرد اساسی دیفیبریلاتورهای قلبی؛ نسخه تلفیقی منتشرشده شامل <span class="en-inline">IEC 60601-2-4:2010+A1:2018</span> است.</li>
+          <li><b>IEC 60601-1:</b> الزامات عمومی ایمنی پایه و عملکرد اساسی تجهیزات الکتریکی پزشکی.</li>
+          <li><b>IEC 60601-1-2:</b> الزامات سازگاری الکترومغناطیسی (EMC) تجهیزات الکتریکی پزشکی.</li>
+          <li><b>ISO 14971:</b> چارچوب مدیریت ریسک برای تجهیزات پزشکی؛ برای شناسایی و کنترل خطرات مرتبط با طراحی، استفاده و نگهداری کاربرد دارد.</li>
+          <li><b>کلاس خطر:</b> طبقه‌بندی به بازار و مقررات وابسته است. در چارچوب <b>EU MDR</b>، دیفیبریلاتورهای فعال درمانی که انرژی الکتریکی بالقوه خطرناک را برای اثر فیزیولوژیک مهم به بیمار می‌رسانند، معمولاً در <b>Class IIb</b> قرار می‌گیرند؛ طبقه‌بندی نهایی باید بر اساس Intended Use و Rule مربوط به محصول انجام شود.</li>
+          <li><b>قطعه کاربردی:</b> بسته به طراحی و مسیر کاربرد، قطعه‌های متصل به بیمار می‌توانند از نوع <b>BF یا CF</b> و دارای الزامات <b>Defibrillator-proof</b> باشند؛ این مشخصه باید از برچسب‌گذاری و مستندات همان مدل استخراج شود.</li>
+          <li><b>ایمنی الکتریکی:</b> عایق‌بندی، جریان نشتی، حفاظت در برابر شوک و عملکرد ایمن مدار تخلیه باید مطابق الزامات تجهیزات پزشکی و آزمون‌های سازنده/استاندارد بررسی شود.</li>
+        </ul>
+        <div class="box warn"><h5>مرجع مهم</h5><p>IEC 60601-2-4 استاندارد اختصاصی دیفیبریلاتورهاست و در کنار IEC 60601-1 و استانداردهای تکمیلی مورد استفاده قرار می‌گیرد. شماره و ویرایش استاندارد قابل اعمال باید بر اساس بازار هدف و نسخه معتبر در زمان ارزیابی تعیین شود.</p></div>`
+      },
+      { key:"safety", label:"ایمنی و هشدارها", html:`
+        <h4><span class="dot"></span>ایمنی و هشدارها</h4>
+        <div class="box danger"><h5>هشدار ایمنی</h5><p>شوک دیفیبریلاتور می‌تواند برای بیمار و افراد اطراف خطرناک باشد. استفاده بالینی باید فقط توسط افراد آموزش‌دیده و طبق دستورالعمل سازنده و پروتکل مرکز انجام شود.</p></div>
+        <ul>
+          <li><b>خطر شوک ناخواسته:</b> پیش از تخلیه، نباید هیچ فردی با بیمار، تخت یا مسیر رسانای متصل به بیمار تماس داشته باشد. محیط اطراف بیمار باید برای تخلیه ایمن آماده باشد.</li>
+          <li><b>همگام‌سازی:</b> در Cardioversion باید حالت <b>SYNC</b> و تشخیص صحیح QRS/R-wave بررسی شود؛ شوک نامناسب در زمان حساس چرخه قلب می‌تواند آریتمی خطرناک ایجاد کند.</li>
+          <li><b>سایر تجهیزات:</b> تجهیزات متصل به بیمار، کابل‌ها و منابع اکسیژن باید طبق دستورالعمل سازنده و پروتکل مرکز از نظر خطر جرقه، مسیر جریان و تداخل با شوک بررسی و مدیریت شوند.</li>
+          <li><b>پوست و الکترود:</b> تماس مناسب الکترود با پوست و استفاده از پد سالم ضروری است. چروک، جداشدگی یا تماس ناکافی می‌تواند امپدانس را افزایش دهد و کیفیت درمان را کاهش دهد.</li>
+          <li><b>ضربان‌ساز و ICD کاشتنی:</b> در بیماران دارای دستگاه کاشتنی باید دستورالعمل سازنده و پروتکل بالینی رعایت شود؛ محل پدها نباید مستقیماً روی خود دستگاه کاشتنی قرار گیرد و مدیریت پس از شوک ممکن است لازم باشد.</li>
+          <li><b>آموزش اپراتور:</b> تفاوت Defibrillation و Synchronized Cardioversion، تفسیر ECG، محدودیت‌های دستگاه، بررسی وضعیت باتری و واکنش به آلارم‌ها باید در آموزش رسمی پوشش داده شود.</li>
+          <li><b>تست و سرویس:</b> هرگز برای بررسی انرژی خروجی، تخلیه درمانی را به‌صورت تجربی روی انسان انجام ندهید؛ آزمون‌های عملکردی با <b>Defibrillator Analyzer</b> و طبق روش سرویس انجام می‌شوند.</li>
+        </ul>`
+      },
+      { key:"troubleshooting", label:"خرابی‌های رایج و عیب‌یابی", html:`
+        <h4><span class="dot"></span>خرابی‌های رایج و عیب‌یابی</h4>
+        <table class="tbl">
+          <tr><th>مشکل</th><th>علل محتمل</th><th>اقدام/راه‌حل فنی</th></tr>
+          <tr><td>شارژ نشدن خازن</td><td>باتری ضعیف، مدار شارژ، منبع تغذیه، خطای کنترل یا خازن</td><td>بررسی منبع تغذیه و وضعیت باتری؛ اجرای Self-Test؛ در صورت تداوم، بررسی مدار شارژ توسط تکنسین مجاز</td></tr>
+          <tr><td>شارژ آهسته</td><td>کاهش ظرفیت باتری، افزایش مقاومت داخلی، فرسودگی مدار شارژ یا خازن</td><td>بررسی زمان شارژ با مشخصات سازنده و آزمون باتری/خازن با تجهیزات کالیبره</td></tr>
+          <tr><td>انرژی خروجی خارج از محدوده</td><td>اختلال مدار تخلیه، سنجش ولتاژ/جریان، خازن یا کنترل شکل موج</td><td>آزمون با Defibrillator Analyzer و مقایسه با حدود سرویس؛ کالیبراسیون یا تعمیر طبق دستورالعمل</td></tr>
+          <tr><td>شوک تحویل نمی‌شود</td><td>خطای الکترود، امپدانس نامناسب، مدار تخلیه یا interlock ایمنی</td><td>بررسی اتصال الکترود و پیام خطا؛ ادامه عیب‌یابی فقط در حالت سرویس و با بار آزمون مناسب</td></tr>
+          <tr><td>ECG پرنویز یا قطع‌شونده</td><td>کابل/الکترود معیوب، تماس پوستی نامناسب، نویز برق یا خرابی ورودی ECG</td><td>بررسی کابل و الکترود، کیفیت اتصال، فیلترها و کانال ورودی؛ تعویض قطعه معیوب</td></tr>
+          <tr><td>SYNC یا تشخیص R-wave نادرست</td><td>دامنه پایین ECG، آرتیفکت، لید نامناسب یا تنظیمات فیلتر</td><td>بررسی کیفیت ECG و لید انتخابی؛ تطبیق با روش تست سازنده؛ عدم استفاده بالینی تا رفع خطا</td></tr>
+          <tr><td>آلارم باتری</td><td>ظرفیت کم، باتری فرسوده، شارژر یا سنجشگر باتری</td><td>بررسی وضعیت شارژ و عمر باتری و اجرای تست ظرفیت طبق دستور سازنده</td></tr>
+          <tr><td>ثبت نشدن رویدادها</td><td>حافظه پر، خطای نرم‌افزار/حافظه یا تنظیمات ثبت</td><td>بررسی حافظه و تنظیمات، انتقال امن داده‌ها و اجرای آزمون ثبت رویداد</td></tr>
+          <tr><td>آلارم خطای سیستم</td><td>خطای خودآزمایی، دمای غیرمجاز، مدار توان یا نرم‌افزار</td><td>ثبت کد خطا، اجرای Self-Test و ارجاع به سرویس مجاز بر اساس Service Manual</td></tr>
+        </table>`
+      },
+      { key:"maintenance", label:"نگهداری و کالیبراسیون", html:`
+        <h4><span class="dot"></span>نگهداری و کالیبراسیون</h4>
+        <div class="timeline">
+          <div class="titem"><b>روزانه / پیش از استفاده</b><span>بازرسی ظاهری، بررسی سلامت کابل‌ها و پدها، وضعیت باتری، روشن‌شدن و Self-Test، کنترل پیام‌های خطا و آماده‌به‌کاری دستگاه.</span></div>
+          <div class="titem"><b>هفتگی</b><span>در مراکز با استفاده مکرر، بررسی عملکرد شارژ و زمان آماده‌شدن، وضعیت اتصالات و لوازم جانبی و کنترل ثبت رویدادها طبق چک‌لیست مرکز.</span></div>
+          <div class="titem"><b>ماهانه</b><span>بازبینی ظرفیت و سلامت باتری، بررسی کابل ECG و الکترودها، کنترل عملکرد نمایشگر و آلارم‌ها و اجرای آزمون‌های عملکردی تعریف‌شده توسط سازنده.</span></div>
+          <div class="titem"><b>سالانه / دوره‌ای</b><span>انجام PM و آزمون ایمنی الکتریکی توسط واحد مهندسی پزشکی/تکنسین مجاز، اندازه‌گیری انرژی و شکل موج با <b>Defibrillator Analyzer</b>، بررسی زمان شارژ، دقت انرژی، جریان/ولتاژ و پارامترهای مربوط به ECG و Sync طبق Service Manual و استانداردهای قابل اعمال.</span></div>
+        </div>
+        <div class="box info"><h5>کالیبراسیون</h5><p>کالیبراسیون و Verification باید با آنالایزر کالیبره و دارای ردیابی اندازه‌شناسی انجام شود. آزمون‌های مهم شامل <b>انرژی خروجی، زمان شارژ، پارامترهای شکل موج، عملکرد Sync، ECG و ایمنی الکتریکی</b> است. فواصل کالیبراسیون باید بر اساس توصیه سازنده، سیاست مرکز و سابقه عملکرد دستگاه تعیین شوند.</p></div>
+        <div class="box warn"><h5>باتری و الکترود</h5><p>باتری قابل شارژ، پدهای یک‌بارمصرف و سایر لوازم مصرفی باید طبق تاریخ انقضا، شرایط نگهداری و مشخصات سازنده مدیریت شوند. برای آزمون شوک از بار آزمون/آنالایزر استفاده شود، نه بدن انسان.</p></div>`
+      },
+      { key:"quiz", label:"سوالات خودآزمایی", html:`
+        <h4><span class="dot"></span>سوالات خودآزمایی</h4>
+        <div class="acc">
+          <details>
+            <summary>۱) کدام دو ریتم از مهم‌ترین ریتم‌های شوک‌پذیر در ایست قلبی هستند؟</summary>
+            <div>فیبریلاسیون بطنی <b>(VF)</b> و تاکی‌کاردی بطنی بدون نبض <b>(pVT)</b>.</div>
+          </details>
+          <details>
+            <summary>۲) تفاوت اصلی Defibrillation و Synchronized Cardioversion چیست؟</summary>
+            <div>دیفیبریلاسیون برای ریتم‌های شوک‌پذیرِ بدون نبض مانند VF/pVT به‌صورت غیرهمگام انجام می‌شود؛ کاردیوورژن الکتریکی برای برخی تاکی‌آریتمی‌های دارای نبض با شوک <b>همگام با R-wave</b> انجام می‌شود.</div>
+          </details>
+          <details>
+            <summary>۳) چرا شکل موج Biphasic در دیفیبریلاتورهای امروزی رایج است؟</summary>
+            <div>در شکل موج بای‌فازیک، جهت جریان در طول شوک تغییر می‌کند و طراحی موج می‌تواند با کنترل جریان و امپدانس بیمار، اثربخشی مناسب را با انرژی و جریان اوج کمتر نسبت به بسیاری از موج‌های تک‌فازی فراهم کند؛ مقدار انرژی مناسب همچنان به دستگاه و توصیه سازنده وابسته است.</div>
+          </details>
+        </div>`
+      }
+    ]
+  },
+  {
+    id:"ultrasound",
+    name:"سونوگرافی",
+    en:"Ultrasound",
+    tag:"تصویربرداری تشخیصی",
+    icon:"ultrasound",
+    sections:[
+      { key:"principle", label:"اصل کارکرد", html:`
+        <h4><span class="dot"></span>اصل کارکرد</h4>
+        <p>سونوگرافی یک روش تصویربرداری پزشکی است که با استفاده از <b>امواج فراصوت</b>، یعنی امواج مکانیکی با فرکانس بالاتر از محدوده شنوایی انسان، ساختارها و حرکت بافت‌های بدن را نمایش می‌دهد. در سامانه‌های تشخیصی، فرکانس کاری پروب‌ها معمولاً در محدوده چند مگاهرتز تا حدود ۱۵–۱۸ مگاهرتز است. برخلاف CT و رادیوگرافی، سونوگرافی از <b>تابش یونیزان</b> استفاده نمی‌کند.</p>
+        <div class="thread">
+          <b>تولید و دریافت موج:</b> در ترنسدیوسر، پالس‌های الکتریکی کوتاه به عناصر پیزوالکتریک اعمال می‌شوند. این عناصر بر اثر <b>اثر پیزوالکتریک معکوس</b> تغییر شکل مکانیکی پیدا کرده و موج فراصوت تولید می‌کنند. موج در بدن حرکت می‌کند و در مرز بافت‌هایی با امپدانس آکوستیکی متفاوت، بخشی از انرژی آن بازتاب می‌شود. پژواک بازگشتی همان عناصر را تحریک کرده و بر اثر <b>اثر پیزوالکتریک مستقیم</b> به سیگنال الکتریکی تبدیل می‌شود.
+        </div>
+        <ul>
+          <li><b>امپدانس آکوستیکی:</b> برای یک محیط همگن، <span class="en-inline">Z = ρc</span> است. هرچه اختلاف امپدانس دو بافت بیشتر باشد، سهم بازتاب در مرز آن‌ها بیشتر می‌شود.</li>
+          <li><b>محاسبه عمق:</b> با اندازه‌گیری زمان رفت‌وبرگشت پژواک و با فرض سرعت متوسط صوت در بافت نرم حدود <span class="en-inline">1540 m/s</span>، عمق تقریباً از رابطه <span class="en-inline">d = c×t/2</span> به‌دست می‌آید.</li>
+          <li><b>شکل‌گیری تصویر:</b> سامانه زمان رسیدن و دامنه پژواک‌ها را پردازش می‌کند. در B-Mode شدت پژواک‌ها به روشنایی پیکسل‌ها تبدیل می‌شود و با اسکن متوالی خطوط صوتی، تصویر مقطعی ساخته می‌شود.</li>
+          <li><b>باریکه‌سازی و فوکوس:</b> در پروب‌های آرایه‌ای، اختلاف زمان تحریک و دریافت عناصر برای هدایت و فوکوس پرتو به‌کار می‌رود. انتخاب فرکانس بالاتر معمولاً رزولوشن بهتری می‌دهد، ولی تضعیف بیشتری در عمق ایجاد می‌کند.</li>
+          <li><b>حالت‌های تصویربرداری:</b> B-Mode برای تصویر دوبعدی، M-Mode برای نمایش حرکت در امتداد یک خط، و داپلر برای بررسی حرکت و جریان خون استفاده می‌شوند. داپلر می‌تواند به شکل رنگی، پالسی، پیوسته یا توانی پیاده‌سازی شود.</li>
+          <li><b>پردازش دیجیتال:</b> سیگنال دریافتی پس از تقویت، TGC، فیلترگذاری و نمونه‌برداری ADC، در Beamformer و پردازنده تصویر پردازش شده و سپس برای نمایش، ذخیره و انتقال به قالب‌های مناسب مانند DICOM تبدیل می‌شود.</li>
+        </ul>`
+      },
+      { key:"parts", label:"اجزای اصلی", html:`
+        <h4><span class="dot"></span>اجزای اصلی</h4>
+        <ul>
+          <li><b>ترنسدیوسر (پروب):</b> مجموعه‌ای از عناصر الکتروآکوستیکی برای ارسال و دریافت امواج. انواع رایج شامل کانوکس، لینیر، فیزدآرِی، داخل‌حفره‌ای و پروب‌های تخصصی هستند.</li>
+          <li><b>عناصر پیزوالکتریک:</b> معمولاً از سرامیک‌های پیزوالکتریک یا کامپوزیت‌های پیزوالکتریک ساخته می‌شوند و وظیفه تبدیل انرژی الکتریکی به مکانیکی و برعکس را دارند.</li>
+          <li><b>لایه تطبیق و لنز صوتی:</b> برای بهبود انتقال انرژی بین عنصر و بافت و شکل‌دهی پرتو استفاده می‌شوند؛ پشت عنصر نیز لایه Backing برای کنترل طول پالس و پهنای باند به‌کار می‌رود.</li>
+          <li><b>فرستنده و Pulser:</b> پالس‌های الکتریکی با دامنه و زمان‌بندی کنترل‌شده ایجاد می‌کند و در آرایه‌ها تأخیرهای لازم برای Beam Steering و Focusing را اعمال می‌کند.</li>
+          <li><b>مدار دریافت:</b> شامل حفاظت ورودی، تقویت‌کننده کم‌نویز، TGC و فیلترهای آنالوگ برای آماده‌سازی سیگنال‌های بسیار ضعیف اکو است.</li>
+          <li><b>مبدل آنالوگ به دیجیتال (ADC):</b> سیگنال‌های اکو را با نرخ نمونه‌برداری مناسب دیجیتال می‌کند تا Beamformer و پردازنده‌های دیجیتال بتوانند آن‌ها را پردازش کنند.</li>
+          <li><b>Beamformer و پردازنده سیگنال:</b> تأخیرهای زمانی کانال‌ها را اعمال و سیگنال‌ها را جمع می‌کند؛ پردازش‌هایی مانند آشکارسازی پوش، فیلترگذاری، Log Compression و پردازش داپلر نیز در این بخش انجام می‌شود.</li>
+          <li><b>پردازنده تصویر و نمایشگر:</b> داده‌های پردازش‌شده را به تصویر تبدیل و روی نمایشگر نشان می‌دهد؛ کنسول کنترل، حافظه، شبکه و رابط DICOM نیز معمولاً در این بخش قرار دارند.</li>
+          <li><b>منبع تغذیه و سامانه خنک‌کاری:</b> توان الکتریکی پایدار و ایزوله برای بخش‌های مختلف فراهم می‌کند و در مدل‌های قابل‌حمل ممکن است باتری و مدار مدیریت توان نیز وجود داشته باشد.</li>
+        </ul>
+        <div class="box ok"><h5>نکته مهندسی</h5><ul><li>سلامت پروب مستقیماً روی یکنواختی و کیفیت تصویر اثر دارد. خرابی یک یا چند عنصر می‌تواند به صورت نوارهای عمودی یا نواحی غیرطبیعی در تصویر ظاهر شود.</li></ul></div>`
+      },
+      { key:"clinical", label:"کاربرد بالینی", html:`
+        <h4><span class="dot"></span>کاربرد بالینی</h4>
+        <ul>
+          <li><b>زنان و زایمان:</b> ارزیابی بارداری، رشد جنین، محل جفت، مایع آمنیوتیک و آناتومی رحم و تخمدان‌ها.</li>
+          <li><b>قلب و عروق:</b> اکوکاردیوگرافی برای ارزیابی حفره‌ها، عملکرد قلب، دریچه‌ها و جریان خون با داپلر.</li>
+          <li><b>شکم و لگن:</b> بررسی کبد، کیسه صفرا، مجاری صفراوی، کلیه‌ها، مثانه، طحال، پانکراس و برخی ضایعات مایع یا جامد.</li>
+          <li><b>عروق:</b> داپلر برای بررسی جریان خون شریان‌ها و وریدها، تنگی‌ها، انسدادها و برخی ترومبوزها.</li>
+          <li><b>عضلانی‌اسکلتی:</b> ارزیابی تاندون‌ها، رباط‌ها، عضلات، بورس‌ها، مایع مفصلی و برخی آسیب‌های بافت نرم.</li>
+          <li><b>تیروئید، پستان و بافت نرم:</b> ارزیابی ندول‌ها و ضایعات و کمک به هدایت نمونه‌برداری.</li>
+          <li><b>اورژانس و POCUS:</b> ارزیابی سریع قلب، ریه، شکم و وضعیت حجم در کنار تخت بیمار بر اساس پروتکل بالینی.</li>
+          <li><b>کاربردهای مداخله‌ای:</b> هدایت سوزن برای بیوپسی، تخلیه مایعات، برخی بلوک‌های عصبی و دسترسی عروقی.</li>
+        </ul>
+        <div class="box warn"><h5>نکته بالینی</h5><ul><li>کیفیت و تفسیر مطالعه به نوع پروب، تنظیمات دستگاه، مهارت اپراتور و ویژگی‌های بیمار وابسته است؛ یافته سونوگرافی باید در کنار شرح حال و سایر داده‌های بالینی تفسیر شود.</li></ul></div>`
+      },
+      { key:"specs", label:"مشخصات فنی", html:`
+        <h4><span class="dot"></span>مشخصات فنی</h4>
+        <table class="tbl">
+          <tr><th>پارامتر</th><th>محدوده/مقدار معمول</th></tr>
+          <tr><td>فرکانس ترنسدیوسر</td><td>تقریباً <span class="num">1–18 MHz</span>؛ بسته به نوع پروب و کاربرد</td></tr>
+          <tr><td>عمق تصویربرداری</td><td>تقریباً <span class="num">2–30 cm</span> در کاربردهای رایج؛ وابسته به فرکانس، آتنویشن و تنظیمات</td></tr>
+          <tr><td>رزولوشن محوری</td><td>تقریباً <span class="num">0.2–1 mm</span> در سامانه‌های متداول؛ وابسته به فرکانس و طول پالس</td></tr>
+          <tr><td>رزولوشن جانبی</td><td>تقریباً <span class="num">0.5–2 mm</span>؛ وابسته به پهنای پرتو و فوکوس</td></tr>
+          <tr><td>سرعت صوت فرضی در بافت نرم</td><td>حدود <span class="num">1540 m/s</span></td></tr>
+          <tr><td>توان/شدت خروجی آکوستیکی</td><td>وابسته به پریست، پروب و مد تصویربرداری؛ باید مطابق حدود و الزامات استاندارد و سازنده باشد</td></tr>
+          <tr><td>نوع سیگنال</td><td>پالس‌های RF آنالوگ در مسیر اولیه؛ داده دیجیتال پس از ADC و پردازش؛ خروجی تصویری/شبکه‌ای معمولاً DICOM</td></tr>
+          <tr><td>نرخ نمونه‌برداری ADC</td><td>معمولاً چند ده مگاهرتز یا بیشتر، متناسب با فرکانس و معماری سامانه</td></tr>
+          <tr><td>تعداد کانال</td><td>وابسته به طراحی Beamformer؛ از چند ده تا صدها کانال در سامانه‌های بالینی پیشرفته</td></tr>
+          <tr><td>نرخ فریم</td><td>وابسته به عمق، میدان دید، تعداد خطوط و حالت تصویربرداری؛ در B-Mode معمولاً چند ده فریم بر ثانیه</td></tr>
+          <tr><td>توان مصرفی سیستم</td><td>بسته به مدل؛ معمولاً ده‌ها تا چندصد وات برای کنسول و سامانه قابل‌حمل</td></tr>
+          <tr><td>ذخیره‌سازی و ارتباط</td><td>حافظه داخلی، USB/شبکه و DICOM/PACS در بسیاری از سامانه‌های بالینی</td></tr>
+        </table>`
+      },
+      { key:"standards", label:"استانداردها و کلاس خطر", html:`
+        <h4><span class="dot"></span>استانداردها و طبقه‌بندی</h4>
+        <div class="badges">
+          <span class="badge">IEC 60601-2-37</span>
+          <span class="badge">IEC 60601-1</span>
+          <span class="badge">IEC 60601-1-2</span>
+          <span class="badge">IEC 62359</span>
+          <span class="badge">ISO 14971</span>
+          <span class="badge">ISO 13485</span>
+        </div>
+        <ul>
+          <li><b>IEC 60601-2-37:</b> الزامات اختصاصی ایمنی پایه و عملکرد اساسی تجهیزات تشخیصی و پایش پزشکی فراصوت را مشخص می‌کند.</li>
+          <li><b>IEC 60601-1:</b> الزامات عمومی ایمنی پایه و عملکرد اساسی تجهیزات الکتریکی پزشکی.</li>
+          <li><b>IEC 60601-1-2:</b> الزامات سازگاری الکترومغناطیسی (EMC).</li>
+          <li><b>IEC 62359:</b> روش‌های مرتبط با تعیین شاخص‌های خروجی و شاخص‌های حرارتی و مکانیکی فراصوت.</li>
+          <li><b>ISO 14971:</b> چارچوب مدیریت ریسک تجهیزات پزشکی؛ <b>ISO 13485</b> نیز الزامات سیستم مدیریت کیفیت سازندگان تجهیزات پزشکی را پوشش می‌دهد.</li>
+        </ul>
+        <table class="tbl">
+          <tr><th>ویژگی</th><th>وضعیت معمول</th></tr>
+          <tr><td>کلاس حفاظت الکتریکی</td><td>بسته به طراحی و منبع تغذیه؛ بسیاری از کنسول‌های رومیزی Class I و برخی سامانه‌های قابل‌حمل دارای طراحی Class II هستند. باید به برچسب و IFU سازنده استناد شود.</td></tr>
+          <tr><td>نوع قطعه کاربردی</td><td>پروب‌های خارجی معمولاً Type BF؛ در کاربردهای قلبی تهاجمی، نوع قطعه کاربردی می‌تواند CF باشد. طبقه‌بندی نهایی تابع طراحی و استاندارد سازنده است.</td></tr>
+          <tr><td>کلاس خطر تنظیم‌گری</td><td>کلاس خطر تنظیم‌گری به کشور و intended use وابسته است؛ بنابراین نباید یک کلاس واحد جهانی برای همه سامانه‌های سونوگرافی تعیین کرد.</td></tr>
+        </table>`
+      },
+      { key:"safety", label:"ایمنی و هشدارها", html:`
+        <h4><span class="dot"></span>ایمنی و هشدارها</h4>
+        <div class="box danger">
+          <h5>ایمنی بیمار</h5>
+          <ul>
+            <li>فراصوت می‌تواند <b>اثرات حرارتی</b> و <b>مکانیکی</b> ایجاد کند؛ بنابراین از کمترین خروجی و کوتاه‌ترین زمان اسکن لازم برای دستیابی به اطلاعات تشخیصی استفاده شود.</li>
+            <li><b>TI (Thermal Index)</b> شاخصی برای برآورد پتانسیل افزایش دما و <b>MI (Mechanical Index)</b> شاخصی مرتبط با اثرات مکانیکی و احتمال کاویتاسیون است. این شاخص‌ها ابزارهای نمایش ریسک‌اند، نه اندازه‌گیری مستقیم آسیب در بیمار.</li>
+            <li>در بارداری و سایر کاربردهای حساس، اصل <b>ALARA</b> رعایت شود: خروجی آکوستیکی و زمان مواجهه تا حد معقول و موردنیاز برای پاسخ بالینی محدود بماند.</li>
+            <li>پروب‌های داخل‌حفره‌ای و سایر پروب‌هایی که نیاز به سطح بالای کنترل عفونت دارند باید طبق دستورالعمل سازنده و سیاست کنترل عفونت مرکز، تمیز و در صورت لزوم ضدعفونی سطح بالا یا استریل شوند.</li>
+          </ul>
+        </div>
+        <div class="box warn">
+          <h5>ایمنی اپراتور و دستگاه</h5>
+          <ul>
+            <li>پروب و کابل را از ضربه، افتادن، خم‌کردن شدید و کشش کانکتور محافظت کنید؛ آسیب مکانیکی می‌تواند باعث خرابی عناصر یا نفوذ مایع شود.</li>
+            <li>تنها از ژل و مواد پاک‌کننده/ضدعفونی‌کننده سازگار با مدل پروب استفاده شود. روش مجاز غوطه‌وری برای هر پروب باید از دستورالعمل سازنده بررسی شود.</li>
+            <li>در صورت مشاهده ترک پوسته، کابل آسیب‌دیده، گرم‌شدن غیرعادی، خطای ایمنی یا نفوذ مایع، استفاده از پروب متوقف و دستگاه برای ارزیابی فنی ارجاع شود.</li>
+          </ul>
+        </div>`
+      },
+      { key:"troubleshoot", label:"خرابی‌های رایج و عیب‌یابی", html:`
+        <h4><span class="dot"></span>خرابی‌های رایج و عیب‌یابی</h4>
+        <table class="tbl">
+          <tr><th>مشکل</th><th>علت احتمالی و اقدام پیشنهادی</th></tr>
+          <tr><td>نوار یا ستون تیره در تصویر</td><td>خرابی یک یا چند عنصر پروب، کابل یا کانکتور؛ پروب دیگر را برای مقایسه امتحان کرده و در صورت تداوم، تست اختصاصی پروب انجام شود.</td></tr>
+          <tr><td>تصویر تار یا کم‌کنتراست</td><td>Gain/TGC، Focus، فرکانس یا پریست نامناسب، ژل ناکافی یا مشکل در پروب؛ تنظیمات را بازبینی و سلامت پروب را بررسی کنید.</td></tr>
+          <tr><td>افت عمق نفوذ</td><td>انتخاب فرکانس بالا، افزایش آتنویشن یا کاهش حساسیت دریافت؛ پروب و پریست متناسب با عمق موردنظر انتخاب شود.</td></tr>
+          <tr><td>کاهش شدید نرخ فریم</td><td>عمق زیاد، چند Focal Zone، فعال بودن همزمان Color/Power Doppler یا پردازش سنگین؛ تنظیمات غیرضروری کاهش یابد.</td></tr>
+          <tr><td>خطای شناسایی پروب</td><td>مشکل کانکتور، آلودگی، آسیب کابل یا خطای نرم‌افزاری؛ دستگاه خاموش/روشن و کانکتور طبق دستورالعمل بررسی شود؛ در صورت تداوم سرویس فنی لازم است.</td></tr>
+          <tr><td>نویز یا آرتیفکت الکتریکی</td><td>تداخل الکترومغناطیسی، زمین نامناسب یا منبع تغذیه مشکل‌دار؛ مسیر کابل‌ها و شرایط برق و EMC بررسی شود.</td></tr>
+          <tr><td>خطای اندازه‌گیری فاصله یا داپلر</td><td>کالیبراسیون، تنظیم سرعت صوت، زاویه داپلر یا خطای نرم‌افزار؛ آزمون با فانتوم و کنترل QC انجام شود.</td></tr>
+          <tr><td>گرم‌شدن غیرعادی پروب</td><td>پریست خروجی بالا، استفاده طولانی در مدهای پرتوان یا خرابی داخلی؛ خروجی را کاهش داده و در صورت تداوم، استفاده متوقف و پروب بررسی شود.</td></tr>
+          <tr><td>نفوذ مایع به پروب</td><td>آسیب پوسته یا آب‌بندی؛ پروب از سرویس خارج و برای بررسی ایمنی و تعمیر تخصصی ارسال شود.</td></tr>
+        </table>`
+      },
+      { key:"maintenance", label:"نگهداری و کالیبراسیون", html:`
+        <h4><span class="dot"></span>نگهداری و کالیبراسیون</h4>
+        <ul>
+          <li><b>روزانه:</b> بازرسی چشمی پروب و کابل، پاک‌کردن ژل پس از استفاده، بررسی کیفیت تصویر و کنترل عملکرد اولیه دستگاه و نمایشگر.</li>
+          <li><b>هفتگی:</b> بررسی همه پروب‌ها، کنترل یکنواختی تصویر روی فانتوم در صورت وجود برنامه QC، پاک‌سازی فیلترها و بررسی وضعیت کابل‌ها و کانکتورها.</li>
+          <li><b>ماهانه:</b> آزمون‌های QC تصویری شامل یکنواختی، رزولوشن، عمق نفوذ و دقت اندازه‌گیری بر اساس برنامه مرکز درمانی و توصیه سازنده؛ نتایج ثبت و با مقادیر پایه مقایسه شوند.</li>
+          <li><b>سالانه:</b> ارزیابی ایمنی الکتریکی، کنترل عملکرد سیستم، بررسی پروب‌ها، آزمون فانتوم و در صورت الزام سازنده/مرکز، اندازه‌گیری و ارزیابی خروجی آکوستیکی و شاخص‌های مربوطه توسط فرد صلاحیت‌دار.</li>
+          <li><b>نگهداری پروب:</b> پروب را در نگهدارنده مخصوص قرار دهید، از کابل آویزان نکنید، کانکتور را خشک و تمیز نگه دارید و از خم‌کردن شدید یا ضربه به سطح پروب جلوگیری کنید.</li>
+          <li><b>کنترل عفونت:</b> روش تمیزکاری و سطح ضدعفونی باید بر اساس نوع پروب، کاربرد و دستورالعمل سازنده انتخاب شود؛ مواد ناسازگار می‌توانند به پوسته یا عناصر داخلی آسیب بزنند.</li>
+        </ul>
+        <div class="box warn"><h5>نکته کالیبراسیون</h5><ul><li>کالیبراسیون و QC سونوگرافی باید با فانتوم مناسب و ابزارهای مرجع معتبر انجام شود. هر پروب یک جزء مستقل برای ارزیابی است و سلامت یک پروب، سلامت سایر پروب‌ها را ثابت نمی‌کند.</li></ul></div>`
+      },
+      { key:"quiz", label:"سوالات خودآزمایی", html:`
+        <h4><span class="dot"></span>سوالات خودآزمایی</h4>
+        <details class="acc"><summary>۱. اثر پیزوالکتریک در ترنسدیوسر چه نقشی دارد؟</summary>
+          <div class="ans"><b>پاسخ:</b> در حالت ارسال، ولتاژ الکتریکی باعث تغییر شکل عنصر پیزوالکتریک و تولید موج فراصوت می‌شود؛ در حالت دریافت، فشار مکانیکی ناشی از پژواک باعث ایجاد ولتاژ الکتریکی می‌شود. بنابراین ترنسدیوسر می‌تواند هم فرستنده و هم گیرنده باشد.</div>
+        </details>
+        <details class="acc"><summary>۲. چرا افزایش فرکانس معمولاً رزولوشن را بهتر ولی نفوذ را کمتر می‌کند؟</summary>
+          <div class="ans"><b>پاسخ:</b> افزایش فرکانس طول موج را کاهش می‌دهد و امکان تفکیک جزئیات کوچک‌تر را افزایش می‌دهد؛ در عین حال تضعیف و جذب انرژی فراصوت در بافت معمولاً با افزایش فرکانس بیشتر می‌شود، بنابراین برای ساختارهای عمیق‌تر از فرکانس‌های پایین‌تر استفاده می‌شود.</div>
+        </details>
+        <details class="acc"><summary>۳. MI و TI چه مفهومی دارند؟</summary>
+          <div class="ans"><b>پاسخ:</b> MI شاخصی از پتانسیل اثرات مکانیکی فراصوت و TI شاخصی از پتانسیل افزایش دمای بافت است. این شاخص‌ها برای کمک به مدیریت مواجهه آکوستیکی به‌کار می‌روند و رعایت اصل ALARA در تنظیم توان و زمان اسکن اهمیت دارد.</div>
+        </details>`
+      }
+    ]
+  },
+
+  {
+    id:"patient-monitor",
+    name:"مونیتور علائم حیاتی",
+    en:"Patient Monitor",
+    tag:"پایش علائم حیاتی",
+    icon:"patientMonitor",
+    sections:[
+      { key:"principle", label:"اصل کارکرد", html:`
+        <h4><span class="dot"></span>اصل کارکرد</h4>
+        <p>مونیتور علائم حیاتی یک سامانه چندپارامتری است که سیگنال‌های فیزیولوژیک بیمار را از حسگرها و ماژول‌های ورودی دریافت، تقویت و فیلتر می‌کند، سپس با مبدل‌های آنالوگ‌به‌دیجیتال و الگوریتم‌های پردازش سیگنال، پارامترهای عددی و موجی را به‌صورت پیوسته روی نمایشگر نشان می‌دهد. سامانه همچنین حدود آلارم را با مقادیر اندازه‌گیری‌شده مقایسه کرده و در شرایط تعریف‌شده هشدار دیداری و شنیداری ایجاد می‌کند.</p>
+        <ul>
+          <li><b>ECG:</b> اختلاف پتانسیل‌های الکتریکی ایجادشده توسط دپلاریزاسیون و رپلاریزاسیون قلب از طریق الکترودهای پوستی اندازه‌گیری و به شکل موج ECG و ضربان قلب نمایش داده می‌شود.</li>
+          <li><b>SpO₂:</b> پالس‌اکسیمتر با استفاده از نور قرمز و مادون‌قرمز و تحلیل تغییرات جذب نور در خون شریانی ضربان‌دار، اشباع اکسیژن شریانی و نبض را تخمین می‌زند.</li>
+          <li><b>NIBP:</b> فشارخون غیرتهاجمی با کاف و روش‌های اسیلومتریک اندازه‌گیری می‌شود؛ نوسانات فشار ناشی از ضربان شریانی در کاف تحلیل شده و فشار سیستولیک، دیاستولیک و متوسط برآورد می‌شوند.</li>
+          <li><b>IBP:</b> در پایش تهاجمی، فشار از طریق کاتتر و ترانسدیوسر فشاری اندازه‌گیری می‌شود. تغییر شکل دیافراگم ترانسدیوسر به سیگنال الکتریکی تبدیل شده و موج و مقادیر فشار نمایش داده می‌شوند.</li>
+          <li><b>دما:</b> حسگرهای ترمیستور یا سایر حسگرهای دمایی، تغییرات مقاومت/ویژگی الکتریکی وابسته به دما را اندازه‌گیری و به درجه حرارت تبدیل می‌کنند.</li>
+          <li><b>ETCO₂:</b> در کاپنوگرافی معمولاً با روش جذب مادون‌قرمز، غلظت CO₂ گاز بازدمی اندازه‌گیری و به شکل عدد ETCO₂ و موج کپنوگرام نمایش داده می‌شود.</li>
+          <li><b>تنفس:</b> در بسیاری از مانیتورها از تغییر امپدانس قفسه سینه بین الکترودهای ECG برای تخمین نرخ و الگوی تنفس استفاده می‌شود؛ برخی سامانه‌ها نیز نرخ تنفس را از کپنوگرافی به دست می‌آورند.</li>
+        </ul>
+        <div class="box info"><h5>زنجیره اندازه‌گیری</h5><p>حسگر ← مدار ورودی و حفاظت ← تقویت و فیلتر ← ADC ← پردازش دیجیتال و محاسبه پارامتر ← نمایش/ثبت روند ← منطق آلارم. دقت نهایی به حسگر، کالیبراسیون، شرایط بیمار، آرتیفکت و الگوریتم دستگاه وابسته است.</p></div>`
+      },
+      { key:"parts", label:"اجزای اصلی", html:`
+        <h4><span class="dot"></span>اجزای اصلی</h4>
+        <ul>
+          <li><b>ماژول ECG:</b> ورودی الکترودها، تقویت‌کننده ایزوله، فیلتر و مدار تشخیص QRS/ضربان.</li>
+          <li><b>ماژول SpO₂:</b> LEDهای قرمز و مادون‌قرمز، فوتودیود، مدار درایور و پردازشگر استخراج SpO₂ و Pulse Rate.</li>
+          <li><b>ماژول NIBP:</b> پمپ، شیرهای کنترلی، سنسور فشار و مسیر پنوماتیک کاف.</li>
+          <li><b>ماژول IBP:</b> ورودی ترانسدیوسر فشار، مدار تحریک/تقویت و کانال‌های اندازه‌گیری فشار تهاجمی.</li>
+          <li><b>ماژول دما:</b> ورودی پروب دما و مدار اندازه‌گیری/تبدیل مقدار سنسور.</li>
+          <li><b>ماژول Capnography:</b> مسیر نمونه یا جریان اصلی، منبع IR، آشکارساز و سامانه اندازه‌گیری CO₂.</li>
+          <li><b>برد پردازش مرکزی:</b> پردازنده، حافظه، الگوریتم‌های پردازش سیگنال، مدیریت آلارم و ارتباط بین ماژول‌ها.</li>
+          <li><b>نمایشگر:</b> معمولاً LCD/LED با نمایش موج‌های ECG، SpO₂، فشار، CO₂ و اعداد پارامترها.</li>
+          <li><b>سامانه آلارم:</b> آلارم‌های فیزیولوژیک و فنی، چراغ/نشانگر وضعیت و صدای هشدار.</li>
+          <li><b>باتری پشتیبان و مدار شارژ:</b> حفظ عملکرد دستگاه هنگام جابه‌جایی یا قطع برق.</li>
+          <li><b>کابل‌ها و حسگرها:</b> لید ECG، سنسور SpO₂، کاف NIBP، ترانسدیوسر IBP، پروب دما و مجموعه نمونه‌گیری CO₂.</li>
+          <li><b>ارتباطات:</b> بسته به مدل شامل Ethernet/Wi‑Fi، USB، RS‑232 یا رابط‌های اختصاصی برای شبکه بیمارستانی و انتقال داده.</li>
+          <li><b>ثبت روند (Trend):</b> حافظه‌ای برای ذخیره مقادیر و رخدادها در طول زمان و امکان بازبینی تغییرات وضعیت بیمار.</li>
+        </ul>`
+      },
+      { key:"clinical", label:"کاربرد بالینی", html:`
+        <h4><span class="dot"></span>کاربرد بالینی</h4>
+        <p>مونیتورهای علائم حیاتی در محیط‌هایی استفاده می‌شوند که پایش پیوسته یا دوره‌ای وضعیت فیزیولوژیک بیمار لازم است:</p>
+        <ul>
+          <li><b>ICU و CCU:</b> پایش مداوم ECG، SpO₂، فشار و در صورت نیاز IBP و ETCO₂ برای بیماران بحرانی.</li>
+          <li><b>اتاق عمل:</b> پایش ECG، اکسیژناسیون، فشارخون، دما و در بسیاری از موارد CO₂ بازدمی در طول بیهوشی و ریکاوری.</li>
+          <li><b>اورژانس:</b> ارزیابی سریع و پایش روند بیمار، به‌ویژه در بیماران ناپایدار یا نیازمند مشاهده مستمر.</li>
+          <li><b>ریکاوری/PACU:</b> پایش پس از بیهوشی و شناسایی تغییرات تنفسی و قلبی.</li>
+          <li><b>NICU و بخش‌های نوزادان:</b> مانیتورینگ با تجهیزات و محدوده‌های متناسب با نوزاد، همراه با توجه ویژه به آلارم‌ها و اندازه حسگرها.</li>
+          <li><b>بخش‌های بستری:</b> بسته به مدل و سیاست مرکز، پایش نقطه‌ای یا پیوسته بیماران پرخطر.</li>
+        </ul>
+        <div class="box info"><h5>تشخیص زودهنگام وخامت</h5><p>روند تغییرات HR، SpO₂، فشار، دما و تنفس می‌تواند در شناسایی وخامت بالینی کمک‌کننده باشد. در برخی مراکز این داده‌ها در سامانه‌های امتیاز هشدار زودهنگام مانند <b>Early Warning Score</b> وارد می‌شوند؛ مانیتور به‌تنهایی جایگزین ارزیابی بالینی نیست.</p></div>`
+      },
+      { key:"specs", label:"مشخصات فنی", html:`
+        <h4><span class="dot"></span>مشخصات فنی (مقادیر نمونه)</h4>
+        <p>مقادیر زیر بازه‌های آموزشی/رایج هستند و بسته به سازنده، مدل، بیمار و ماژول‌های نصب‌شده تغییر می‌کنند.</p>
+        <table class="tbl">
+          <tr><th>پارامتر</th><th>مقدار / بازه نمونه</th></tr>
+          <tr><td>ECG</td><td>۳، ۵ یا ۱۲ لید؛ انتخاب وابسته به مدل و کاربرد</td></tr>
+          <tr><td>نرخ ضربان قلب</td><td>تقریباً 20 تا 300 bpm در بسیاری از مدل‌ها</td></tr>
+          <tr><td>SpO₂</td><td>معمولاً 0 تا 100٪؛ محدوده دقیق دقت و آلارم به مدل وابسته است</td></tr>
+          <tr><td>NIBP</td><td>تقریباً 0 تا 300 mmHg برای فشار کاف/سامانه اندازه‌گیری؛ محدوده بالینی وابسته به مدل</td></tr>
+          <tr><td>IBP</td><td>معمولاً چند کانال فشار؛ در بسیاری از مدل‌ها حدود −50 تا +300 mmHg</td></tr>
+          <tr><td>دما</td><td>تقریباً 0 تا 50 °C در بسیاری از ورودی‌ها؛ برخی مدل‌ها بازه متفاوت دارند</td></tr>
+          <tr><td>ETCO₂</td><td>معمولاً حدود 0 تا 150 mmHg یا معادل درصد حجمی، بسته به ماژول</td></tr>
+          <tr><td>نرخ تنفس</td><td>تقریباً 0 تا 150 تنفس در دقیقه، بسته به روش و مدل</td></tr>
+          <tr><td>نرخ نمونه‌برداری ECG</td><td>اغلب صدها نمونه در ثانیه؛ مقدار دقیق به طراحی و مسیر پردازش بستگی دارد</td></tr>
+          <tr><td>نمایشگر</td><td>LCD/TFT یا LED؛ معمولاً رنگی و چندموجی</td></tr>
+          <tr><td>باتری</td><td>باتری قابل شارژ، اغلب لیتیوم‌یون؛ زمان کار وابسته به مدل و بار ماژول‌ها</td></tr>
+          <tr><td>توان مصرفی</td><td>وابسته به اندازه نمایشگر و ماژول‌ها؛ معمولاً ده‌ها وات در حالت کار با برق شهر</td></tr>
+          <tr><td>ارتباطات</td><td>بسته به مدل: Ethernet، Wi‑Fi، USB، RS‑232 یا رابط اختصاصی</td></tr>
+          <tr><td>ذخیره Trend</td><td>از چند ساعت تا چند روز یا بیشتر، بسته به ظرفیت حافظه و تنظیمات</td></tr>
+          <tr><td>آلارم</td><td>حد بالا/پایین برای پارامترهای فیزیولوژیک و آلارم‌های فنی ماژول‌ها</td></tr>
+        </table>
+        <div class="box warn"><h5>تفسیر مشخصات</h5><p>محدوده اندازه‌گیری، محدوده نمایش، محدوده آلارم و محدوده دقت الزاماً یکسان نیستند. هنگام خرید، PM یا عیب‌یابی باید دیتاشیت و Service Manual همان مدل بررسی شود.</p></div>`
+      },
+      { key:"standards", label:"استانداردها و کلاس خطر", html:`
+        <h4><span class="dot"></span>استانداردها و کلاس خطر</h4>
+        <ul>
+          <li><b>IEC 60601-1:</b> الزامات عمومی ایمنی پایه و عملکرد اساسی تجهیزات الکتریکی پزشکی.</li>
+          <li><b>IEC 60601-1-2:</b> الزامات سازگاری الکترومغناطیسی (EMC).</li>
+          <li><b>IEC 60601-1-8:</b> الزامات عمومی، آزمون‌ها و راهنمایی برای سامانه‌های آلارم در تجهیزات و سامانه‌های الکتریکی پزشکی.</li>
+          <li><b>IEC 60601-2-27:</b> الزامات اختصاصی تجهیزات مانیتورینگ ECG.</li>
+          <li><b>IEC 60601-2-49:</b> الزامات اختصاصی ایمنی پایه و عملکرد اساسی تجهیزات چندپارامتری پایش بیمار.</li>
+          <li><b>ISO 14971:</b> مدیریت ریسک تجهیزات پزشکی، از جمله شناسایی خطرات مربوط به اندازه‌گیری، آلارم، نرم‌افزار و خطاهای استفاده.</li>
+          <li><b>کلاس خطر:</b> طبقه‌بندی قانونی به Intended Use، بازار هدف و Rule مقرراتی وابسته است. در نظام‌های طبقه‌بندی مانند EU MDR، کلاس دقیق یک Patient Monitor را نمی‌توان صرفاً از نام دستگاه تعیین کرد و باید پیکربندی، ادعاهای سازنده و کاربرد موردنظر بررسی شود.</li>
+          <li><b>نوع قطعه کاربردی:</b> بسته به مدار و کاربرد هر کانال ممکن است BF یا CF باشد و کانال‌های ECG/فشار/سنسورها باید الزامات مربوط به جداسازی و حفاظت را رعایت کنند.</li>
+        </ul>
+        <div class="box info"><h5>نکته مهندسی</h5><p>وجود چند ماژول در یک دستگاه به معنی یکسان بودن الزامات همه کانال‌ها نیست. نوع Applied Part و سطح حفاظت هر ورودی باید از برچسب‌گذاری و مستندات همان مدل استخراج شود.</p></div>`
+      },
+      { key:"safety", label:"ایمنی و هشدارها", html:`
+        <h4><span class="dot"></span>ایمنی و هشدارها</h4>
+        <ul>
+          <li><b>جریان نشتی:</b> اتصال چند تجهیز به بیمار می‌تواند مجموع جریان‌های نشتی را افزایش دهد؛ تجهیزات متصل باید دارای حفاظت و شرایط سازگار با محیط پزشکی باشند.</li>
+          <li><b>آلارم‌ها:</b> حدود آلارم باید متناسب با وضعیت بیمار تنظیم و صدای/نشانگر آلارم قابل مشاهده و شنیدن باشد. خاموش‌کردن غیرضروری آلارم‌ها می‌تواند باعث از دست رفتن هشدار مهم شود.</li>
+          <li><b>Alarm Fatigue:</b> تعداد زیاد آلارم‌های غیرضروری یا حدود نامناسب می‌تواند باعث کاهش توجه اپراتور شود؛ تنظیم منطقی حدود، نگهداری حسگرها و بررسی علت آلارم‌های تکراری اهمیت دارد.</li>
+          <li><b>جداسازی الکتریکی:</b> ورودی‌های متصل به بیمار باید از مدارهای خطرناک ایزوله باشند. استفاده از کابل و سنسور غیرمجاز یا آسیب‌دیده می‌تواند ایمنی را کاهش دهد.</li>
+          <li><b>بیماران دارای Pacemaker/ICD:</b> فیلترها و الگوریتم تشخیص ضربان ممکن است تحت تأثیر پالس‌های دستگاه کاشتنی قرار گیرند؛ عملکرد تشخیص HR و آلارم باید مطابق دستورالعمل سازنده بررسی شود.</li>
+          <li><b>دفیبریلاسیون:</b> کانال‌های متصل به بیمار باید در صورت طراحی دستگاه، در برابر اثرات دفیبریلاسیون محافظت شده باشند. قبل از اتصال/استفاده، علامت و مشخصات Defibrillator-proof بودن کانال بررسی شود.</li>
+          <li><b>SpO₂:</b> سنسور باید در محل مناسب و بدون فشار بیش از حد قرار گیرد و محل آن در پایش طولانی بررسی شود؛ نور شدید محیط و حرکت می‌تواند بر اندازه‌گیری اثر بگذارد.</li>
+          <li><b>NIBP:</b> اندازه و محل کاف باید مناسب بیمار باشد. تکرار اندازه‌گیری در فاصله‌های کوتاه یا کاف نامناسب می‌تواند ناراحتی یا خطای اندازه‌گیری ایجاد کند.</li>
+          <li><b>IBP و ETCO₂:</b> مسیرهای تهاجمی و نمونه‌گیری باید طبق پروتکل کنترل عفونت و دستورالعمل سازنده مدیریت شوند.</li>
+        </ul>`
+      },
+      { key:"troubleshooting", label:"خرابی‌های رایج و عیب‌یابی", html:`
+        <h4><span class="dot"></span>خرابی‌های رایج و عیب‌یابی</h4>
+        <table class="tbl">
+          <tr><th>مشکل</th><th>علل محتمل</th><th>اقدام/راه‌حل فنی</th></tr>
+          <tr><td>ECG پرنویز</td><td>الکترود خشک/بدتماس، حرکت بیمار، کابل معیوب یا EMI</td><td>بررسی محل و کیفیت الکترود، کابل و زمین/EMC؛ استفاده از فیلترهای مجاز دستگاه</td></tr>
+          <tr><td>SpO₂ ناپایدار یا غیرواقعی</td><td>حرکت، پرفیوژن ضعیف، سنسور نامناسب، نور محیط یا کابل</td><td>بررسی محل سنسور، پرفیوژن و اتصال؛ تست با شبیه‌ساز SpO₂ در حالت سرویس</td></tr>
+          <tr><td>NIBP خطای اندازه‌گیری می‌دهد</td><td>کاف نامناسب، نشتی مسیر پنوماتیک، حرکت یا خرابی پمپ/شیر</td><td>بررسی کاف و شیلنگ، تست نشتی و فشار با NIBP Analyzer یا مرجع فشار</td></tr>
+          <tr><td>IBP صفر نمی‌شود</td><td>مشکل ترانسدیوسر، کابل، فشار مرجع یا خطای Zero</td><td>بازبینی اتصالات و اجرای Zero طبق دستورالعمل؛ تست با شبیه‌ساز فشار</td></tr>
+          <tr><td>دما نادرست است</td><td>پروب نامناسب، خرابی کابل یا کالیبراسیون</td><td>بررسی نوع پروب و اتصال؛ مقایسه با شبیه‌ساز/مرجع دما و کالیبراسیون در صورت نیاز</td></tr>
+          <tr><td>ETCO₂ صفر/نادرست</td><td>نشتی، انسداد مسیر نمونه، آب/رطوبت، سنسور یا خطای Zero</td><td>بررسی مسیر نمونه، فیلتر و Water Trap؛ اجرای Zero و تست با گاز مرجع طبق سرویس</td></tr>
+          <tr><td>آلارم‌های کاذب</td><td>حدود نامناسب، آرتیفکت، حسگر معیوب یا تنظیمات اشتباه</td><td>بررسی علت فیزیولوژیک/فنی آلارم، حسگر و حدود؛ هرگز فقط آلارم را بدون رفع علت خاموش نکنید</td></tr>
+          <tr><td>نمایشگر قطع/کم‌نور</td><td>منبع تغذیه، باتری، بک‌لایت یا برد نمایشگر</td><td>بررسی برق ورودی و باتری؛ در صورت تداوم بررسی ماژول نمایشگر در سرویس</td></tr>
+          <tr><td>قطع شبکه</td><td>کابل، تنظیم IP، سوئیچ شبکه، نرم‌افزار یا رابط ارتباطی</td><td>بررسی Link، کابل و تنظیمات شبکه و سپس تست ارتباط با سیستم مرکزی</td></tr>
+          <tr><td>ثبت Trend انجام نمی‌شود</td><td>حافظه، تنظیمات ثبت، خطای نرم‌افزار یا پر شدن حافظه</td><td>بررسی ظرفیت و تنظیمات، انتقال داده‌ها و اجرای آزمون ثبت روند</td></tr>
+        </table>`
+      },
+      { key:"maintenance", label:"نگهداری و کالیبراسیون", html:`
+        <h4><span class="dot"></span>نگهداری و کالیبراسیون</h4>
+        <div class="timeline">
+          <div class="titem"><b>روزانه / پیش از استفاده</b><span>بازرسی ظاهری، بررسی کابل‌ها و سنسورها، تمیزی دستگاه، روشن‌شدن و Self-Test، کنترل باتری و بررسی وضعیت آلارم‌ها.</span></div>
+          <div class="titem"><b>هفتگی</b><span>بازبینی اتصالات، کابل ECG، سنسور SpO₂، کاف NIBP، مسیر CO₂ و وضعیت ثبت Trend؛ بررسی عملکرد آلارم‌های اصلی طبق چک‌لیست مرکز.</span></div>
+          <div class="titem"><b>ماهانه</b><span>آزمون عملکرد NIBP، بررسی صحت ECG/SpO₂ با شبیه‌ساز بیمار، بررسی دما و در صورت وجود IBP/ETCO₂ با تجهیزات آزمون مناسب؛ بازبینی باتری و زمان کار.</span></div>
+          <div class="titem"><b>سالانه / دوره‌ای</b><span>PM کامل، تست ایمنی الکتریکی، بررسی جریان نشتی و ارت، Verification/Calibration ماژول‌های NIBP، IBP، SpO₂، ETCO₂ و دما و تست صحت آلارم‌ها مطابق دستور سازنده و برنامه کیفیت مرکز.</span></div>
+        </div>
+        <div class="box info"><h5>کالیبراسیون و شبیه‌سازی</h5><p>برای ECG از <b>Patient Simulator</b>، برای NIBP از مرجع فشار/آزمونگر NIBP، برای IBP از شبیه‌ساز فشار، برای SpO₂ از شبیه‌ساز نوری، برای ETCO₂ از گاز مرجع/تجهیز آزمون و برای دما از شبیه‌ساز یا مرجع دمایی استفاده می‌شود. حدود پذیرش باید از Service Manual همان مدل گرفته شود.</p></div>
+        <div class="box warn"><h5>نکته مهم</h5><p>فواصل کالیبراسیون یک عدد ثابت برای همه مانیتورها نیست. سابقه خرابی، شدت استفاده، توصیه سازنده و سیاست مدیریت تجهیزات پزشکی باید در تعیین دوره PM/QC در نظر گرفته شود.</p></div>`
+      },
+      { key:"quiz", label:"سوالات خودآزمایی", html:`
+        <h4><span class="dot"></span>سوالات خودآزمایی</h4>
+        <div class="acc">
+          <details>
+            <summary>۱) SpO₂ در مونیتور علائم حیاتی بر چه اصل فیزیکی اندازه‌گیری می‌شود؟</summary>
+            <div>با استفاده از <b>فوتوپلتیسموگرافی و جذب نور قرمز و مادون‌قرمز</b> در خون ضربان‌دار؛ نسبت جذب دو طول موج برای تخمین اشباع اکسیژن شریانی استفاده می‌شود.</div>
+          </details>
+          <details>
+            <summary>۲) تفاوت NIBP و IBP در چیست؟</summary>
+            <div>NIBP به‌صورت غیرتهاجمی و معمولاً با روش اسیلومتریک و کاف اندازه‌گیری می‌شود؛ IBP از طریق مسیر تهاجمی، کاتتر و ترانسدیوسر فشار، موج و مقدار فشار را به‌صورت مستقیم‌تر اندازه‌گیری می‌کند.</div>
+          </details>
+          <details>
+            <summary>۳) چرا مدیریت آلارم در Patient Monitor اهمیت زیادی دارد؟</summary>
+            <div>زیرا آلارم باید تغییرات مهم فیزیولوژیک و خطاهای فنی را به‌موقع اطلاع دهد. آلارم‌های بیش از حد یا نامرتبط می‌توانند باعث <b>Alarm Fatigue</b> شوند؛ بنابراین حدود آلارم باید منطقی و متناسب با وضعیت بیمار تنظیم و علت آلارم‌های تکراری بررسی شود.</div>
+          </details>
+        </div>`
+      }
+    ]
+  },
+  {
+    id:"mri",
+    name:"ام‌آر‌آی",
+    en:"MRI (Magnetic Resonance Imaging)",
+    tag:"تصویربرداری تشخیصی",
+    icon:"mri",
+    sections:[
+      { key:"principle", label:"اصل کارکرد", html:`
+        <h4><span class="dot"></span>اصل کارکرد</h4>
+        <p>ام‌آر‌آی یا <b>تصویربرداری تشدید مغناطیسی</b> از برهم‌کنش هسته‌های دارای اسپین، به‌ویژه پروتون‌های هیدروژن آب و چربی، با میدان مغناطیسی و امواج رادیویی استفاده می‌کند. این روش <b>از تابش یونیزان استفاده نمی‌کند</b>. در میدان اصلی ثابت <span class="en-inline">B<sub>0</sub></span>، ممان‌های مغناطیسی پروتون‌ها به‌طور متوسط با میدان هم‌راستا می‌شوند و با فرکانس لارمور پیش‌روی (Precession) می‌کنند: <span class="en-inline">ω<sub>0</sub> = γB<sub>0</sub></span>.</p>
+        <div class="thread"><b>برانگیزش RF:</b> یک پالس رادیویی در فرکانس لارمور، مغناطش خالص را از راستای <span class="en-inline">B<sub>0</sub></span> منحرف می‌کند. پس از قطع RF، اسپین‌ها به تعادل برمی‌گردند و سیگنال RF ضعیفی در سیم‌پیچ گیرنده القا می‌شود. این سیگنال، که به <b>Free Induction Decay (FID)</b> و سیگنال‌های حاصل از توالی‌های پالس مربوط است، مبنای بازسازی تصویر قرار می‌گیرد.</div>
+        <p><b>گرادیان‌ها</b> میدان مغناطیسی را به‌صورت کنترل‌شده در راستاهای مختلف تغییر می‌دهند تا موقعیت فضایی سیگنال مشخص شود. انتخاب برش با گرادیان انتخاب برش، کدگذاری فاز با تغییر فاز اسپین‌ها و کدگذاری فرکانس با ایجاد وابستگی فرکانس به موقعیت انجام می‌شود. داده‌های فضایی در <span class="en-inline">k-space</span> ذخیره و سپس با تبدیل فوریه (Fourier Transform) یا بازسازی‌های پیشرفته به تصویر تبدیل می‌شوند.</p>
+        <ul>
+          <li><b>T1:</b> زمان مشخصه‌ی بازیابی مؤلفه طولی مغناطش پس از تحریک RF است. در بسیاری از توالی‌های T1-weighted، چربی روشن‌تر و مایع آزاد تیره‌تر دیده می‌شود و برای آناتومی و برخی ارزیابی‌های پس از تزریق ماده حاجب گادولینیوم مفید است.</li>
+          <li><b>T2:</b> زمان مشخصه‌ی کاهش مؤلفه عرضی مغناطش و از دست‌رفتن هم‌فازی اسپین‌هاست. در بسیاری از تصاویر T2-weighted، مایعات و ادم روشن‌تر دیده می‌شوند و برای تشخیص بسیاری از تغییرات پاتولوژیک با آب افزایش‌یافته کاربرد دارد.</li>
+          <li><b>نکته:</b> T1 و T2 «دو تصویر ثابت» نیستند؛ کنتراست نهایی تابع توالی پالس، زمان‌های <span class="en-inline">TR</span> و <span class="en-inline">TE</span>، چگالی پروتون و پارامترهای بازسازی است.</li>
+        </ul>`
+      },
+      { key:"parts", label:"اجزای اصلی", html:`
+        <h4><span class="dot"></span>اجزای اصلی سامانه MRI</h4>
+        <ul>
+          <li><b>آهنربای اصلی (Superconducting Magnet):</b> میدان ثابت و یکنواخت <span class="en-inline">B<sub>0</sub></span> را ایجاد می‌کند؛ سامانه‌های بالینی رایج معمولاً ۱٫۵ یا ۳ تسلا هستند.</li>
+          <li><b>سیم‌پیچ‌های گرادیان (Gradient Coils):</b> سه مجموعه سیم‌پیچ برای ایجاد تغییرات کنترل‌شده در میدان در راستاهای x، y و z؛ سرعت تغییر میدان با <span class="en-inline">slew rate</span> بیان می‌شود.</li>
+          <li><b>سیم‌پیچ‌های RF:</b> کویل فرستنده، گیرنده یا آرایه‌ای از کویل‌های گیرنده برای تحریک و دریافت سیگنال پروتون‌ها؛ انتخاب کویل مناسب روی SNR و پوشش آناتومیک اثر مستقیم دارد.</li>
+          <li><b>سیستم خنک‌کننده و Cryogenics:</b> آهنربای ابررسانا برای حفظ حالت ابررسانایی به سامانه برودتی متکی است. در بسیاری از سامانه‌های متعارف، هلیوم مایع به‌عنوان کرایوجن به‌کار می‌رود و سامانه‌های جدید ممکن است مصرف هلیوم بسیار کم یا مدار بسته داشته باشند.</li>
+          <li><b>سیستم Shim:</b> شیم‌های فعال و غیرفعال برای یکنواخت‌کردن میدان <span class="en-inline">B<sub>0</sub></span> و کاهش اعوجاج طیفی و تصویری.</li>
+          <li><b>تخت بیمار:</b> تخت غیرمغناطیسی یا سازگار با MR با حرکت کنترل‌شده برای قراردهی دقیق بیمار داخل گانتری.</li>
+          <li><b>سیستم کنترل و بازسازی تصویر:</b> کنسول اپراتور، مولد توالی، کنترل گرادیان و RF، ADC، پردازنده‌ها، ذخیره‌سازی k-space و الگوریتم‌های بازسازی.</li>
+          <li><b>اتاق حفاظت‌شده RF:</b> محفظه Faraday برای کاهش ورود و خروج امواج رادیویی ناخواسته و حفاظت از سیگنال بسیار ضعیف MRI در برابر تداخل الکترومغناطیسی.</li>
+          <li><b>سامانه‌های ایمنی و جانبی:</b> سیستم ارتباط صوتی، دوربین، تهویه، پایش اکسیژن/کرایوجن در طراحی‌های مربوط، آشکارسازهای فلزی و تجهیزات پایش بیمار سازگار با MR.</li>
+        </ul>`
+      },
+      { key:"clinical", label:"کاربرد بالینی", html:`
+        <h4><span class="dot"></span>کاربردهای بالینی</h4>
+        <p>MRI به‌ویژه به دلیل <b>کنتراست عالی بافت نرم</b> و امکان تصویربرداری در صفحات مختلف، در بسیاری از حوزه‌های تشخیصی کاربرد دارد.</p>
+        <ul>
+          <li><b>مغز و اعصاب:</b> سکته مغزی، تومورها، بیماری‌های دمیلینه‌کننده مانند MS، ضایعات ماده سفید، صرع، اختلالات هیپوفیز و بررسی اعصاب جمجمه‌ای.</li>
+          <li><b>ستون فقرات:</b> دیسک بین‌مهره‌ای، تنگی کانال، فشار ریشه عصبی، ضایعات نخاع، تومور و عفونت.</li>
+          <li><b>مفاصل و اسکلتی‌عضلانی:</b> رباط‌ها، تاندون‌ها، منیسک، غضروف، مغز استخوان و آسیب‌های بافت نرم.</li>
+          <li><b>قلب و عروق:</b> ارزیابی ساختار و عملکرد قلب، حجم‌ها و کسر جهشی، اسکار میوکارد و برخی بیماری‌های مادرزادی؛ همچنین <span class="en-inline">MR Angiography (MRA)</span> برای ارزیابی عروق.</li>
+          <li><b>شکم و لگن:</b> کبد، مجاری صفراوی، پانکراس، کلیه‌ها، غدد فوق کلیه، رحم و تخمدان‌ها، پروستات و ارزیابی برخی تومورها و التهاب‌ها.</li>
+          <li><b>آنژیوگرافی MR:</b> تصویربرداری از عروق با یا بدون ماده حاجب، بسته به ناحیه و پروتکل.</li>
+          <li><b>طیف‌سنجی MR:</b> اندازه‌گیری برخی متابولیت‌ها برای اهداف تشخیصی و پژوهشی، به‌ویژه در مغز.</li>
+          <li><b>کاربردهای عملکردی:</b> مانند <span class="en-inline">fMRI</span> برای بررسی تغییرات وابسته به فعالیت عصبی و <span class="en-inline">DWI/DTI</span> برای ارزیابی انتشار آب و مسیرهای ماده سفید.</li>
+        </ul>
+        <div class="box ok"><h5>نکته بالینی</h5><ul><li>انتخاب MRI یا روش دیگر به سؤال بالینی، وضعیت بیمار، وجود ایمپلنت یا وسیله پزشکی، نیاز به ماده حاجب، زمان و دسترسی به دستگاه وابسته است؛ MRI برای همه بیماران یا همه سؤالات تصویربرداری بهترین گزینه واحد نیست.</li></ul></div>`
+      },
+      { key:"specs", label:"مشخصات فنی", html:`
+        <h4><span class="dot"></span>مشخصات فنی نمونه</h4>
+        <table class="tbl"><thead><tr><th>پارامتر</th><th>مقدار/محدوده متعارف</th><th>نکته</th></tr></thead><tbody>
+          <tr><td>قدرت میدان اصلی</td><td>۱٫۵ یا ۳ تسلا در سامانه‌های بالینی رایج</td><td>برخی سامانه‌های پژوهشی و تخصصی میدان‌های بالاتری دارند.</td></tr>
+          <tr><td>قطر گانتری (Bore)</td><td>حدود ۶۰ تا ۷۰ سانتی‌متر</td><td>وابسته به مدل؛ سامانه‌های Wide-bore نیز وجود دارند.</td></tr>
+          <tr><td>گرادیان</td><td>تقریباً ۲۰ تا ۸۰ mT/m در سامانه‌های بالینی؛ مقادیر بالاتر نیز ممکن است وجود داشته باشد.</td><td>قدرت گرادیان بر سرعت و برخی قابلیت‌های تصویربرداری اثر دارد.</td></tr>
+          <tr><td>Slew Rate</td><td>تقریباً ۱۰۰ تا ۲۰۰+ T/m/s در بسیاری از سامانه‌های بالینی</td><td>حد واقعی به مدل و محدودیت‌های ایمنی/عملکردی وابسته است.</td></tr>
+          <tr><td>فرکانس لارمور پروتون</td><td>حدود ۶۳٫۹ MHz در ۱٫۵T و ۱۲۷٫۷ MHz در ۳T</td><td>تقریباً ۴۲٫۵۸ MHz/T برای پروتون هیدروژن.</td></tr>
+          <tr><td>رزولوشن فضایی</td><td>معمولاً حدود ۰٫۵ تا ۱٫۵ mm درون‌صفحه‌ای در تصویربرداری تشخیصی</td><td>وابسته به FOV، ماتریس، ضخامت برش، SNR و توالی.</td></tr>
+          <tr><td>زمان اسکن</td><td>تقریباً ۱۰ تا ۶۰ دقیقه برای بسیاری از معاینات روتین</td><td>بسته به ناحیه، تعداد توالی‌ها، حرکت بیمار و پروتکل.</td></tr>
+          <tr><td>نوع سیگنال</td><td>سیگنال RF آنالوگ از کویل گیرنده، سپس داده دیجیتال</td><td>ADC و زنجیره پردازش سیگنال برای تشکیل k-space و تصویر استفاده می‌شوند.</td></tr>
+          <tr><td>توان مصرفی</td><td>در حد چند ده تا چند صد kVA بسته به سامانه و زیرساخت</td><td>مصرف لحظه‌ای و متوسط را باید از مشخصات سازنده گرفت.</td></tr>
+          <tr><td>هلیوم مایع</td><td>در سامانه‌های متعارف ابررسانا وجود دارد؛ سامانه‌های کم‌هلیوم/بدون‌هلیوم نیز عرضه شده‌اند.</td><td>سطح و مدیریت کرایوجن کاملاً مدل‌محور است.</td></tr>
+          <tr><td>نوع آهنربا</td><td>ابررسانا در اکثر MRIهای بالینی ۱٫۵ و ۳T</td><td>آهنرباهای دائمی و مقاومتی نیز در برخی کاربردها وجود دارند.</td></tr>
+        </tbody></table>
+        <p>مقادیر بالا <b>نمونه‌های مهندسی و بازه‌های متعارف</b> هستند و مشخصات قطعی هر دستگاه باید از دیتاشیت و دفترچه سرویس همان مدل استخراج شود.</p>`
+      },
+      { key:"standards", label:"استانداردها و کلاس خطر", html:`
+        <h4><span class="dot"></span>استانداردها و طبقه‌بندی</h4>
+        <ul>
+          <li><b>IEC 60601-2-33:</b> الزامات ویژه ایمنی پایه و عملکرد اساسی تجهیزات رزونانس مغناطیسی پزشکی؛ نسخه ۲۰۲۲ مبنای فعلی این استاندارد است و بر حفاظت بیمار و کارکنان MR تمرکز دارد.</li>
+          <li><b>IEC 60601-1:</b> الزامات عمومی ایمنی پایه و عملکرد اساسی تجهیزات الکتریکی پزشکی.</li>
+          <li><b>IEC 60601-1-2:</b> الزامات سازگاری الکترومغناطیسی (EMC) و مصونیت/انتشار تداخل.</li>
+          <li><b>ISO 14971:</b> مدیریت ریسک برای تجهیزات پزشکی؛ برای شناسایی و کنترل خطرهای مرتبط با میدان مغناطیسی، RF، گرادیان، کرایوجن و سایر ریسک‌ها کاربرد دارد.</li>
+          <li><b>ISO 13485:</b> سیستم مدیریت کیفیت تولیدکننده تجهیزات پزشکی و فرایندهای مرتبط با طراحی و تولید.</li>
+        </ul>
+        <table class="tbl"><thead><tr><th>ویژگی طبقه‌بندی</th><th>وضعیت MRI</th></tr></thead><tbody>
+          <tr><td>تابش یونیزان</td><td>ندارد؛ تصویربرداری بر پایه میدان مغناطیسی، گرادیان و RF است.</td></tr>
+          <tr><td>کلاس خطر تنظیم‌گری</td><td>کلاس تنظیم‌گری به حوزه قضایی و intended use وابسته است؛ در چارچوب EU MDR، تجهیزات فعال تشخیصی MRI معمولاً تحت Rule 10 در Class IIa قرار می‌گیرند، مگر اینکه شرایط دیگری در مقررات/کاربری اعمال شود.</td></tr>
+          <tr><td>قطعه کاربردی (Applied Part)</td><td>بسته به پیکربندی و کویل؛ کویل‌های بیمار و برخی اجزای تماس‌دار معمولاً با طبقه‌بندی BF یا الزامات اختصاصی MR طراحی می‌شوند. طبقه‌بندی دقیق باید از اسناد سازنده مدل بررسی شود.</td></tr>
+          <tr><td>ایمنی میدان</td><td>کنترل دسترسی، غربالگری بیمار و کارکنان، تعیین نواحی ایمنی MR، کنترل اجسام فرومغناطیسی و رعایت برچسب‌های MR Safe / MR Conditional / MR Unsafe.</td></tr>
+        </tbody></table>`
+      },
+      { key:"safety", label:"ایمنی و هشدارها", html:`
+        <h4><span class="dot"></span>ایمنی بیمار و اپراتور</h4>
+        <div class="box warn"><h5>هشدار اصلی</h5><ul><li>میدان مغناطیسی اصلی حتی در زمان عدم تصویربرداری برقرار است. ورود اجسام فرومغناطیسی می‌تواند باعث <b>اثر پرتابه‌ای (Projectile)</b> و آسیب جدی شود.</li><li>هیچ ایمپلنت، ضربان‌ساز، کلیپس عروقی، پمپ، وسیله پایش یا ابزار دیگری نباید صرفاً بر اساس ظاهر فلزی/غیرفلزی یا تجربه قبلی مجاز تلقی شود؛ وضعیت <b>MR Safe یا MR Conditional</b> و شرایط دقیق استفاده باید احراز شود.</li></ul></div>
+        <ul>
+          <li><b>میدان B0:</b> نیروی کششی و گشتاور روی مواد فرومغناطیسی ایجاد می‌کند و می‌تواند بعضی وسایل را جابه‌جا یا عملکرد وسایل فعال را مختل کند.</li>
+          <li><b>RF و SAR:</b> انرژی RF در بافت جذب می‌شود و با <span class="en-inline">Specific Absorption Rate (SAR)</span> پایش می‌شود. تماس پوست با پوست، حلقه‌های بسته، کابل‌های نامناسب یا تماس با بخش‌های رسانا می‌تواند خطر گرم‌شدن موضعی و سوختگی را افزایش دهد.</li>
+          <li><b>گرادیان‌ها:</b> میدان‌های متغیر با زمان می‌توانند احساس ضربه/انقباض محیطی عصبی ایجاد کنند و جریان القایی ایجادشده در بعضی رساناها نیز باید در طراحی و غربالگری در نظر گرفته شود.</li>
+          <li><b>صدا:</b> سوئیچینگ سریع گرادیان‌ها صدای بلند تولید می‌کند؛ استفاده از محافظ شنوایی مناسب برای بیمار ضروری است.</li>
+          <li><b>Quench:</b> از دست‌رفتن ابررسانایی آهنربا می‌تواند موجب تبخیر سریع هلیوم و ایجاد خطر کمبود اکسیژن/افزایش فشار در صورت تهویه ناکافی شود؛ مسیر خروج گاز و سامانه‌های ایمنی باید مطابق طراحی سایت باشند.</li>
+          <li><b>ماده حاجب:</b> در صورت استفاده از گادولینیوم، غربالگری پزشکی، بررسی عملکرد کلیه و دستورالعمل مرکز باید رعایت شود؛ ماده حاجب بخشی از خطرات مستقل MRI را نیز دارد.</li>
+        </ul>
+        <h5>چهار ناحیه ایمنی MRI</h5>
+        <ul>
+          <li><b>Zone I:</b> فضای عمومی که میدان MR معمولاً در آن خطر کنترل‌نشده ایجاد نمی‌کند.</li>
+          <li><b>Zone II:</b> ناحیه واسط و غربالگری بیماران/مراجعان و ارتباط با محیط کنترل‌شده MR.</li>
+          <li><b>Zone III:</b> ناحیه کنترل‌شده‌ای که دسترسی به محیط MR در آن محدود به افراد آموزش‌دیده و افراد غربال‌شده است.</li>
+          <li><b>Zone IV:</b> اتاق اسکنر و محیط مجاور آهنربای اصلی؛ ناحیه‌ای که میدان استاتیک قوی حضور دارد و کنترل شدید اجسام و افراد الزامی است.</li>
+        </ul>
+        <div class="box ok"><h5>اصل ایمنی</h5><ul><li>اگر وضعیت ایمنی یک وسیله یا ایمپلنت نامشخص است، آن را تا زمان تأیید مستندات سازنده و شرایط MR، قابل‌استفاده در محیط MRI فرض نکنید.</li></ul></div>`
+      },
+      { key:"troubleshooting", label:"خرابی‌های رایج و عیب‌یابی", html:`
+        <h4><span class="dot"></span>خرابی‌های رایج و عیب‌یابی</h4>
+        <table class="tbl"><thead><tr><th>مشکل</th><th>علت‌های محتمل</th><th>اقدام/راه‌حل</th></tr></thead><tbody>
+          <tr><td>Quench یا افت ناگهانی میدان</td><td>از دست‌رفتن حالت ابررسانایی، خطای کرایوژن یا رخداد اضطراری</td><td>ایمنی بیمار و پرسنل را در اولویت قرار دهید؛ رویه Quench و تهویه سایت را اجرا کرده و سرویس تخصصی را درگیر کنید.</td></tr>
+          <tr><td>افت SNR / تصویر دانه‌دانه</td><td>مشکل کویل RF، اتصال، پیش‌تقویت‌کننده، افزایش نویز محیط یا تنظیم نادرست</td><td>کویل و کانکتور را بررسی، تست QA را اجرا و در صورت تداوم زنجیره RF توسط سرویس مجاز بررسی شود.</td></tr>
+          <tr><td>آرتیفکت زیگزاگ/خطوط یا نوارها</td><td>تداخل RF خارجی، شیلدینگ ناکافی، کابل یا منبع نویز الکترومغناطیسی</td><td>منبع تداخل را شناسایی، وضعیت RF Shield و فیلترها را بررسی و تست phantom انجام دهید.</td></tr>
+          <tr><td>اعوجاج هندسی</td><td>ناهمگنی B0، خطای گرادیان، شیم نامناسب یا فلز داخل/نزدیک FOV</td><td>شیم و QA گرادیان را بررسی، جسم فلزی را حذف و با فانتوم هندسی صحت را ارزیابی کنید.</td></tr>
+          <tr><td>Ghosting یا تکرار تصویر</td><td>حرکت بیمار، جریان خون/تنفس، اشکال در کدگذاری فاز یا تداخل</td><td>بی‌حرکتی و آموزش بیمار را بهبود داده، جهت فاز و پروتکل را بررسی و در صورت لزوم تکنیک‌های کاهش حرکت را به‌کار ببرید.</td></tr>
+          <tr><td>گرادیان بیش از حد گرم/خطای Gradient</td><td>کارکرد طولانی با توالی‌های سنگین، خطای خنک‌کاری یا الکترونیک گرادیان</td><td>توالی را متوقف و اجازه دهید سیستم طبق منطق سازنده خنک شود؛ سپس لاگ خطا و عملکرد گرادیان توسط سرویس بررسی شود.</td></tr>
+          <tr><td>افت سطح کرایوژن / هشدار هلیوم</td><td>نشتی، تبخیر غیرعادی یا خطای سامانه کرایوجن</td><td>سطح و فشار را مطابق دستورالعمل سازنده پایش و در صورت غیرعادی بودن فوراً سرویس تخصصی را مطلع کنید.</td></tr>
+          <tr><td>عدم تشکیل تصویر</td><td>خطای کنسول، ارتباط با کویل، ADC/پردازش یا داده k-space ناقص</td><td>Self-Test، وضعیت کویل، اتصالات، لاگ نرم‌افزار و زنجیره دریافت را بررسی؛ از بازکردن بخش‌های سرویس بدون مجوز خودداری شود.</td></tr>
+        </tbody></table>`
+      },
+      { key:"maintenance", label:"نگهداری و کالیبراسیون", html:`
+        <h4><span class="dot"></span>نگهداری، QC و کالیبراسیون</h4>
+        <ul>
+          <li><b>روزانه:</b> بررسی وضعیت عمومی سیستم، تخت و قفل‌ها، ارتباط بیمار، سیستم مانیتورینگ، کویل‌ها و کابل‌ها؛ کنترل پیام‌های خطا؛ اطمینان از تمیزی و آماده‌بودن محیط.</li>
+          <li><b>هفتگی:</b> مرور لاگ خطاها، بررسی ظاهری کابل و کانکتور کویل‌ها، کنترل عملکرد تجهیزات جانبی سازگار با MR و بررسی روند کیفیت تصویر در صورت وجود برنامه QA داخلی.</li>
+          <li><b>ماهانه:</b> اجرای آزمون‌های QC تعریف‌شده توسط مرکز و سازنده، بررسی یکنواختی، SNR، هندسه، ضخامت برش/دقت موقعیت و در صورت نیاز ارزیابی عملکرد کویل‌های مهم با فانتوم.</li>
+          <li><b>سالانه:</b> ارزیابی جامع عملکرد توسط فیزیک‌پزشک/MR Scientist یا فرد صلاحیت‌دار، بازبینی برنامه ایمنی MR، کنترل دسترسی و علائم، بررسی مکانیکی و فیزیکی سامانه و PM توسط سرویس مجاز.</li>
+          <li><b>سطح هلیوم:</b> در سامانه‌های متعارف کرایوجن، سطح/وضعیت هلیوم طبق مشخصات سازنده پایش شود. بسیاری از سامانه‌های جدید کم‌هلیوم یا بدون‌هلیوم، روش پایش متفاوتی دارند.</li>
+          <li><b>کالیبراسیون گرادیان:</b> صحت دامنه و زمان‌بندی گرادیان‌ها و عملکرد هندسی باید با آزمون‌های تخصصی و فانتوم‌های مناسب ارزیابی شود؛ هرگونه تنظیم سرویس داخلی باید توسط فرد مجاز انجام شود.</li>
+          <li><b>RF و SAR:</b> سیستم پایش توان RF و محدودیت‌های SAR باید با آزمون‌های عملکردی و طبق الزامات سازنده/استاندارد بررسی شوند؛ تغییر در کویل یا زنجیره RF بدون اعتبارسنجی می‌تواند ایمنی را تحت تأثیر قرار دهد.</li>
+          <li><b>تست کیفیت تصویر (QC):</b> آزمون‌های متداول شامل SNR، یکنواختی، رزولوشن، اعوجاج هندسی، ضخامت برش و ارزیابی آرتیفکت است. نتایج باید با خط پایه نصب و حدود پذیرش مرکز مقایسه و روند آنها ثبت شود.</li>
+          <li><b>مستندسازی:</b> تاریخ PM، نتایج QC، خطاها، سرویس کویل‌ها، وضعیت کرایوژن، تغییرات نرم‌افزار/سخت‌افزار و تاریخ آخرین ارزیابی ایمنی باید ثبت و قابل ردیابی باشد.</li>
+        </ul>
+        <div class="box warn"><h5>نکته ایمنی سرویس</h5><ul><li>آهنربای MRI را نمی‌توان مانند یک دستگاه الکتریکی معمولی «خاموش» کرد؛ میدان استاتیک می‌تواند حتی در حالت آماده‌به‌کار وجود داشته باشد. هر فعالیت سرویس در محیط نزدیک آهنربا باید مطابق دستورالعمل سازنده و سیاست ایمنی MR انجام شود.</li></ul></div>`
+      },
+      { key:"quiz", label:"سوالات خودآزمایی", html:`
+        <h4><span class="dot"></span>سوالات خودآزمایی</h4>
+        <details class="acc"><summary>۱. نقش میدان B0، پالس RF و گرادیان‌ها در MRI چیست؟</summary>
+          <div class="ans"><b>پاسخ:</b> B0 میدان اصلی را ایجاد می‌کند و جهت‌گیری و فرکانس لارمور پروتون‌ها را تعیین می‌کند؛ پالس RF مغناطش را برانگیخته و سیگنال قابل‌اندازه‌گیری ایجاد می‌کند؛ گرادیان‌ها اطلاعات موقعیت فضایی سیگنال را برای انتخاب برش و کدگذاری فضایی فراهم می‌کنند.</div>
+        </details>
+        <details class="acc"><summary>۲. تفاوت اصلی کنتراست T1 و T2 چیست؟</summary>
+          <div class="ans"><b>پاسخ:</b> T1 عمدتاً به بازیابی مغناطش طولی مربوط است و در تصاویر T1-weighted معمولاً چربی روشن‌تر و مایع آزاد تیره‌تر دیده می‌شود؛ T2 به از دست‌رفتن هم‌فازی و کاهش مغناطش عرضی مربوط است و مایعات در بسیاری از تصاویر T2-weighted روشن‌تر دیده می‌شوند.</div>
+        </details>
+        <details class="acc"><summary>۳. چرا هر وسیله یا ایمپلنت فلزی را نمی‌توان وارد اتاق MRI کرد؟</summary>
+          <div class="ans"><b>پاسخ:</b> میدان ثابت می‌تواند مواد فرومغناطیسی را به سمت آهنربا بکشاند و گشتاور ایجاد کند؛ RF و میدان‌های متغیر نیز می‌توانند موجب گرم‌شدن یا القای جریان شوند و وسایل فعال ممکن است دچار اختلال شوند. بنابراین باید وضعیت MR Safe یا MR Conditional و شرایط دقیق استفاده هر وسیله بررسی شود.</div>
+        </details>`
+      }
+    ]
+  },
+  {
+    id:"ct",
+    name:"دستگاه سی‌تی اسکن",
+    en:"Computed Tomography (CT) Scanner",
+    tag:"تصویربرداری مقطعی",
+    icon:"ct",
+    sections:[
+      { key:"principle", label:"اصل کارکرد", html:`
+        <h4><span class="dot"></span>اصل کارکرد</h4>
+        <p>سی‌تی اسکن با استفاده از <b>تابش یونیزان پرتو ایکس</b> تصاویر مقطعی و سه‌بعدی از بدن می‌سازد. لوله‌ی پرتو ایکس روی یک گانتری چرخان نصب است و در هر دور ۳۶۰ درجه، پرتو از زوایای متعدد از بدن بیمار عبور می‌کند؛ آرایه‌ی آشکارسازها در طرف مقابل، شدت پرتو عبوری را اندازه می‌گیرد. آنچه ثبت می‌شود، «نمای تضعیف» (Projection) در هر زاویه است.</p>
+        <div class="thread">
+          <b>از تضعیف تا تصویر:</b> تضعیف پرتو ایکس در ماده از <span class="en-inline">قانون بیر–لامبرت</span> پیروی می‌کند: <span class="en-inline">I = I<sub>0</sub> · e<sup>−μx</sup></span> که μ ضریب تضعیف خطی است. دستگاه با شمارش فوتون‌ها در هر آشکارساز، «مجموع μ در طول مسیر» را می‌سنجد و پس از گردآوری صدها نمای زاویه‌ای، توزیع μ در مقطع را بازسازی می‌کند. الگوریتم کلاسیک <b>بازپروژکسیون فیلترشده (FBP)</b> و در دستگاه‌های جدید <b>بازسازی تکراری (IR)</b> و <b>بازسازی با شبکه‌ی عصبی (DLR)</b> به‌کار می‌رود که نویز و دوز را به‌طور چشمگیر کاهش می‌دهند.
+        </div>
+        <ul>
+          <li><b>واحد هانسفیلد (HU):</b> مقیاس استاندارد تضعیف نسبت به آب تعریف می‌شود: <span class="en-inline">HU = 1000 × (μ − μ<sub>water</sub>) / μ<sub>water</sub></span>. بر این اساس آب = ۰، هوا ≈ <span class="en-inline">−1000</span>، بافت نرم ≈ <span class="en-inline">20–80</span>، چربی ≈ <span class="en-inline">−100 تا −50</span> و استخوان از حدود <span class="en-inline">+300</span> تا بیش از <span class="en-inline">+2000</span> HU متغیر است. مبنای تشخیص افتراقی (خون، مایع، کلسیفیکاسیون، چربی) همین اعداد است.</li>
+          <li><b>اسپیرال/هلیکال:</b> با فناوری حلقه‌ی لغزان (Slip Ring) چرخش پیوسته و حرکت هم‌زمان تخت، اسکن مارپیچی و تصویربرداری حجمی امکان‌پذیر می‌شود. پارامتر کلیدی <b>پیچ (Pitch)</b> است: نسبت جابه‌جایی تخت در هر دور به عرض پرتو.</li>
+          <li><b>آشکارساز چند‌برشی (MDCT):</b> آرایه‌ی چند‌ردیفه (۱۶ تا ۳۲۰ ردیف) امکان برش‌های نازک ۰٫۵ میلی‌متری و پوشش چند‌سانتی‌متری در هر دور را می‌دهد؛ پیش‌شرط تصویرسازی قلبی و آنژیوگرافی.</li>
+          <li><b>منابع خطا و اصلاح آن:</b> سختی‌شدن پرتو (Beam Hardening) چون فوتون‌های کم‌انرژی زودتر جذب می‌شوند، پراکندگی کامپتون، و پراکندگی فوتون به آشکارساز مجاور. فیلتر بوتی‌شکل (Bowtie Filter)، کنترل خودکار مواجه‌سازی (AEC) و تصحیح کالیبراسیون، این خطاها را جبران می‌کنند.</li>
+          <li><b>مواد حاجب:</b> ید (با لبه‌ی جذب در حدود <span class="en-inline">33.2 keV</span>) تضعیف موضعی را موقتاً بالا می‌برد و برای آنژیوگرافی، ارزیابی پرفیوژن و بررسی ارگان‌ها استفاده می‌شود؛ زمان‌بندی و غلظت آن با انژکتور خودکار کنترل می‌شود.</li>
+        </ul>`
+      },
+      { key:"parts", label:"اجزای اصلی", html:`
+        <h4><span class="dot"></span>اجزای اصلی</h4>
+        <ul>
+          <li><b>لوله‌ی پرتو ایکس:</b> آند چرخان با هدف تنگستن–رنیوم و نقطه‌ی کانونی کوچک/بزرگ؛ ظرفیت حرارتی آن با واحد MHU سنجیده می‌شود و محدودکننده‌ی زمان اسکن پیوسته است.</li>
+          <li><b>مولد ولتاژ بالا:</b> مبدل فرکانس‌بالا یا ترانسفورماتور چرخان که ولتاژ <span class="en-inline">70–150 kVp</span> و جریان لوله را تولید می‌کند و پایداری kVp/mA نقش مستقیم در صحت HU دارد.</li>
+          <li><b>حلقه‌ی لغزان (Slip Ring):</b> انتقال توان و داده بین قسمت چرخان و ثابت گانتری؛ هسته‌ی فناوری اسکن هلیکال.</li>
+          <li><b>کولیماتور و فیلتر:</b> کولیماتور پیش‌بیمار برای شکل‌دهی پرتو و کاهش دوز، کولیماتور پس‌بیمار برای حذف پراکندگی، و فیلتر بوتی‌شکل برای همگن‌سازی شدت پرتو در مقطع.</li>
+          <li><b>آرایه‌ی آشکارساز:</b> آشکارسازهای سوسوزن (GOS یا CdWO₄) همراه با فوتودیود، یا آشکارساز یونیزاسیون گازی؛ هر ردیف شامل صدها کانال مستقل است.</li>
+          <li><b>سیستم گردآوری داده (DAS):</b> تقویت‌کننده‌های کم‌نویز، فیلتر آنتی‌آلیاسینگ و ADC با نرخ بالا؛ این بخش نسبت سیگنال به نویز تصویر را تعیین می‌کند.</li>
+          <li><b>رایانه‌ی بازسازی:</b> پردازشگر قوی (اغلب GPU) با الگوریتم‌های FBP و IR، کِرنل‌های نرم/استخوانی، MAR (کاهش آرتیفکت فلز) و MPR/3D.</li>
+          <li><b>گانتری و سیستم مکانیکی:</b> استاتور و روتور، قابلیت شیب (Tilt)، لامپ‌های نشانگر موقعیت لیزر، ترمز و محدودکننده‌های حرکت؛ زمان دور از <span class="en-inline">0.25 تا 1.0 ثانیه</span>.</li>
+          <li><b>تخت بیمار:</b> صفحه‌ی فیبرکربنی با ظرفیت ۲۰۰–۳۰۰ کیلوگرم، انکودر موقعیت دقیق و صحت جابه‌جایی در حد کسری از میلی‌متر.</li>
+          <li><b>کنسول اپراتور، PACS و انژکتور:</b> انتخاب پروتکل و رهگیری دوز (CTDIvol/DLP)، ارسال تصویر با DICOM 3.0، گزارش دوز (RDSR) و همگام‌سازی انژکتور خودکار مواد حاجب.</li>
+          <li><b>سیستم خنک‌کاری و ایمنی:</b> مبدل حرارتی روغن/هوا، فن‌های گانتری، کلید توقف اضطراری، اینترلاک درب اتاق و چراغ‌های هشدار تابش.</li>
+        </ul>
+        <div class="box ok"><h5>نکته‌ی مهندسی</h5><ul><li>پایداری ولتاژ لوله و کالیبراسیون آشکارساز، دو عامل بنیادی در صحت واحد هانسفیلد هستند؛ درفت کوچک در این دو، خطای تشخیصی (مثلاً تمایز خون از مایع) ایجاد می‌کند.</li></ul></div>`
+      },
+      { key:"clinical", label:"کاربرد بالینی", html:`
+        <h4><span class="dot"></span>کاربرد بالینی</h4>
+        <ul>
+          <li><b>تروما و اورژانس:</b> CT سر، ستون فقرات گردنی و اسکن کل‌بدن (Whole-Body/Polytrauma) برای کشف سریع خونریزی، شکستگی و آسیب ارگان‌های داخلی.</li>
+          <li><b>سکته‌ی مغزی:</b> CT بدون حاجب برای افتراق خونریزی از ایسکمی؛ CT پرفیوژن و CTA برای ارزیابی عروق و انتخاب بیمار برای ترومبکتومی.</li>
+          <li><b>ریه و قفسه‌ی سینه:</b> CT آنژیوگرافی برای آمبولی ریه، ارزیابی توده و ندول، و غربالگری سرطان ریه با پروتکل کم‌دوز (LDCT).</li>
+          <li><b>شکم و لگن:</b> بررسی کبد، پانکراس، کلیه؛ تشخیص سنگ (کولیک کلیوی)، آپاندیسیت، دیورتیکولیت و انسداد روده؛ CT اوروگرافی و کولونوگرافی مجازی.</li>
+          <li><b>انکولوژی:</b> تعیین مرحله (Staging)، پیگیری پاسخ به درمان و بررسی متاستاز.</li>
+          <li><b>قلب و عروق:</b> امتیاز کلسیم کرونری، CT آنژیوگرافی کرونر با همگام‌سازی نوار قلب، و بررسی آنوریسم و دایسکسیون آئورت.</li>
+          <li><b>مداخلات هدایت‌شده:</b> بیوپسی، تخلیه‌ی آبسه، رادیوفرکوئنسی و کریو‌ابلیشن تحت هدایت CT.</li>
+          <li><b>سر و صورت، دنتال و CBCT:</b> سینوس‌ها، استخوان‌های صورت، پیچ‌های ایمپلنت و برنامه‌ریزی جراحی.</li>
+          <li><b>برنامه‌ریزی پرتودرمانی:</b> CT شبیه‌ساز (Simulation CT) برای تعیین هندسه و محاسبه‌ی توزیع دوز.</li>
+        </ul>
+        <div class="box warn"><h5>نکته‌ی بالینی–مهندسی</h5><ul><li>هر درخواست CT باید <b>توجیه بالینی (Justification)</b> داشته باشد؛ چون سطح دوز CT با رادیوگرافی ساده چند مرتبه‌ی بزرگی متفاوت است و انتخاب پروتکل مناسب، بزرگ‌ترین ابزار کاهش دوز به‌شمار می‌آید.</li></ul></div>`
+      },
+      { key:"specs", label:"مشخصات فنی", html:`
+        <h4><span class="dot"></span>مشخصات فنی (نوعی)</h4>
+        <table class="tbl">
+          <tr><th>پارامتر</th><th>مقدار نوعی</th></tr>
+          <tr><td>دهانه‌ی گانتری (Bore)</td><td><span class="num">70 – 80 cm</span>؛ میدان اسکن تا <span class="num">50 cm</span></td></tr>
+          <tr><td>زمان چرخش گانتری</td><td><span class="num">0.25 – 1.0 s</span> (در مدل‌های پیشرفته تا <span class="num">0.20 s</span>)</td></tr>
+          <tr><td>ولتاژ لوله (kVp)</td><td><span class="num">70 – 150 kVp</span> با گام تنظیم و کنترل خودکار بر اساس ضخامت بیمار</td></tr>
+          <tr><td>جریان لوله (mA/mAs)</td><td><span class="num">10 – 800 mA</span>؛ mAs تا حدود <span class="num">1000</span> با مدولاسیون AEC در محور z و زاویه‌ای</td></tr>
+          <tr><td>ضخامت برش</td><td><span class="num">0.5 – 10 mm</span> (برش‌های بازسازی تا <span class="num">0.4 mm</span>)</td></tr>
+          <tr><td>تعداد ردیف آشکارساز</td><td><span class="num">16 – 320 ردیف</span> (MDCT)</td></tr>
+          <tr><td>رزولوشن فضایی (High-Contrast)</td><td>حدود <span class="num">0.3 – 0.6 mm</span> بر مبنای MTF</td></tr>
+          <tr><td>قابلیت تشخیص کنتراست پایین</td><td>تشخیص سوراخ‌های حدود <span class="num">3 – 5 mm</span> در کنتراست اختلافی <span class="num">0.3 – 0.5 %</span></td></tr>
+          <tr><td>بازه‌ی اعداد CT</td><td><span class="num">−1024 تا +3071 HU</span> (۱۲ بیت)</td></tr>
+          <tr><td>دقت عدد CT (صحت HU)</td><td>± ۲ تا ± ۴ <span class="num">HU</span> در آب (بسته به پروتکل و دوز)</td></tr>
+          <tr><td>نویز تصویر (SD در آب)</td><td>معمولاً <span class="num">0.3 – 0.6 %</span> در پروتکل شکمی استاندارد</td></tr>
+          <tr><td>پیچ (Pitch) هلیکال</td><td>معمولاً <span class="num">0.5 – 1.5</span> (تنظیم‌پذیر)</td></tr>
+          <tr><td>سرعت تخت و صحت موقعیت</td><td><span class="num">0.5 – 300 mm/s</span>؛ صحت جابه‌جایی در حد <span class="num">± 0.25 mm</span></td></tr>
+          <tr><td>ظرفیت تخت</td><td><span class="num">200 – 300 kg</span></td></tr>
+          <tr><td>ظرفیت حرارتی لوله</td><td>حدود <span class="num">5 – 8 MHU</span> با نرخ دفع حرارت چند صد کیلووات</td></tr>
+          <tr><td>نوع سیگنال خروجی</td><td>دیجیتال: <span class="en-inline">DICOM 3.0</span> (CT/MR/CR)، گزارش دوز به‌صورت <span class="en-inline">RDSR (DICOM SR)</span>، <span class="en-inline">HL7</span> و <span class="en-inline">DICOM MWL</span> برای پذیرش؛ خروجی های‌لوول خطا و وضعیت</td></tr>
+          <tr><td>توان مصرفی</td><td>اوج <span class="num">30 – 100 kW</span> (تحت بار لوله)، مصرف میانگین <span class="num">5 – 15 kW</span>؛ تغذیه‌ی سه‌فاز <span class="num">380 – 480 V</span></td></tr>
+          <tr><td>دوز بیمار (شاخص‌های نمایشی)</td><td><span class="en-inline">CTDIvol (mGy)</span> و <span class="en-inline">DLP (mGy·cm)</span> روی کنسول و در گزارش دوز</td></tr>
+          <tr><td>زمان بازسازی تصویر</td><td>حدود <span class="num">0.5 – 20 image/s</span> (بسته به الگوریتم IR/DLR و اندازه‌ی ماتریس)</td></tr>
+        </table>`
+      },
+      { key:"standards", label:"استانداردها و کلاس خطر", html:`
+        <h4><span class="dot"></span>استانداردها و طبقه‌بندی خطر</h4>
+        <div class="badges">
+          <span class="badge">IEC 60601-1</span>
+          <span class="badge">IEC 60601-1-2</span>
+          <span class="badge">IEC 60601-1-3</span>
+          <span class="badge">IEC 60601-2-44</span>
+          <span class="badge">IEC 61223-3-5</span>
+          <span class="badge">NEMA XR 25/28/29</span>
+          <span class="badge">ISO 14971</span>
+          <span class="badge">DICOM PS3</span>
+        </div>
+        <ul>
+          <li><b>IEC 60601-2-44:</b> استاندارد اختصاصی تجهیزات سی‌تی اسکن؛ الزامات عملکرد، نمایش دوز، صحت اعداد CT و شرایط آزمون را تعیین می‌کند.</li>
+          <li><b>IEC 60601-1-3:</b> الزامات عمومی حفاظت در برابر پرتو در تجهیزات تشخیصی پرتو ایکس — از جمله محدودسازی پرتو نشتی و نشانگرهای تابش.</li>
+          <li><b>IEC 61223-3-5:</b> آزمون‌های پذیرش و پایداری (Constancy) عملکرد تصویربرداری CT؛ مرجع اصلی برنامه‌ی QC.</li>
+          <li><b>NEMA XR 25 / XR 28 / XR 29:</b> استانداردهای صنعت برای <b>هشدارهای دوز</b> (Dose Check)، <b>گزارش دوز</b> (Structured Dose Reporting) و مکانیزم هشدار پیش از دوز بالا؛ در CT مدرن الزامی محسوب می‌شود.</li>
+          <li><b>IEC 60601-1-8 و IEC 60601-1-2:</b> الزامات سیستم آلارم و سازگاری الکترومغناطیسی.</li>
+          <li><b>ISO 14971 / ISO 13485 و DICOM PS3 (به‌ویژه RDSR):</b> مدیریت ریسک، کیفیت و تبادل استاندارد تصویر و گزارش دوز.</li>
+          <li><b>الزامات ملی حفاظت در برابر پرتو</b> (مقررات سازمان انرژی اتمی/کمیسیون حفاظت پرتوی کشور و سطوح مرجع تشخیصی — DRL) نیز الزامی است.</li>
+        </ul>
+        <table class="tbl">
+          <tr><th>ویژگی طبقه‌بندی</th><th>وضعیت دستگاه سی‌تی اسکن</th></tr>
+          <tr><td>کلاس حفاظت الکتریکی</td><td>کلاس I (اتصال به هادی حفاظتی زمین) با تغذیه‌ی سه‌فاز</td></tr>
+          <tr><td>نوع قطعه‌ی کاربرد</td><td>نوع B (تماس با تخت بیمار)؛ قطعه‌ی نوع BF در برخی ماژول‌های پایش ضربان</td></tr>
+          <tr><td>درجه‌ی حفاظت در برابر آب</td><td>معمولاً IPX0 در گانتری و کنسول؛ IPX1 در برخی مدل‌ها</td></tr>
+          <tr><td>حالت کار</td><td>کارکرد پیوسته‌ی سیستم با کارکرد <b>متناوب (Intermittent)</b> لوله‌ی پرتو ایکس بر پایه‌ی نسبت بار/خنک‌کاری و ظرفیت MHU</td></tr>
+          <tr><td>طبقه‌بندی خطر</td><td><b>خطر بالا</b> — کلاس IIb در چارچوب مقررات اروپا (MDR)؛ به‌دلیل تابش یونیزان و ریسک تجمعی دوز بیمار</td></tr>
+          <tr><td>طبقه‌بندی پرتوی</td><td>دستگاه مولد پرتو ایکس تشخیصی با پرتو نشتی محدودشده و اینترلاک اتاق</td></tr>
+        </table>`
+      },
+      { key:"safety", label:"ایمنی و هشدارها", html:`
+        <h4><span class="dot"></span>ایمنی بیمار و اپراتور</h4>
+        <div class="box danger">
+          <h5>هشدارهای پرتوی و بیمار</h5>
+          <ul>
+            <li>CT از <b>تابش یونیزان</b> استفاده می‌کند و دوز آن با رادیوگرافی ساده قابل مقایسه نیست؛ رعایت <b>ALARA</b> و پرسش از سطح‌های مرجع تشخیصی (DRL) الزامی است.</li>
+            <li>پیش از اسکن، <b>وضعیت بارداری</b> بیمار باید پرسیده و ثبت شود؛ در بارداری، CT تنها با توجیه قوی و پس از بررسی روش‌های جایگزین (سونوگرافی/MRI) انجام شود.</li>
+            <li>در کودکان، پروتکل‌های مخصوص سن و وزن با kVp و mAs پایین‌تر به‌کار رود؛ دوز کودک حساسیت پرتوی بالاتری دارد.</li>
+            <li>مواجهه‌ی مکرر و تجمعی بیمار باید در سابقه‌ی پرتوی ثبت و در تجویز بعدی بازبینی شود؛ از اسکن‌های تکراری بدون توجیه پرهیز کنید.</li>
+            <li>مواد حاجب یدی می‌تواند واکنش آلرژیک، نارسایی کلیه (در بیماران با eGFR پایین) یا خروج از عروق (Extravasation) ایجاد کند؛ سابقه‌ی آلرژی، عملکرد کلیه و مصرف متفورمین پیش از تزریق بررسی شود.</li>
+            <li>بیماران با کلستروفوبی، درد یا ناتوانی حرکتی ممکن است به آرام‌سازی نیاز داشته باشند؛ حرکت بیمار، آرتیفکت و تکرار اسکن (و دوز اضافه) ایجاد می‌کند.</li>
+          </ul>
+        </div>
+        <div class="box warn">
+          <h5>هشدارهای اپراتور و ایمنی پرتوی</h5>
+          <ul>
+            <li>پیش از تابش، <b>اینترلاک درب اتاق</b> و چراغ‌های هشدار باید بررسی شود؛ هیچ‌کس جز بیمار نباید در اتاق باقی بماند.</li>
+            <li>برای حضور اجباری (مثلاً نگه‌داشتن کودک)، از پیش‌بند سربی، محافظ تیروئید و عینک سربی استفاده و فاصله و زمان مواجهه به کمترین مقدار محدود شود؛ در حالت معمول از بی‌حرکت‌کننده‌ها استفاده کنید.</li>
+            <li>استفاده‌ی صحیح از <b>دُزیمتر فردی</b> (Film/TLD/OSL) و ثبت دوره‌ای آن الزامی است.</li>
+            <li>پرتو پراکنده در گانتری و اتاق، با افزایش kVp و میدان اسکن زیاد می‌شود؛ از ماندن بی‌دلیل در اتاق و نزدیک گانتری پرهیز کنید.</li>
+            <li>توقف اضطراری (Emergency Stop) و مسیر خروج اضطراری اتاق را بشناسید؛ در صورت گیر افتادن بیمار، رویه‌ی خروج ایمن را تمرین‌شده اجرا کنید.</li>
+            <li>اشیا فلزی، پروتز و ایمپلنت‌های خارجی روی سطح بدن باید برداشته شوند؛ در بیماران با ضربان‌ساز/ICD محدودیت‌های سازنده و پروتکل بیمارستان بررسی شود.</li>
+          </ul>
+        </div>
+        <div class="box ok"><h5>توصیه‌ی عملی برای مهندس پزشکی</h5><ul><li>هر تلاش در جهت کاهش دوز (بهینه‌سازی AEC، انتخاب kVp، کاهش طول اسکن و استفاده از بازسازی تکراری) اثری مستقیم بر ایمنی بیمار دارد؛ نمایش و ثبت CTDIvol/DLP در هر مطالعه را به‌عنوان شاخص کیفیت پیگیری کنید.</li></ul></div>`
+      },
+      { key:"troubleshoot", label:"خرابی‌های رایج و عیب‌یابی", html:`
+        <h4><span class="dot"></span>خرابی‌های رایج و عیب‌یابی</h4>
+        <table class="tbl">
+          <tr><th>مشکل</th><th>علت احتمالی و راه‌حل</th></tr>
+          <tr><td>آرتیفکت حلقه‌ای (Ring Artifact)</td><td>درفت کالیبراسیون آشکارساز یا ضعف یک کانال؛ اجرای <b>Air Calibration</b> (کالیبراسیون هوا) و بررسی گزارش کانال‌های معیوب؛ در صورت تکرار، تعویض ماژول آشکارساز.</td></tr>
+          <tr><td>آرتیفکت خطوط شعاعی و تاری از اجسام فلزی</td><td>سختی‌شدن پرتو و کمبود فوتون (Photon Starvation) از پروتز و پیچ؛ افزایش kVp، استفاده از الگوریتم <b>MAR</b> و بازسازی تکراری.</td></tr>
+          <tr><td>خطای “Tube Arcing” یا افت ناگهانی kV</td><td>فرسودگی لوله و افت خلأ یا آلودگی مسیر؛ بررسی لاگ خطا، اندازه‌گیری kVp با متر و در صورت تأیید، تعویض لوله.</td></tr>
+          <tr><td>خطای “kV/mA Error” یا ناپایداری جریان لوله</td><td>خرابی مولد فشارقوی، کابل فشارقوی یا لوله؛ تست مولد، بررسی اتصالات و کالیبراسیون kVp/mA.</td></tr>
+          <tr><td>افزایش نویز تصویر با پروتکل یکسان</td><td>کاهش خروجی لوله (فرسودگی)، افت بهره‌ی آشکارساز، خطای AEC یا دمای نامناسب آشکارساز؛ تست خروجی با فانتوم و بازبینی تنظیمات AEC.</td></tr>
+          <tr><td>خطای عدم تطابق کالیبراسیون هوا (Air Cal Failed)</td><td>گرم نشدن کافی دستگاه، تغییر دمای محیط یا خطای آشکارساز؛ اجرای کامل چرخه‌ی Warm-up و تکرار کالیبراسیون در دمای پایدار.</td></tr>
+          <tr><td>کاهش دقت اعداد CT (خطای HU آب)</td><td>درفت کالیبراسیون، خطای kVp یا اشکال در بازسازی؛ آزمون فانتوم آب، کالیبراسیون مجدد و بررسی کِرنل بازسازی.</td></tr>
+          <tr><td>آرتیفکت پله‌ای یا جابه‌جایی تصویر در اسکن هلیکال</td><td>ناهمزمانی حرکت تخت با چرخش، Pitch نامناسب یا خطای الگوریتم درون‌یابی؛ بازبینی تنظیمات اسکن و کالیبراسیون موقعیت تخت.</td></tr>
+          <tr><td>ناهم‌راستایی نامناسب لیزر موقعیت (Laser Alignment)</td><td>جابه‌جایی مکانیکی یا خطای کالیبراسیون نشانگر؛ تنظیم و کالیبراسیون موقعیت لیزر با فانتوم موقعیت‌سنج.</td></tr>
+          <tr><td>عدم تولید گزارش دوز (RDSR) در PACS</td><td>تنظیم نادرست DICOM SR یا خطای شبکه؛ بازبینی پیکربندی ارسال و اتصال شبکه.</td></tr>
+          <tr><td>قفل شدن گانتری یا خطای حرکت/شیب</td><td>خطای درایو، انکودر یا ترمز ایمنی؛ بررسی کدهای خطا، تست حرکت آزاد و بازبینی سیستم درایو.</td></tr>
+          <tr><td>خطای ظرفیت حرارتی لوله (“Tube Heat Capacity” / اُوِرهیت)</td><td>تعداد زیاد اسکن پیوسته در زمان کوتاه؛ انتظار برای خنک‌کاری، کاهش mAs/kVp یا طول اسکن و بازبینی سیستم خنک‌کننده (مبدل حرارتی و فن‌ها).</td></tr>
+          <tr><td>عدم پاسخ تخت یا خطای موقعیت بیمار</td><td>خرابی انکودر، موتور درایو یا سیم‌کشی؛ تست حرکت تخت و کالیبراسیون موقعیت.</td></tr>
+          <tr><td>هندسه‌ی نادرست تصویر یا خطای بازسازی حجمی</td><td>خطای مرکز چرخش (Isocenter) یا کالیبراسیون هندسی؛ اجرای آزمون فانتوم هندسی و اصلاح کالیبراسیون سرویس.</td></tr>
+        </table>`
+      },
+      { key:"maintenance", label:"نگهداری و کالیبراسیون", html:`
+        <h4><span class="dot"></span>نگهداری، کالیبراسیون و QC</h4>
+        <ul>
+          <li><b>روزانه:</b> اجرای چرخه‌ی Warm-up و کالیبراسیون هوا، بررسی چراغ‌های هشدار تابش و اینترلاک درب، تست کلید توقف اضطراری، بررسی وضعیت ظرفیت حرارتی لوله، تست عملکرد تخت و لامپ لیزر، بررسی کنسول و پریست پروتکل‌ها.</li>
+          <li><b>هفتگی:</b> آزمون فانتوم ساده (یکنواختی و نویز)، بازبینی دمای آشکارساز و گانتری، بررسی فیلترهای هوا و سیستم خنک‌کاری، مرور لاگ خطاها.</li>
+          <li><b>ماهانه:</b> آزمون‌های پایداری (Constancy) مطابق IEC 61223-3-5 — دقت عدد CT آب، نویز، یکنواختی تصویر، ضخامت برش، صحت هندسی و تشخیص کنتراست پایین؛ ثبت نتایج در دفتر QC.</li>
+          <li><b>فصلی/سالانه:</b> کالیبراسیون آشکارساز و مرکز چرخش، سنجش صحت و تکرارپذیری kVp و جریان لوله با متر غیرتهاجمی، آزمون خطی‌بودن mAs و صحت AEC، کالیبراسیون موقعیت تخت و شیب گانتری، <b>اندازه‌گیری CTDI و DLP</b> با فانتوم دوزیمتری و اتاق یونیزاسیون، تست ایمنی الکتریکی (جریان نشتی و مقاومت زمین)، بررسی <b>پرتو نشتی</b>، به‌روزرسانی نرم‌افزار و پشتیبان‌گیری از پروتکل‌ها.</li>
+          <li><b>قطعات مصرفی و عمری:</b> ردیابی عمر لوله (بر مبنای تعداد اسکن و mAs تجمعی)، تعویض روغن و فیلترهای خنک‌کاری، بازبینی آشکارسازهای با کانال معیوب، تعویض باتری‌های UPS و لامپ‌های نشانگر.</li>
+          <li><b>مستندسازی:</b> نگهداری رکورد QA/C، گزارش دوز، لاگ سرویس، شماره‌ی سری و تاریخ کالیبراسیون هریک از بلوک‌های آشکارساز و برچسب تاریخ آخرین کالیبراسیون روی دستگاه؛ در صورت خروج از تلورانس، دستگاه تا رفع خطا از سرویس خارج شود.</li>
+        </ul>
+        <div class="box warn"><h5>هشدارهای کالیبراسیون</h5><ul><li>دمای محیط اتاق و دمای آشکارساز باید در محدوده‌ی اعلام‌شده‌ی سازنده باشد؛ تغییر دمای سریع (مثلاً باز کردن درِ اتاق پرتوی سرد) باعث افت کالیبراسیون هوا و آرتیفکت حلقه‌ای می‌شود.</li><li>فانتوم‌های QA باید متناسب با پروتکل (بدن یا سر) و کالیبره باشند؛ مقایسه‌ی نتایج با خط پایه‌ی زمان نصب، مهم‌ترین ابزار کشف درفت تدریجی است.</li></ul></div>
+        <div class="box ok"><h5>ارتباط با برنامه‌ی دوز بیمارستان</h5><ul><li>مهندس پزشکی و کارشناس فیزیک پزشکی باید DRLهای محلی را تعیین و روند دوز در مطالعات پرتکرار (مثل CT شکم و سر) را به‌صورت دوره‌ای پایش کنند؛ افزایش بی‌دلیل دوز، معمولاً نخستین نشانه‌ی افت عملکرد لوله یا آشکارساز است.</li></ul></div>`
+      },
+      { key:"quiz", label:"سوالات خودآزمایی", html:`
+        <h4><span class="dot"></span>سوالات خودآزمایی</h4>
+        <details class="acc"><summary>۱. واحد هانسفیلد (HU) چگونه تعریف می‌شود و مقدار مرجع آب، هوا و استخوان چقدر است؟</summary>
+          <div class="ans"><b>پاسخ:</b> HU نسبت تضعیف جسم به آب را با مقیاس خطی بیان می‌کند:<br><span class="en-inline">HU = 1000 × (μ − μ<sub>water</sub>) / μ<sub>water</sub></span><br>بر این پایه آب = ۰، هوا ≈ −۱۰۰۰، چربی حدود −۱۰۰ تا −۵۰، بافت نرم حدود ۲۰ تا ۸۰ و استخوان از حدود +۳۰۰ به بالا (تا بیش از +۲۰۰۰) HU است. مزیت این تعریف، بی‌بعد و مستقل‌بودن مقیاس از انرژی پرتو برای مقایسه‌ی تشخیصی است.</div>
+        </details>
+        <details class="acc"><summary>۲. «پیچ (Pitch)» در اسکن هلیکال چگونه محاسبه می‌شود و چه اثری بر دوز و کیفیت تصویر دارد؟</summary>
+          <div class="ans"><b>پاسخ:</b> پیچ برابر است با «جابه‌جایی تخت در هر دور گانتری» تقسیم بر «عرض کل پرتو (کولیماسیون)». پیچ کمتر از ۱ پوشش آویزدار (Overlap) ایجاد می‌کند و دوز بیشتری برای همان حجم می‌دهد، ولی کیفیت تصویر و رزولوشن محور z بهتر است؛ پیچ بزرگ‌تر از ۱ سرعت و پوشش حجمی را افزایش می‌دهد و برای همان ولوم، دوز مؤثر کمتری دارد، اما ممکن است یکنواختی و آرتیفکت‌ها بدتر شود. بنابراین انتخاب پیچ باید با هدف بالینی (مثلاً دقت در مقابل سرعت در تروما) متعادل شود.</div>
+        </details>
+        <details class="acc"><summary>۳. سه عامل اصلی کاهش دوز بیمار در CT کدام‌اند و چرا kVp بیشترین اثر را دارد؟</summary>
+          <div class="ans"><b>پاسخ:</b> سه عامل کلیدی: (۱) کاهش <b>kVp</b>، (۲) کاهش <b>mAs</b> با استفاده از مدولاسیون خودکار مواجه‌سازی (AEC) و (۳) کاهش طول و تعداد فازهای اسکن (کوتاه‌کردن محدوده‌ی اسکن و حذف فازهای غیرضروری). kVp بیشترین اثر را دارد چون هم انرژی فوتون‌ها و هم نرخ تولید آن‌ها را افزایش می‌دهد و دوز تقریباً با توان بالای kVp متناسب است؛ در مقابل، کاهش kVp باعث تغییر کنتراست تصویر و نیاز به پروتکل‌های تطبیقی می‌شود. تکمیل‌کننده‌ی این سه، استفاده از بازسازی تکراری/داده‌محور برای کاهش نویز در دوز پایین است.</div>
+        </details>`
+      }
+    ]
+  }
+];
+
+/* =========================================================
+   ساخت کارت‌ها
+   ========================================================= */
+const grid = document.getElementById('cardGrid');
+
+function renderCards(filter=''){
+  const q = filter.trim().toLowerCase();
+  const list = DEVICES.filter(d =>
+    !q || d.name.toLowerCase().includes(q) || d.en.toLowerCase().includes(q) || d.tag.toLowerCase().includes(q)
+  );
+  if(!list.length){
+    grid.innerHTML = '<div class="empty">دستگاهی با این عبارت پیدا نشد. عبارت دیگری را امتحان کنید.</div>';
+    return;
+  }
+  grid.innerHTML = list.map(d => `
+    <button class="card" data-id="${d.id}" aria-haspopup="dialog">
+      <span class="ico" aria-hidden="true">${ICONS[d.icon]}</span>
+      <h3>${d.name}</h3>
+      <div class="en">${d.en}</div>
+      <span class="tag">${d.tag}</span>
+    </button>
+  `).join('');
+  grid.querySelectorAll('.card').forEach(c =>
+    c.addEventListener('click', () => openModal(c.dataset.id))
+  );
+}
+
+/* =========================================================
+   مودال
+   ========================================================= */
+const overlay  = document.getElementById('overlay');
+const modal    = document.getElementById('modal');
+const mTitle   = document.getElementById('mTitle');
+const mEn      = document.getElementById('mEn');
+const mIco     = document.getElementById('mIco');
+const tabBar   = document.getElementById('tabBar');
+const mBody    = document.getElementById('mBody');
+let lastFocused = null;
+
+function openModal(id){
+  const d = DEVICES.find(x => x.id === id);
+  if(!d) return;
+  lastFocused = document.activeElement;
+
+  mIco.innerHTML = ICONS[d.icon];
+  mTitle.textContent = d.name;
+  mEn.textContent = d.en;
+
+  tabBar.innerHTML = d.sections.map((s,i) =>
+    `<button class="tab${i===0?' active':''}" data-tab="${s.key}" role="tab">${s.label}</button>`
+  ).join('');
+
+  mBody.innerHTML = d.sections.map((s,i) =>
+    `<div class="panel${i===0?' active':''}" id="panel-${s.key}" role="tabpanel">${s.html}</div>`
+  ).join('');
+
+  tabBar.querySelectorAll('.tab').forEach(t => {
+    t.addEventListener('click', () => switchTab(t.dataset.tab, d));
+  });
+
+  overlay.classList.add('open');
+  document.body.classList.add('locked');
+  modal.scrollTop = 0;
+  overlay.scrollTop = 0;
+  document.getElementById('btnClose').focus();
+}
+
+function switchTab(key, d){
+  tabBar.querySelectorAll('.tab').forEach(t =>
+    t.classList.toggle('active', t.dataset.tab === key));
+  mBody.querySelectorAll('.panel').forEach(p =>
+    p.classList.toggle('active', p.id === 'panel-' + key));
+  mBody.scrollTop = 0;
+}
+
+function closeModal(){
+  overlay.classList.remove('open');
+  document.body.classList.remove('locked');
+  if(lastFocused && lastFocused.focus) lastFocused.focus();
+}
+
+document.getElementById('btnClose').addEventListener('click', closeModal);
+overlay.addEventListener('click', e => { if(e.target === overlay) closeModal(); });
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+});
+/* جابه‌جایی بین تب‌ها با کلیدهای جهت‌دار */
+document.addEventListener('keydown', e => {
+  if(!overlay.classList.contains('open')) return;
+  if(e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+  const tabs = [...tabBar.querySelectorAll('.tab')];
+  const idx = tabs.findIndex(t => t.classList.contains('active'));
+  if(idx < 0) return;
+  const next = e.key === 'ArrowLeft' ? (idx + 1) % tabs.length : (idx - 1 + tabs.length) % tabs.length;
+  tabs[next].click();
+  tabs[next].focus();
+});
+
+/* =========================================================
+   جستجو و راه‌اندازی
+   ========================================================= */
+document.getElementById('searchInput').addEventListener('input', e => renderCards(e.target.value));
+document.getElementById('yearLine').textContent = '© ' + new Date().getFullYear() + ' — تمامی حقوق محفوظ است.';
+renderCards();
+</script>
+</body>
+</html>
